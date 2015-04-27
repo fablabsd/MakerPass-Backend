@@ -1,0 +1,6 @@
+<?xml version="1.0"?><resource xmlns:xlink="http://www.w3.org/1999/xlink">
+    <CUSTOMERList xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/">CUSTOMER</CUSTOMERList>
+    <INVOICEList xlink:href="http://www.thomas-bayer.com/sqlrest/INVOICE/">INVOICE</INVOICEList>
+    <ITEMList xlink:href="http://www.thomas-bayer.com/sqlrest/ITEM/">ITEM</ITEMList>
+    <PRODUCTList xlink:href="http://www.thomas-bayer.com/sqlrest/PRODUCT/">PRODUCT</PRODUCTList>
+</resource>

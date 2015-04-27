@@ -1,0 +1,27 @@
+
+
+echo g++ -I/usr/local/include/Poco  -Wall -Wno-sign-compare -DPOCO_BUILD_HOST=raspberrypi  -D_XOPEN_SOURCE=500 -D_REENTRANT -D_THREAD_SAFE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -DPOCO_HAVE_FD_EPOLL  -O2 -DNDEBUG -fPIC -c ./SharedMem_Process1.cpp  -o ./SharedMem_Process1.o 
+
+g++ -I/usr/local/include/Poco  -Wall -Wno-sign-compare -DPOCO_BUILD_HOST=raspberrypi  -D_XOPEN_SOURCE=500 -D_REENTRANT -D_THREAD_SAFE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -DPOCO_HAVE_FD_EPOLL  -O2 -fpermissive -DNDEBUG -fPIC  -c ./SharedMem_Process1.cpp  -o ./SharedMem_Process1.o
+
+
+echo g++ -O2 -Wl,-rpath,/usr/local/lib -o ./SharedMem_Process1 ./SharedMem_Process1.o -L/usr/local/lib  -lPocoFoundation -lpthread -ldl -lrt
+
+g++ -O2 -Wl,-rpath,/usr/local/lib -o ./SharedMem_Process1 ./SharedMem_Process1.o -L/usr/local/lib  -lPocoFoundation -lpthread -ldl -lrt
+
+strip ./SharedMem_Process1
+
+
+### COMPILE PROCESS 2 -----------------------------------
+
+echo g++ -I/usr/local/include/Poco  -Wall -Wno-sign-compare -DPOCO_BUILD_HOST=raspberrypi  -D_XOPEN_SOURCE=500 -D_REENTRANT -D_THREAD_SAFE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -DPOCO_HAVE_FD_EPOLL  -O2 -DNDEBUG -fPIC -c ./SharedMem_Process2.cpp  -o ./SharedMem_Process2.o 
+
+g++ -I/usr/local/include/Poco  -Wall -Wno-sign-compare -DPOCO_BUILD_HOST=raspberrypi  -D_XOPEN_SOURCE=500 -D_REENTRANT -D_THREAD_SAFE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -DPOCO_HAVE_FD_EPOLL  -O2 -fpermissive -DNDEBUG -fPIC  -c ./SharedMem_Process2.cpp  -o ./SharedMem_Process2.o
+
+
+echo g++ -O2 -Wl,-rpath,/usr/local/lib -o ./SharedMem_Process2 ./SharedMem_Process2.o -L/usr/local/lib  -lPocoFoundation -lpthread -ldl -lrt
+
+g++ -O2 -Wl,-rpath,/usr/local/lib -o ./SharedMem_Process2 ./SharedMem_Process2.o -L/usr/local/lib  -lPocoFoundation -lpthread -ldl -lrt
+
+strip ./SharedMem_Process2
+

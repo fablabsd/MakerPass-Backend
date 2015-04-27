@@ -1,0 +1,7 @@
+
+
+#Call a REST web service
+./httpget_with_parse http://www.thomas-bayer.com/sqlrest/
+
+
+

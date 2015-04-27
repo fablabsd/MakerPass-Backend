@@ -1,0 +1,17 @@
+
+
+## run first process in background which will sleep for a few seconds
+## after setting the memory in order to allow process 2 a chance to read it
+./SharedMem_Process1 &
+
+
+## sleep for a second just to give process 1 a chance
+## to create the shared mem
+sleep 2
+
+## now run process 2 which, if it works, should print out the values that 
+## were set in process 1
+./SharedMem_Process2
+
+
+

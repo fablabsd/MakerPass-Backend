@@ -1,0 +1,4 @@
+
+
+
+cat ./output.xml | ./DOMParser

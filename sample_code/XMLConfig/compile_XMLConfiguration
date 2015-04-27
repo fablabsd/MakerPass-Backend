@@ -1,0 +1,14 @@
+
+
+echo g++ -I/usr/local/include/Poco  -Wall -Wno-sign-compare -DPOCO_BUILD_HOST=raspberrypi  -D_XOPEN_SOURCE=500 -D_REENTRANT -D_THREAD_SAFE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -DPOCO_HAVE_FD_EPOLL  -O2 -DNDEBUG -fPIC -c ./XMLConfig.cpp  -o ./XMLConfig.o 
+
+g++ -I/usr/local/include/Poco  -Wall -Wno-sign-compare -DPOCO_BUILD_HOST=raspberrypi  -D_XOPEN_SOURCE=500 -D_REENTRANT -D_THREAD_SAFE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -DPOCO_HAVE_FD_EPOLL  -O2 -DNDEBUG -fPIC  -c ./XMLConfig.cpp  -o ./XMLConfig.o
+
+
+echo g++ -O2 -Wl,-rpath,/usr/local/lib -o ./XMLConfig ./XMLConfig.o -L/usr/local/lib -lPocoXML -lPocoFoundation -lpthread -ldl -lrt
+
+g++ -O2 -Wl,-rpath,/usr/local/lib -o ./XMLConfig ./XMLConfig.o -L/usr/local/lib -lPocoUtil -lPocoXML -lPocoFoundation -lpthread -ldl -lrt
+
+strip ./XMLConfig
+
+
