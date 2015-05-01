@@ -75,7 +75,7 @@ int main(int argc, char** argv)
         Poco::Net::HTTPCredentials credentials(username, password);
 
 		HTTPClientSession session(uri.getHost(), uri.getPort());
-		HTTPRequest request(HTTPRequest::HTTP_GET, path, HTTPMessage::HTTP_1_1);
+		HTTPRequest request(HTTPRequest::HTTP_POST, path, HTTPMessage::HTTP_1_1);
 		HTTPResponse response;
 		if (!doRequest(session, request, response))
 		{
