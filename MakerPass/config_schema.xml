@@ -1,0 +1,24 @@
+
+//defines the machine being controlled 
+<machines>
+	<id>
+	<friendly_name>
+	<parent_id>...this is important for configuring if we are using a centralized or de-centralized design...if centralized, then only one master for a group of machines...if decentralized then each machine is it's own master, and controls only one plug
+	<plug_id> ...i.e. foreign key code to plug that maps to ip_address of it's smartplug
+
+</machines>
+
+// defines the different smartplugs usable by a machine
+<smartplugs>
+	<id>
+	<friendly_name>...i.e. "WeMo Insight"
+	<ip_address>
+	<statemap_type>...i.e. just on/off, or on_off_w_power_monitor etc
+</smartplugs>
+
+// defines the kind of statemap that will get used to control a plug (this depends on the plug's capabilities)
+<statemap_types>
+	<statemap_type>...i.e. ON_OFF or ON_OFF_W_POWER_MONITOR
+	<description>...i.e. this statemap only supports binary on/off controls...or this statemap supports multiple features requiring power monitoring...
+
+</statemap_types>
