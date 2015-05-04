@@ -16,6 +16,8 @@ http://ouimeaux.readthedocs.org/en/latest/wemo.html
 	(b)  Then in your .git/config file replace the https url link with the new link that is 
 	generated under the "clone" dialog in bitbucket (it should show "SSH" as the selected link).
    
-** SQLite -- Read instruction in "INSTALL" file.  This probably just consists
-of a ./configure; make; make install
+** SQLite -- sudo apt-get install sqlite3 
+If you get a weird error about it not existing in /usr/local/bin just do a which sqlite3 and 
+you will see it's installed in /usr/bin...no idea why it's looking for it in usr/local/bin -- might
+have something to do with the fact that my first attempt on this involved compiling from source
 
