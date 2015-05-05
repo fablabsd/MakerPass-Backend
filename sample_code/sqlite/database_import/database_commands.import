@@ -1,0 +1,5 @@
+
+
+.mode csv
+.import machine_config.csv machine_config
+

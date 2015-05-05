@@ -20,4 +20,6 @@ http://ouimeaux.readthedocs.org/en/latest/wemo.html
 If you get a weird error about it not existing in /usr/local/bin just do a which sqlite3 and 
 you will see it's installed in /usr/bin...no idea why it's looking for it in usr/local/bin -- might
 have something to do with the fact that my first attempt on this involved compiling from source
+A lot of good sqlite info can be found here (about the CLI):
+https://www.sqlite.org/cli.html
 
