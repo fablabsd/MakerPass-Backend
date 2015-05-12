@@ -6,7 +6,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define MAX_BUF_SIZE 200 
+#define MAX_BUF_SIZE  10
 /*
 
 readHID.c -- Read a string from a rawHID device in /dev

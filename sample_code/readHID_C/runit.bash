@@ -8,9 +8,9 @@ sudo adafruit-rpi-lcd -c white "Ready..."
 
 ## wait for swipe -- note hidraw device listed below
 ## is dynamic, so you may need to try hidraw0,1,2 etc...
-## grep for hidraw in dmesg and look for a keyboard belonging to STMicroelectronics
+## grep for keyboard in dmesg and look for a keyboard belonging to STMicroelectronics
 ## i.e. keyboard emulated swipe
-sudo ./a.out /dev/hidraw3 | sudo perl swipe.pl
+sudo ./a.out /dev/hidraw1 | sudo perl swipe.pl
 
 ## turn off lcd and machine/led
 sudo adafruit-rpi-lcd --off
