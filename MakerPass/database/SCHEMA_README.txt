@@ -26,7 +26,7 @@
 // user overview
 <users>
 	<user_id> // for barcode
-	<username> // for potential future use with active directory
+	<username> // for potential future use with active directory or other authentication tool
 	<firstname>
 	<lastname>
 	<last_scan>  // text field w datetime

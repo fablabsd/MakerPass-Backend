@@ -1,5 +1,0 @@
-
-
-.mode csv
-.import machine_rec.csv machine_rec
-

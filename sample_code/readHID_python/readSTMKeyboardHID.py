@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 ##
-## readHID.py -- Read a string from a rawHID device in /dev and print the ascii converted contents
+## readSTMKeyboardHID.py -- Read a string from a rawHID device in /dev and print the ascii converted contents
 ##
 
 import sys
@@ -29,7 +29,7 @@ ID = -1
 
 ## verify program arguments
 if (len(sys.argv) < 2): 
-	print "\nUsage:  python readHID.py <device from /dev>\n\n"
+	print "\nUsage:  python readSTMKeyboardHID.py <device from /dev>\n\n"
 	sys.exit(0)
     
 ## Open the device for reading 
