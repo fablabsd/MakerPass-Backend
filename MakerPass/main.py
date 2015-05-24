@@ -60,7 +60,7 @@ def main():
 
 			## Now manage each of the machine states
 			for machine in machine_list:
-				pass
+				machine.manageState()
 
 
                 except (KeyboardInterrupt):
@@ -73,10 +73,6 @@ def InitMachines(shared_mem):
 	machine_list = []
 
 	## get machine ids from database
-	## test - 10=normal create, 20=normal other, 30=i'm not master, 40=unrecognized
-	#machine_ids = [10,20,30]
-	#machines_owned_by_me = [10,20]
-	
 	rows = MakerPassDatabase.getMachineRecords()
 
 	## Create machine object for each machine

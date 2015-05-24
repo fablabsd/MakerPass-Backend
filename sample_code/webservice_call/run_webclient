@@ -1,4 +1,17 @@
 #!/bin/bash
 
 
-python webclient.py http://www.thomas-bayer.com/sqlrest/
+## test a service testing site 
+python webclient_json.py http://jsonplaceholder.typicode.com/posts/1
+
+## test xml service
+#python webclient_xml.py http://www.thomas-bayer.com/sqlrest/
+
+
+## test specific device call to ouimeaux
+#python webclient_json.py http://localhost:5000/api/device/MYMADEUPNAME
+
+
+
+## test environment call to ouimeaux
+#python webclient_json.py http://localhost:5000/api/environment

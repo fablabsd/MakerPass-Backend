@@ -1,0 +1,4 @@
+{
+    "error": "No device matching closet", 
+    "message": "You have requested this URI [/api/device/closet] but did you mean /api/device/<string:name> or /api/environment ?"
+}

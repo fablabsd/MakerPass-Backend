@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import sys
 import SmartPlug
 import MakerPassDatabase
 
@@ -35,14 +36,32 @@ class Machine(object):
 
 	
 	##  ----- METHODS ------------------------------------- 
-	def enableMachinePlug():
-		pass
-	def disableMachinePlug():
-		pass
-	def isMachinePlugEnables():
-		pass
-	def isSwitchedOn():
-		pass
-	def manageState():
-		pass
+	def enableMachinePlug(self):
+		print "FATAL:  Machine.enableMachinePlug() called directly - should be called from derived class"
+		sys.exit(1)	
+	def disableMachinePlug(self):
+		print "FATAL:  Machine.disableMachinePlug() called directly - should be called from derived class"
+		sys.exit(1)	
+	def isMachinePlugEnabled(self):
+		print "FATAL:  Machine.isMachinePlugEnabled() called directly - should be called from derived class"
+		sys.exit(1)	
+	def isSwitchedOn(self):
+		print "FATAL:  Machine.isSwitchedOn() called directly - should be called from derived class"
+		sys.exit(1)	
+	def manageState(self):
+		if (self.plug.statemap_type == "ON_OFF_W_POWER_MONITOR"):
+			self.manageState_on_off_power_monitor()
+		elif (self.plug.statemap_type == "ON_OFF"):
+			self.manageState_on_off()	
+		else:
+			print "Error:  Unrecognized statemap type for this Machine Smartplug device:  " + self.plug.statemap_type
+			sys.exit()
 
+	def manageState_on_off_power_monitor(self):
+		print "FATAL:  Machine.manageState_on_off_power_monitor() called directly - should be called from derived class"
+		sys.exit(1) 
+
+	def manageState_on_off(self):
+		print "FATAL:  Machine.manageState_on_off() called directly - should be called from derived class"
+		sys.exit(1) 
+		
