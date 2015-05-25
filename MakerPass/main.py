@@ -113,8 +113,10 @@ def InitMachines(shared_mem):
 		## a list of child/owned machines
 		if (machine['parent_machine_id'] == MY_MASTER_CONTROLLER_ID ):
 	                
-			print "Creating machine ID: %s" % machine['description']
-                	new_machine = Machine.Machine(machine['machine_id'], machine['plug_id'])
+			print "Creating machine ID: %s" % machine['machine_description']
+                	new_machine = Machine.Machine(machine['machine_id'], machine['machine_description'], \
+			machine['plug_id'], machine['plug_description'], machine['ip_address'], machine['plug_type'])
+
 			machine_list.append(new_machine)
 
 	return machine_list

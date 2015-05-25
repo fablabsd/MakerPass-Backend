@@ -1,11 +1,12 @@
 #!/usr/bin/python
 
-import SmartPlug
+from MachineStates import MachineStates
+from SmartPlug import SmartPlug
 
 class SmartPlugWemoInsight(SmartPlug):
         
 	def __init__(self, plug_id, description, ip_address):
-		SmartPlug.__init__(plug_id, description, ip_address)
+		super(SmartPlugWemoInsight, self).__init__(plug_id, description, ip_address)
 		self.switched_on_threshold = 12345  ## need to address what this value should be
 
 
@@ -27,12 +28,12 @@ class SmartPlugWemoInsight(SmartPlug):
 			if (is_new_user == True): 
 				self.state = MachineStates.STATE_NEED_SWITCH_ON
 			
-			if (isSwitchedOn()) self.state = MachineStates.STATE_NEED_ENABLE
+			if (self.isSwitchedOn()): self.state = MachineStates.STATE_NEED_ENABLE
 	
 	
 		elif (self.state == MachineStates.STATE_NEED_SWITCH_ON):
 	
-			if (isSwitchedOn()):
+			if (self.isSwitchedOn()):
 				enableMachinePlug()
 				self.state = MachineStates.STATE_ALL_ON
 
@@ -46,21 +47,21 @@ class SmartPlugWemoInsight(SmartPlug):
 				enableMachinePlug()
 				self.state = MachineStates.STATE_ALL_ON
 			
-			if (!isSwitchedOn()) self.state = MachineStates.STATE_ALL_OFF
+			if (Not(self.isSwitchedOn())): self.state = MachineStates.STATE_ALL_OFF
 	
 		elif (self.state == MachineStates.STATE_ALL_ON):
 	
-			// note there is no "unswipe" option here - we do not
-			// automatically switch off a machine  - user must turn
-			// it off and then they will be automatically logged out
-			if (!isSwitchedOn()): 
+			## note there is no "unswipe" option here - we do not
+			## automatically switch off a machine  - user must turn
+			## it off and then they will be automatically logged out
+			if (Not(self.isSwitchedOn())): 
 				self.state = MachineStates.STATE_ALL_OFF
 				disableMachinePlug()
 	
 		else: 
 			print "StatePlugWemoInsight.manageState():  oops..invalid state encountered..."
 			print " must have been those darn cosmic rays.."
-			throw exception;
+			raise SystemExit
 	
 	
 

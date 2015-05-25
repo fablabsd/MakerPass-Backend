@@ -15,9 +15,12 @@ class Machine(object):
 		self.current_user = ""
 
 		if (plug_type == "WEMO_INSIGHT"):
-			self.plug = SmartPlugWemoInsight.SmartPlugWemoInsight(plug_id, plug_descr,plug_ip_addr)
+			self.plug = SmartPlugWemoInsight.SmartPlugWemoInsight(plug_id, plug_desc,plug_ip_addr)
 		elif (plug_type == "TEST_BRAND"):
-			self.plug = SmartPlugTestBrand.SmartPlugTestBrand(plug_id, plug_descr,plug_ip_addr)
+			self.plug = SmartPlugTestBrand.SmartPlugTestBrand(plug_id, plug_desc,plug_ip_addr)
+		else:
+			print "FATAL:  Invalid plug_type received: " + plug_type
+			raise SystemExit
 	
 	def manageState(self, scanned_user, selected_machine_id):
 
@@ -41,7 +44,7 @@ class Machine(object):
 
 		## if we just transitioned into the ALL_OFF state then record
 		## the time used for this user, and reset the user
-		if ((plug.state == MachineStates.STATE_ALL_OFF) && (prev_state != MachineStates.STATE_ALL_OFF)):
+		if ((self.plug.state == MachineStates.STATE_ALL_OFF) and (prev_state != MachineStates.STATE_ALL_OFF)):
 			## TBD:  record/subtract time used
 			self.current_user = ""
 
