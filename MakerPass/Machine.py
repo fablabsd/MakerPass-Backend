@@ -1,67 +1,47 @@
 #!/usr/bin/python
 
 import sys
-import SmartPlug
-import MakerPassDatabase
+import SmartPlugWemoInsight
+import SmartPlugTestBrand
 
-class MachineStates:
-        ## enumerated machine states
-        STATE_ALL_OFF = 0
-        STATE_NEED_ENABLE = 1
-        STATE_NEED_SWITCH_ON = 2
-        STATE_ALL_ON = 3
-
+from MachineStates import MachineStates
 	
 class Machine(object):
 
 
-	def __init__(self, machine_id, plug_id):
+	def __init__(self, machine_id, machine_desc, plug_id, plug_desc, plug_ip_addr, plug_type):
 		self.machine_id = machine_id
-		self.state = MachineStates.STATE_ALL_OFF
+		self.machine_description = machine_desc
 		self.current_user = ""
-		
-		## might need another database table for this one i.e. map machine and plug to threshold value 
-		self.switched_on_threshold = 10 ## ?? -- might need another database table for this i.e. 
 
-		## get smartplug info for this machine
-		rowdata = MakerPassDatabase.getSmartPlugData(plug_id)
-		if (len(rowdata) == 0): 
-			print "Error:  Failed to retrieve smartplug_rec for the given plug_id: " + plug_id
-			raise SystemExit
-
-		## should only be one...
-		self.plug = SmartPlug.SmartPlug(rowdata[0]['plug_id'], \
-		rowdata[0]['description'], rowdata[0]['ip_address'], \
-		rowdata[0]['statemap_type'])
-
+		if (plug_type == "WEMO_INSIGHT"):
+			self.plug = SmartPlugWemoInsight.SmartPlugWemoInsight(plug_id, plug_descr,plug_ip_addr)
+		elif (plug_type == "TEST_BRAND"):
+			self.plug = SmartPlugTestBrand.SmartPlugTestBrand(plug_id, plug_descr,plug_ip_addr)
 	
-	##  ----- METHODS ------------------------------------- 
-	def enableMachinePlug(self):
-		print "FATAL:  Machine.enableMachinePlug() called directly - should be called from derived class"
-		sys.exit(1)	
-	def disableMachinePlug(self):
-		print "FATAL:  Machine.disableMachinePlug() called directly - should be called from derived class"
-		sys.exit(1)	
-	def isMachinePlugEnabled(self):
-		print "FATAL:  Machine.isMachinePlugEnabled() called directly - should be called from derived class"
-		sys.exit(1)	
-	def isSwitchedOn(self):
-		print "FATAL:  Machine.isSwitchedOn() called directly - should be called from derived class"
-		sys.exit(1)	
-	def manageState(self):
-		if (self.plug.statemap_type == "ON_OFF_W_POWER_MONITOR"):
-			self.manageState_on_off_power_monitor()
-		elif (self.plug.statemap_type == "ON_OFF"):
-			self.manageState_on_off()	
-		else:
-			print "Error:  Unrecognized statemap type for this Machine Smartplug device:  " + self.plug.statemap_type
-			sys.exit()
+	def manageState(self, scanned_user, selected_machine_id):
 
-	def manageState_on_off_power_monitor(self):
-		print "FATAL:  Machine.manageState_on_off_power_monitor() called directly - should be called from derived class"
-		sys.exit(1) 
+		scan_detected = False
+		is_new_user = False
+		prev_state = self.plug.state
 
-	def manageState_on_off(self):
-		print "FATAL:  Machine.manageState_on_off() called directly - should be called from derived class"
-		sys.exit(1) 
-		
+		## only operate on scanned user if they scanned into this machine
+		if (selected_machine_id == self.machine_id):
+
+			## need to know if scan was detected so we can determine if
+			## this is a scan out or a new scanned user
+			if (scanned_user != ""): 
+				scan_detected = True
+				## determine if this is a new scanned user 
+				if (scanned_user != self.current_user):
+					self.current_user = scanned_user
+					is_new_user = True				
+					 
+		self.plug.manageState(scan_detected, is_new_user)
+
+		## if we just transitioned into the ALL_OFF state then record
+		## the time used for this user, and reset the user
+		if ((plug.state == MachineStates.STATE_ALL_OFF) && (prev_state != MachineStates.STATE_ALL_OFF)):
+			## TBD:  record/subtract time used
+			self.current_user = ""
+

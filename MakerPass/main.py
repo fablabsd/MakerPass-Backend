@@ -47,21 +47,49 @@ def main():
 	while (True):	
 
 		try:
+
+			scanned_user = ""
 	
 			## retrieve scan/swipe info if a scan has been made
 			scan_id, selected_machine_id = shared_mem.get_shared_mem_values()
-			#print scan_id, selected_machine_id
+
+			## handle a valid scan
 			if (scan_id != ""):
+
 				## first reset the shared mem, to minimize potential 
 				## for failed scans from other machines
 				shared_mem.set_shared_mem_values('','')
+
+				## TBD:  Check existence of user
+				##       and has alloted time
+				
+				## TBD:  set scanned_user = database.getuserfromscanid(scan_id)
+				## TBD:  database.setlastscan(scanned_user)
+				scanned_user = "chrisanderson"
+
+				## TBD:  if not valid id -- error
+				## TBD:  if no alloted time left for user -- error
+				## TBD:   potentially need to get machine_id from a mapping table of 
+				## scanner ids (specific to hardware, e.g. SSID) to machine_ids if we are not able
+				## to load machine_ids directly onto scanners
+
+				## display successful swipe and machine selected	
 				print scan_id
 				print selected_machine_id
 
+			## TBD:  don't forget to prevent same user from logging into multiple machines
+			## this function checks user=machine.user for all machines that do no match 
+			## selected_machine_id (and not counting blank users)
+			#if (isUserAlreadyUsingAnotherMachine()): 
+				#print "You can't do that you're already logged into another machine"
+				#continue
+
 			## Now manage each of the machine states
 			for machine in machine_list:
-				machine.manageState()
-
+			
+				## pass in scanned user (if any) and which machine was selected
+				## to main state handling routines for various machines/plugs
+				machine.manageState(scanned_user, selected_machine_id)
 
                 except (KeyboardInterrupt):
                         break
