@@ -18,10 +18,11 @@ class SmartPlugWemoInsight(SmartPlug):
         def isMachinePlugEnabled(self):
                 print " SmartPlugWemoInsight.isMachinePlugPlugEnabled() called "
         def isSwitchedOn(self):
-                print " SmartPlugWemoInsight.isSwitchedOn() called "
+		pass
+                #print " SmartPlugWemoInsight.isSwitchedOn() called "
 
         def manageState(self, scan_detected, is_new_user):
-                print "SmartPlugTestBrand.manageState() called"
+                #print "SmartPlugTestBrand.manageState() called"
 
 		if (self.state == MachineStates.STATE_ALL_OFF):
 	

@@ -4,7 +4,7 @@
 ##
 ## PLNU_IDCardSwipe.py -- Read a string from a rawHID device in /dev and print the ascii converted contents
 ##
-
+import sys
 
 ## define number of bytes to read into buffer - 
 ## Note:  This value is set low as we will loop through
@@ -35,7 +35,15 @@ def main(shared_mem, machine_id):
 	device_name = config_fd.read().rstrip()
 	config_fd.close()
 
+	## if device name not found, we have no mag stripe attached
+	## so just exit
+	if (device_name.rstrip() == ""):
+		print "No PLNU mag stripe found as STMMicroelectronics Keyboard"
+		sys.exit(0)
+
+	
 	## Open the device for reading 
+	print "Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe"
 	fd = open("/dev/" + device_name, "r+")
 	print "Device name: ", fd.name
 

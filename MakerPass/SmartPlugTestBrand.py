@@ -17,8 +17,10 @@ class SmartPlugTestBrand(SmartPlug):
         def isMachinePlugEnabled(self):
                 print " SmartPlugTestBrand.isMachinePlugPlugEnabled() called "
         def isSwitchedOn(self):
-                print " SmartPlugTestBrand.isSwitchedOn() called "
+		pass
+                #print " SmartPlugTestBrand.isSwitchedOn() called "
 
 	def manageState(self, scan_detected, is_new_user):
-		print "SmartPlugTestBrand.manageState() called"
+		pass
+		#print "SmartPlugTestBrand.manageState() called"
 
