@@ -25,10 +25,10 @@ rawdata = [];
 
 ## ------- main------------------------------------------------------
 
-def main(shared_mem, machine_id):
+def main(shared_mem, scanner_id):
   
 
-	MY_MACHINE_ID = machine_id
+	MY_SCANNER_ID = scanner_id
  
 	## first obtain which /dev device we will be reading from
 	config_fd = open("magstripe_scan_usb_port.config", "r+")
@@ -74,7 +74,7 @@ def main(shared_mem, machine_id):
 					str(keymap[rawdata[14]]) + str(keymap[rawdata[15]])
 					
 					## register complete scan by updating synchronized variables 	
-					shared_mem.set_shared_mem_values(outstring, MY_MACHINE_ID)
+					shared_mem.set_shared_mem_values(outstring, MY_SCANNER_ID)
 
 	
 		except (KeyboardInterrupt):

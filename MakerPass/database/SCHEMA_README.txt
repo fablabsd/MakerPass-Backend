@@ -52,3 +52,9 @@
 	<time_logged>
 
 </user_machine_allocations>
+
+// map a specific machine to a specific scanning device
+<machine_scanner_table>
+	<machine_id>
+	<scanner_id>
+</machine_scanner_table>

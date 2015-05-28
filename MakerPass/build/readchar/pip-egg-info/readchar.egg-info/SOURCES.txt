@@ -1,0 +1,11 @@
+setup.cfg
+pip-egg-info/readchar.egg-info/PKG-INFO
+pip-egg-info/readchar.egg-info/SOURCES.txt
+pip-egg-info/readchar.egg-info/dependency_links.txt
+pip-egg-info/readchar.egg-info/not-zip-safe
+pip-egg-info/readchar.egg-info/top_level.txt
+readchar/__init__.py
+readchar/key.py
+readchar/readchar.py
+readchar/readchar_linux.py
+readchar/readchar_windows.py

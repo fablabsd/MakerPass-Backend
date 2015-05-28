@@ -5,6 +5,7 @@ delete from machine_rec;
 delete from user_rec;
 delete from user_machine_allocation_rec;
 delete from smartplug_rec;
+delete from machine_scanner_table;
 
 
 .mode csv
@@ -12,4 +13,5 @@ delete from smartplug_rec;
 .import smartplug_rec.csv smartplug_rec
 .import user_rec.csv user_rec
 .import user_machine_allocation_rec.csv user_machine_allocation_rec
+.import machine_scanner_table.csv machine_scanner_table
 

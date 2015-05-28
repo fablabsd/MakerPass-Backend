@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+from getkey import getkey
+from MachineStates import MachineStates
 from SmartPlug import SmartPlug
 
 class SmartPlugTestBrand(SmartPlug):
@@ -17,10 +19,96 @@ class SmartPlugTestBrand(SmartPlug):
         def isMachinePlugEnabled(self):
                 print " SmartPlugTestBrand.isMachinePlugPlugEnabled() called "
         def isSwitchedOn(self):
-		pass
-                #print " SmartPlugTestBrand.isSwitchedOn() called "
+
+		try:
+
+	                fd = open("switch_machine_on","r+")
+                	if (fd != None):
+                        	fd.close()
+				return True
+
+		except IOError:
+			pass
+
+		return False
 
 	def manageState(self, scan_detected, is_new_user):
-		pass
-		#print "SmartPlugTestBrand.manageState() called"
+
+		if (self.state == MachineStates.STATE_ALL_OFF):
+	
+			if (is_new_user == True): 
+				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+				print "Transition to STATE_NEED_SWITCH_ON\n"
+				self.state = MachineStates.STATE_NEED_SWITCH_ON
+			
+			elif (self.isSwitchedOn()): 
+				self.state = MachineStates.STATE_NEED_ENABLE
+				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+				print "Transition to STATE_NEED_ENABLE\n"
+	
+	
+		elif (self.state == MachineStates.STATE_NEED_SWITCH_ON):
+	
+			if (self.isSwitchedOn()):
+				self.enableMachinePlug()
+				self.state = MachineStates.STATE_ALL_ON
+				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+				print "Transition to STATE_ALL_ON\n"
+
+			## detect an "unswipe"
+			elif (scan_detected == True): 
+				if (is_new_user == False): 
+					self.state = MachineStates.STATE_ALL_OFF;
+					print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+					print "Transition to STATE_ALL_OFF\n"
+
+		elif (self.state == MachineStates.STATE_NEED_ENABLE):	
+	
+			if ( is_new_user == True ): 
+				self.enableMachinePlug()
+				self.state = MachineStates.STATE_ALL_ON
+				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+				print "Transition to STATE_ALL_ON\n"
+			
+			elif (not(self.isSwitchedOn())): 
+				self.state = MachineStates.STATE_ALL_OFF
+				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+				print "Transition to STATE_ALL_OFF\n"
+		
+
+		elif (self.state == MachineStates.STATE_ALL_ON):
+	
+			## note there is no "unswipe" option here - we do not
+			## automatically switch off a machine  - user must turn
+			## it off and then they will be automatically logged out
+			if (not(self.isSwitchedOn())): 
+				self.state = MachineStates.STATE_ALL_OFF
+				self.disableMachinePlug()
+				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+				print "Transition to STATE_ALL_OFF\n"
+
+		else: 
+			print "StatePlugWemoInsight.manageState():  oops..invalid state encountered..."
+			print " must have been those darn cosmic rays.."
+			raise SystemExit
+	
+
+import termios, sys, os
+#import termios, TERMIOS, sys, os
+TERMIOS = termios
+def getkey():
+        fd = sys.stdin.fileno()
+        old = termios.tcgetattr(fd)
+        new = termios.tcgetattr(fd)
+        new[3] = new[3] & ~TERMIOS.ICANON & ~TERMIOS.ECHO
+        new[6][TERMIOS.VMIN] = 1
+        new[6][TERMIOS.VTIME] = 0
+        termios.tcsetattr(fd, TERMIOS.TCSANOW, new)
+        c = None
+        try:
+                c = os.read(fd, 1)
+        finally:
+                termios.tcsetattr(fd, TERMIOS.TCSAFLUSH, old)
+        return c
+	
 
