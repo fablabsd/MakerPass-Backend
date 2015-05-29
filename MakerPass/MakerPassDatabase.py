@@ -156,6 +156,42 @@ def updateUserScanRecords(username, machine_id):
                 if con: con.close()
 
 ## ----------------------------------------------------------
+## ----------------------------------------------------------
+def updateUserScanRecords(username, machine_id):
+
+        con = None
+
+        try:
+                con = lite.connect('database/makerpass_database.db')
+
+                con.row_factory = lite.Row
+                cur = con.cursor()
+
+                # first insert a scan record
+                sql = "insert into user_machine_scan_rec (username, machine_id, scan_timestamp) values ('" + username + "', '" + machine_id + "', (DATETIME('now')));"
+
+                cur.execute(sql)
+
+                ## update the machine-specific last scan
+                sql = "update user_machine_allocation_rec set last_scan = (DATETIME('now')) where username = '" + username + "' and machine_id = '" + machine_id + "';"
+                cur.execute(sql)
+
+                ## update the user-specific last scan
+                sql = "update user_rec set last_scan = (DATETIME('now')) where username = '" + username + "';"
+                cur.execute(sql)
+
+                con.commit()
+                return None
+
+        except lite.Error, e:
+                print "Error %s:" % e.args[0]
+                sys.exit(1)
+
+        finally:
+                if con: con.close()
+
+## ----------------------------------------------------------
+
 
 if __name__ == '__main__': 
 

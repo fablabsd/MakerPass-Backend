@@ -37,7 +37,11 @@ class Machine(object):
 				scan_detected = True
 				## determine if this is a new scanned user 
 				if (scanned_user != self.current_user):
+					
+					## record time used for the current user before switching users
+					MakerPassDatabase.recordTimeUsed(self.current_user, machine_id)
 					self.current_user = scanned_user
+					MakerPassDatabase...scan new person
 					is_new_user = True				
 					 
 		self.plug.manageState(scan_detected, is_new_user)
@@ -46,5 +50,6 @@ class Machine(object):
 		## the time used for this user, and reset the user
 		if ((self.plug.state == MachineStates.STATE_ALL_OFF) and (prev_state != MachineStates.STATE_ALL_OFF)):
 			## TBD:  record/subtract time used
+			MakerPassDatabase.recordTimeUsed(self.current_user, machine_id)
 			self.current_user = ""
 

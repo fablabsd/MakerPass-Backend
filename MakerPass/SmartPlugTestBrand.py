@@ -55,12 +55,15 @@ class SmartPlugTestBrand(SmartPlug):
 				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
 				print "Transition to STATE_ALL_ON\n"
 
-			## detect an "unswipe"
+			## detect new user
 			elif (scan_detected == True): 
+				
+				## detect an "unswipe"
 				if (is_new_user == False): 
 					self.state = MachineStates.STATE_ALL_OFF;
 					print "plug_id:  " + self.plug_id + " - " + self.ip_address 
 					print "Transition to STATE_ALL_OFF\n"
+
 
 		elif (self.state == MachineStates.STATE_NEED_ENABLE):	
 	
