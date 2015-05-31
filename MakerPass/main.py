@@ -56,13 +56,17 @@ def main():
 			## retrieve scan/swipe info if a scan has been made
 			scan_id, scanner_id = shared_mem.get_shared_mem_values()
 
+
 		
 			## handle a valid scan
 			if (scan_id != ""):
+				
+				print "scan_id = " + scan_id
 
 				## first reset the shared mem, to minimize potential 
 				## for failed scans from other machines
 				shared_mem.set_shared_mem_values('','')
+				scan_id2, scanner_id2 = shared_mem.get_shared_mem_values()	
 				
 				##  get machine_id from a mapping table of scanner IDs 
 				## i.e. map scanning device to machine being scanned to
@@ -83,7 +87,7 @@ def main():
 				## found user
 				scanned_username = userinfo['username']
 			
-				print "Found User ID: " + str(scan_id)
+				print "Scan Detected for User ID: " + str(scan_id)
 				print "Scanner ID: " + scanner_id
 				print "Username = " + scanned_username
 				print "Firstname = " + userinfo['firstname']
@@ -93,20 +97,34 @@ def main():
 				print "Total Time Logged = " + str(userinfo['total_time_logged'])
 				print ""
 
-				## If no user_machine_allocation_rec (i.e. permission to the given machine) -- error
+				## If no user_machine_allocation_rec (i.e. permission 
+				## to the given machine) -- error
 				usermachineinfo = MakerPassDatabase.getUserMachineInfo( \
 						scanned_username, selected_machine_id)
 
 				if (usermachineinfo == None):
 					print "The given user (" + scanned_username + " )" 
 					print "has no permission to the given machine (" + selected_machine_id + ")"
+					print "Please check user_machine_allocation_rec to ensure user"
+					print "is registered for time on this machine" 
 					continue
 				
-				## If no alloted time left for user -- error
+				## If no alloted time left for user (total from user_rec) -- error
+				if (userinfo['total_time_logged'] >= userinfo['total_time_allocated']):
+					print "The given user (%s)" % scanned_username
+					print " has exceeded the total alloted to them"
+					print " for all machines.  Please ensure user record is up to date"
+					continue
+			
+				
+                                print "Time Allocated for " + selected_machine_id + " = " + str(usermachineinfo['time_allocated'])
+                                print "Time Logged for " + selected_machine_id + " = " + str(usermachineinfo['time_logged'])
+
+				## If no alloted time left for user on THIS machine 
+				## (from user_machine_allocation_rec) -- error
 				if (usermachineinfo['time_logged'] >= usermachineinfo['time_allocated']):
-					print """The given user (%s)
-						 has no time left to the scanned machine (%s)
-						""" % (scanned_username, selected_machine_id)
+					print "The given user (%s)" % scanned_username
+					print " has no more time left on the scanned machine (%s)" % selected_machine_id
 					continue
 			
 				## Prevent same user from logging into multiple machines
@@ -117,12 +135,8 @@ def main():
 						
 
 				## display successful swipe and machine selected	
-				print "User Successfully scanned for machine:  " + selected_machine_id
+				print "User is authorized for machine:  " + selected_machine_id
 
-				## Update last scan time in user_rec and user_machine_allocation_rec (for specific machine)
-				## and register a scan in user_scan_rec
-				print "Updating user scan records"
-				MakerPassDatabase.updateUserScanRecords(scanned_username, selected_machine_id)
 
 
 			## Now manage each of the machine states

@@ -16,11 +16,11 @@ MAX_BUF_SIZE = 10
 STOP_BYTE = 88
 
 ## This is a mapping of the input codes to numerals
-keymap = {39: 0, 30 : 1, 31 : 2,32 : 3,33 : 4,34 : 5,35 : 6,36 : 7,37 : 8,38 : 9}; 
+keymap = {39: 0, 30 : 1, 31 : 2,32 : 3,33 : 4,34 : 5,35 : 6,36 : 7,37 : 8,38 : 9}
 
 ## holds the raw input values, converted from ascii -- we will
 ## only use the values from this list that are valuable data
-rawdata = [];
+rawdata = []
 
 
 ## ------- main------------------------------------------------------
@@ -52,7 +52,7 @@ def main(shared_mem, scanner_id):
 		try:
 
 			## Read from device 
-			strbuf = fd.read(MAX_BUF_SIZE);
+			strbuf = fd.read(MAX_BUF_SIZE)
 
 			## Loop through each character, and if it's > 0 
 			## (i.e not noise) save it's int value to an ID string
@@ -75,6 +75,9 @@ def main(shared_mem, scanner_id):
 					
 					## register complete scan by updating synchronized variables 	
 					shared_mem.set_shared_mem_values(outstring, MY_SCANNER_ID)
+					
+					## clear the raw data for another scan
+					del rawdata[:]
 
 	
 		except (KeyboardInterrupt):

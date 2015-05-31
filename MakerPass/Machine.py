@@ -3,6 +3,7 @@
 import sys
 import SmartPlugWemoInsight
 import SmartPlugTestBrand
+import MakerPassDatabase
 
 from MachineStates import MachineStates
 	
@@ -27,6 +28,8 @@ class Machine(object):
 		scan_detected = False
 		is_new_user = False
 		prev_state = self.plug.state
+		logged_out_user = ""
+		need_record_time_used = False
 
 		## only operate on scanned user if they scanned into this machine
 		if (selected_machine_id == self.machine_id):
@@ -34,22 +37,51 @@ class Machine(object):
 			## need to know if scan was detected so we can determine if
 			## this is a scan out or a new scanned user
 			if (scanned_user != ""): 
+
 				scan_detected = True
-				## determine if this is a new scanned user 
+
+				## determine if this is a new scanned user -- this empowers scan-outs since
+				## a scan-out will involve a scan_detected, but no new user 
 				if (scanned_user != self.current_user):
 					
-					## record time used for the current user before switching users
-					MakerPassDatabase.recordTimeUsed(self.current_user, machine_id)
-					self.current_user = scanned_user
-					MakerPassDatabase...scan new person
 					is_new_user = True				
-					 
+					
+					## set to record logged time of the user being logged out if applicable i.e.
+					## this is for the case where we are replacing the current user with another
+					## while the machine is on
+					if (self.current_user != ""):
+						need_record_time_used = True
+						logged_out_user = self.current_user
+
+	                                ## Update last scan time in user_rec and user_machine_allocation_rec
+                                	## and register a scan in user_scan_rec
+                                	print "Registering scan in for user: " + scanned_user
+                                	MakerPassDatabase.updateUserScanRecords(scanned_user, selected_machine_id)
+
+					## set the current user
+					print "Setting current user:"
+					print "User = " + scanned_user
+					print "Machine = " + selected_machine_id
+					self.current_user = scanned_user
+					
+		## now enter main state management for the plug to determine
+		## if it should be enabled or not 
 		self.plug.manageState(scan_detected, is_new_user)
 
-		## if we just transitioned into the ALL_OFF state then record
-		## the time used for this user, and reset the user
-		if ((self.plug.state == MachineStates.STATE_ALL_OFF) and (prev_state != MachineStates.STATE_ALL_OFF)):
-			## TBD:  record/subtract time used
-			MakerPassDatabase.recordTimeUsed(self.current_user, machine_id)
-			self.current_user = ""
+		## if we just transitioned to all off from all on then indicate need to record time used from prev user
+		if ((self.plug.state == MachineStates.STATE_ALL_OFF) and (prev_state == MachineStates.STATE_ALL_ON)):
+			need_record_time_used = True
+                        logged_out_user = self.current_user
 
+		## if the current state is ALL_OFF, and the user is set, then we just transitioned to ALL_OFF
+		## so reset the user 
+		if ((self.plug.state == MachineStates.STATE_ALL_OFF) and (self.current_user != "")):
+                        self.current_user = ""
+	
+		## set time_logged in database for the previous user if applicable 	
+		if (need_record_time_used == True):
+			##  record/subtract time used
+                        print "Recording time used for user:"
+                        print "User = " + logged_out_user
+                        print "Machine = " + self.machine_description
+                        MakerPassDatabase.recordTimeUsed(logged_out_user, self.machine_id)

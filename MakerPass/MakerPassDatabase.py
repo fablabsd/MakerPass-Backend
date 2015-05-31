@@ -119,7 +119,6 @@ def getUserMachineInfo(username, machine_id):
         finally:
                 if con: con.close()
 
-## ----------------------------------------------------------
 
 ## ----------------------------------------------------------
 def updateUserScanRecords(username, machine_id):
@@ -156,8 +155,7 @@ def updateUserScanRecords(username, machine_id):
                 if con: con.close()
 
 ## ----------------------------------------------------------
-## ----------------------------------------------------------
-def updateUserScanRecords(username, machine_id):
+def recordTimeUsed(username, machine_id):
 
         con = None
 
@@ -167,17 +165,14 @@ def updateUserScanRecords(username, machine_id):
                 con.row_factory = lite.Row
                 cur = con.cursor()
 
-                # first insert a scan record
-                sql = "insert into user_machine_scan_rec (username, machine_id, scan_timestamp) values ('" + username + "', '" + machine_id + "', (DATETIME('now')));"
-
+                ## update user_machine_allocation_rec by setting time_logged to now minus last scan time
+		## julinaday() is used, but note this still has time info after decimal point so we just
+		## cast to minutes by multiplying by number of minutes in a day 
+                sql = "update user_machine_allocation_rec set time_logged= cast((time_logged + (julianday(datetime('now')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "' and machine_id='" + machine_id + "';"
                 cur.execute(sql)
 
-                ## update the machine-specific last scan
-                sql = "update user_machine_allocation_rec set last_scan = (DATETIME('now')) where username = '" + username + "' and machine_id = '" + machine_id + "';"
-                cur.execute(sql)
-
-                ## update the user-specific last scan
-                sql = "update user_rec set last_scan = (DATETIME('now')) where username = '" + username + "';"
+                ## update the user-specific time_logged - same as above but for user_rec
+                sql = "update user_rec set total_time_logged= cast((total_time_logged + (julianday(datetime('now')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "';"
                 cur.execute(sql)
 
                 con.commit()
