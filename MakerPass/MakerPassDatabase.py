@@ -3,6 +3,7 @@
 import sqlite3 as lite
 import sys
 
+database = 'database/makerpass_database.db'
 
 ## return all the values as row data from machine_rec
 def getMachineRecords():
@@ -10,7 +11,7 @@ def getMachineRecords():
 	con = None
 
 	try:
-    		con = lite.connect('database/makerpass_database.db')
+    		con = lite.connect(database)
    
     		con.row_factory = lite.Row 
     		cur = con.cursor()    
@@ -33,7 +34,7 @@ def getUserInfo(scan_id):
         con = None
 
         try:
-                con = lite.connect('database/makerpass_database.db')
+                con = lite.connect(database)
 
                 con.row_factory = lite.Row
                 cur = con.cursor()
@@ -63,7 +64,7 @@ def getMachineId(scanner_id):
         con = None
 
         try:
-                con = lite.connect('database/makerpass_database.db')
+                con = lite.connect(database)
 
                 con.row_factory = lite.Row
                 cur = con.cursor()
@@ -93,7 +94,7 @@ def getUserMachineInfo(username, machine_id):
         con = None
 
         try:
-                con = lite.connect('database/makerpass_database.db')
+                con = lite.connect(database)
 
                 con.row_factory = lite.Row
                 cur = con.cursor()
@@ -126,7 +127,7 @@ def updateUserScanRecords(username, machine_id):
         con = None
 
         try:
-                con = lite.connect('database/makerpass_database.db')
+                con = lite.connect(database)
 
                 con.row_factory = lite.Row
                 cur = con.cursor()
@@ -160,7 +161,7 @@ def recordTimeUsed(username, machine_id):
         con = None
 
         try:
-                con = lite.connect('database/makerpass_database.db')
+                con = lite.connect(database)
 
                 con.row_factory = lite.Row
                 cur = con.cursor()
@@ -184,6 +185,40 @@ def recordTimeUsed(username, machine_id):
 
         finally:
                 if con: con.close()
+
+## ----------------------------------------------------------
+
+def markMachineEffectiveUseTime(username, machine_id):
+
+
+
+        try:
+                con = lite.connect(database)
+
+                con.row_factory = lite.Row
+                cur = con.cursor()
+
+
+                ## update the machine effective_use_time -- this is the time
+		## the machine was turned off (if supported, otherwise this will be the same as 
+		## the scan time
+                sql = "update user_machine_allocation_rec set last_scan = (DATETIME('now')) where username = '" + username + "' and machine_id = '" + machine_id + "';"
+                cur.execute(sql)
+
+                ## update the user-specific last scan
+                sql = "update user_rec set last_scan = (DATETIME('now')) where username = '" + username + "';"
+                cur.execute(sql)
+
+                con.commit()
+                return None
+
+        except lite.Error, e:
+                print "Error %s:" % e.args[0]
+                sys.exit(1)
+
+        finally:
+                if con: con.close()
+
 
 ## ----------------------------------------------------------
 

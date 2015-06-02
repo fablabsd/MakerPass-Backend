@@ -2,12 +2,24 @@
 
 from MachineStates import MachineStates
 from SmartPlug import SmartPlug
+from datetime import datetime
+
 
 class SmartPlugTestBrand(SmartPlug):
         
 	def __init__(self, plug_id, description, ip_address):
 		super(SmartPlugTestBrand, self).__init__(plug_id, description, ip_address)
-		self.switched_on_threshold = 12345  ## need to address what this value should be
+
+		## we delay calls to isSwitchedOn() to reduce network overhead -- these
+		## vars help us perform timeouts 
+		self.switched_on_timeout_start = datetime.now()
+	
+		## time delay before calling isSwitchedOn() functionality again
+		self.switched_on_delay_time = 10
+
+		## store continuous state of plug switch as we will not always
+		## recalculate the value on each call of isSwitchedOn()
+		self.switch_state = False
 
 
         ##  ----- METHODS -------------------------------------
@@ -17,19 +29,37 @@ class SmartPlugTestBrand(SmartPlug):
                 print " SmartPlugTestBrand.disableMachinePlug() called "
         def isMachinePlugEnabled(self):
                 print " SmartPlugTestBrand.isMachinePlugPlugEnabled() called "
+
+	def checkSwitchState(self):
+
+                try:
+
+                        fd = open("switch_machine_on","r+")
+                        if (fd != None):
+                                fd.close()
+                                return True
+
+                except IOError:
+                        pass
+
+                return False
+		
         def isSwitchedOn(self):
 
-		try:
 
-	                fd = open("switch_machine_on","r+")
-                	if (fd != None):
-                        	fd.close()
-				return True
+		## calculate how long since last call 
+        	switch_on_timeout_end = datetime.now()
+        	timediff_millis = (switch_on_timeout_end - self.switched_on_timeout_start).total_seconds()
+		#print str(timediff_millis)
 
-		except IOError:
-			pass
-
-		return False
+		## wait at least switch_on_delay_time seconds before making actual check again
+        	if ( timediff_millis > self.switched_on_delay_time ):
+                	print "Making isSwitcheaOn() check after delay:  %.2gs" % timediff_millis
+			self.switch_state = self.checkSwitchState()
+			print "New switch state = " + str(self.switch_state)
+                	self.switched_on_timeout_start = datetime.now()
+		
+		return self.switch_state
 
 	def manageState(self, scan_detected, is_new_user):
 

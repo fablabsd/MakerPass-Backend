@@ -49,7 +49,7 @@ class Machine(object):
 					## set to record logged time of the user being logged out if applicable i.e.
 					## this is for the case where we are replacing the current user with another
 					## while the machine is on
-					if (self.current_user != ""):
+					if (self.plug.state == MachineStates.STATE_ALL_ON):
 						need_record_time_used = True
 						logged_out_user = self.current_user
 
@@ -67,6 +67,11 @@ class Machine(object):
 		## now enter main state management for the plug to determine
 		## if it should be enabled or not 
 		self.plug.manageState(scan_detected, is_new_user)
+
+		## mark machine effective use time - this is the time the machine has actually been switched on
+		## we do this so the user is not charged for time between they scanned and the machine was turned on
+		if ((self.plug.state == MachineStates.STATE_ALL_ON) and (prev_state != MachineStates.STATE_ALL_ON)):
+			MakerPassDatabase.markMachineEffectiveUseTime(self.current_user, self.machine_id)
 
 		## if we just transitioned to all off from all on then indicate need to record time used from prev user
 		if ((self.plug.state == MachineStates.STATE_ALL_OFF) and (prev_state == MachineStates.STATE_ALL_ON)):

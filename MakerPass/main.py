@@ -8,6 +8,7 @@ import Machine
 import PLNU_IDCardSwipe
 import MakerPassDatabase
 
+from datetime import datetime
 from multiprocessing import Process
 
 
@@ -45,7 +46,23 @@ def main():
 	
 	## main loop
 	print "Entering main processing loop..."
+
+	
+	loop_time_start = datetime.now()
+
 	while (True):	
+
+                ## control loop timing to save CPU from blowing up
+                loop_time_end = datetime.now()
+        	timediff_millis = (loop_time_end - loop_time_start).total_seconds()
+
+		#print "sleeping - timediff = " + str(timediff_millis)
+
+		## quantize loop timing to about 30ms or so
+                if ( timediff_millis <  0.030 ):
+			time.sleep(0.030 - timediff_millis)
+	
+		loop_time_start = datetime.now()
 
 		try:
 			
