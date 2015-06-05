@@ -1,6 +1,7 @@
 import os
 import json
 import gevent
+import MakerPassWebClient
 from flask import Flask, request, Response
 from flask import render_template, send_from_directory, url_for
 from flask import send_file, make_response, abort
@@ -139,6 +140,11 @@ class SocketNamespace(BaseNamespace):
     def __del__(self):
         statechange.disconnect(dispatch_uid=id(self))
 
+
+# Now for the WebSocket api
+@app.route("/chris")
+def chris(**kwargs):
+    return MakerPassWebClient.headsUpDisplay()
 
 # Now for the WebSocket api
 @app.route("/socket.io/<path:path>")

@@ -2,7 +2,7 @@
 
 
 ## test a service testing site 
-python webclient_json.py http://jsonplaceholder.typicode.com/posts/1
+#python webclient_json.py http://jsonplaceholder.typicode.com/posts/1
 
 ## test xml service
 #python webclient_xml.py http://www.thomas-bayer.com/sqlrest/
@@ -14,4 +14,4 @@ python webclient_json.py http://jsonplaceholder.typicode.com/posts/1
 
 
 ## test environment call to ouimeaux
-#python webclient_json.py http://localhost:5000/api/environment
+python webclient_json.py http://localhost:5000/api/environment
