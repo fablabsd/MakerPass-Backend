@@ -20,7 +20,7 @@ if __name__ == "__main__":
         #while True:
             # http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python
             #switchRND = env.get_switch( random.choice( env.list_switches() ) )
-        switchRND = env.get_switch( "WeMo Insight" )
+        switchRND = env.get_switch( "WEMO CNC ROOM" )
         print switchRND
 	power = switchRND.current_power
 	print "turning off"

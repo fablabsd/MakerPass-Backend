@@ -7,6 +7,7 @@
 ## Set ID for this master/cluster controller - this should match whichever 
 ## machine ID in the database you intend to control the indicated machines
 
-sudo env MY_MASTER_CONTROLLER_ID=MASTER_CONTROLLER python ./main.py
+#sudo env MY_MASTER_CONTROLLER_ID=MASTER_CONTROLLER python ./main.py
+sudo python ./main.py
 
 

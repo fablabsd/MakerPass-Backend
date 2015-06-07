@@ -6,6 +6,7 @@ import time
 import SharedMem
 import Machine
 import PLNU_IDCardSwipe
+import PipeSwipe
 import MakerPassDatabase
 
 from datetime import datetime
@@ -15,7 +16,8 @@ from multiprocessing import Process
 ## -------global variables---------------------------------
 
 ## set controller ID for this controller
-MY_MASTER_CONTROLLER_ID = os.environ["MY_MASTER_CONTROLLER_ID"]
+#MY_MASTER_CONTROLLER_ID = os.environ["MY_MASTER_CONTROLLER_ID"]
+MY_MASTER_CONTROLLER_ID = ""
 
 
 ## --------------------------------------------------------
@@ -28,6 +30,14 @@ def main():
 	print "Creating Shared mem" 
 	shared_mem = SharedMem.Mem()
 	shared_mem.set_shared_mem_values('','')
+
+        ## get which cluster controller this is from config
+        config_fd = open("cluster_controller.config", "r")
+        global MY_MASTER_CONTROLLER_ID
+        MY_MASTER_CONTROLLER_ID = config_fd.read().rstrip()
+        config_fd.close()
+
+	print "Cluster Controller for this machine = " + MY_MASTER_CONTROLLER_ID
 
 	## Create/Init the various machines
 	print "Instantiating Machine Objects"
@@ -43,6 +53,8 @@ def main():
 	## the shared mem to populate a scan  
         print "Spawning PLNU magstripe handler process";
         Process(target=PLNU_IDCardSwipe.main, args=(shared_mem,"PLNU_MAG_SWIPE")).start()
+        print "Spawning Pipe scan handler process";
+        Process(target=PipeSwipe.main, args=(shared_mem, "null")).start()
 	
 	## main loop
 	print "Entering main processing loop..."
@@ -198,14 +210,16 @@ def InitMachines(shared_mem):
 		## ignore this machine definition if I'm not the master/owner
 		## i.e. support clustering of master/owner controllers paired to 
 		## a list of child/owned machines
+
 		if (machine['parent_machine_id'] == MY_MASTER_CONTROLLER_ID ):
 	                
 			print "Creating machine ID: %s\nPaired With Plug: %s\nPlug IP Address %s\n" % \
 				(machine['machine_description'],machine['plug_description'],machine['ip_address'])
                 	new_machine = Machine.Machine(machine['machine_id'], machine['machine_description'], \
-			machine['plug_id'], machine['plug_description'], machine['ip_address'], machine['plug_type'])
+			machine['plug_id'], machine['plug_description'], machine['ip_address'], machine['plug_type'], machine['plug_name'])
 
 			machine_list.append(new_machine)
+			MakerPassDatabase.clearMachineUser(new_machine.machine_id)
 
 	return machine_list
 

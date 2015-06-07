@@ -225,7 +225,7 @@ def printMachineRecs():
 	rows = getMachineRecords()
 	response = ""
         for row in rows:
-		response += row['machine_id'] + " " +  row['parent_machine_id'] + "<br>\n"
+		response += row['machine_id'] + " " +  row['parent_machine_id'] + " " + row['current_user'] + "<br>\n"
 
 	return response
 

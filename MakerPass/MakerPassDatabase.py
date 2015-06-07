@@ -145,6 +145,10 @@ def updateUserScanRecords(username, machine_id):
 		sql = "update user_rec set last_scan = (DATETIME('now')) where username = '" + username + "';"
 		cur.execute(sql)
 
+		## show current user on the machine
+		sql = "update machine_rec set current_user = '" + username + "' where machine_id = '" + machine_id + "';"
+		cur.execute(sql)
+
 		con.commit()
                 return None
 
@@ -156,7 +160,7 @@ def updateUserScanRecords(username, machine_id):
                 if con: con.close()
 
 ## ----------------------------------------------------------
-def recordTimeUsed(username, machine_id):
+def recordTimeUsed(username, machine_id, clear_current_user):
 
         con = None
 
@@ -175,6 +179,39 @@ def recordTimeUsed(username, machine_id):
                 ## update the user-specific time_logged - same as above but for user_rec
                 sql = "update user_rec set total_time_logged= cast((total_time_logged + (julianday(datetime('now')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "';"
                 cur.execute(sql)
+
+
+		con.commit()
+
+                ## clear out the current user from machine_rec if indicated (doing this when transitioning to ALL_OFF state)
+		if (clear_current_user == True):
+			clearMachineUser(machine_id)                	
+
+
+                return None
+
+        except lite.Error, e:
+                print "Error %s:" % e.args[0]
+                sys.exit(1)
+
+        finally:
+                if con: con.close()
+
+## ----------------------------------------------------------
+def clearMachineUser(machine_id):
+
+        con = None
+
+        try:
+                con = lite.connect(database)
+
+                con.row_factory = lite.Row
+                cur = con.cursor()
+
+                ## clear out the current user from machine_rec if indicated (doing this when transitioning to ALL_OFF state)
+                sql = "update machine_rec set current_user = '' where machine_id='" + machine_id + "';"
+                cur.execute(sql)
+
 
                 con.commit()
                 return None

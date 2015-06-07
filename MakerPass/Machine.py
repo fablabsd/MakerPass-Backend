@@ -10,15 +10,17 @@ from MachineStates import MachineStates
 class Machine(object):
 
 
-	def __init__(self, machine_id, machine_desc, plug_id, plug_desc, plug_ip_addr, plug_type):
+	def __init__(self, machine_id, machine_desc, plug_id, plug_desc, plug_ip_addr, plug_type, plug_name):
 		self.machine_id = machine_id
 		self.machine_description = machine_desc
 		self.current_user = ""
 
 		if (plug_type == "WEMO_INSIGHT"):
-			self.plug = SmartPlugWemoInsight.SmartPlugWemoInsight(plug_id, plug_desc,plug_ip_addr)
+			print "Instatiating a WEMO_INSIGHT machine\n"
+			self.plug = SmartPlugWemoInsight.SmartPlugWemoInsight(plug_id, plug_desc,plug_ip_addr, plug_name)
 		elif (plug_type == "TEST_BRAND"):
-			self.plug = SmartPlugTestBrand.SmartPlugTestBrand(plug_id, plug_desc,plug_ip_addr)
+			print "Instantiating a TEST_BRAND machine\n"
+			self.plug = SmartPlugTestBrand.SmartPlugTestBrand(plug_id, plug_desc,plug_ip_addr,plug_name)
 		else:
 			print "FATAL:  Invalid plug_type received: " + plug_type
 			raise SystemExit
@@ -30,6 +32,7 @@ class Machine(object):
 		prev_state = self.plug.state
 		logged_out_user = ""
 		need_record_time_used = False
+		clear_current_user_from_db = False
 
 		## only operate on scanned user if they scanned into this machine
 		if (selected_machine_id == self.machine_id):
@@ -69,7 +72,7 @@ class Machine(object):
 		self.plug.manageState(scan_detected, is_new_user)
 
 		## mark machine effective use time - this is the time the machine has actually been switched on
-		## we do this so the user is not charged for time between they scanned and the machine was turned on
+		## we do this so the user is not charged for time between when they scanned and the machine was turned on
 		if ((self.plug.state == MachineStates.STATE_ALL_ON) and (prev_state != MachineStates.STATE_ALL_ON)):
 			MakerPassDatabase.markMachineEffectiveUseTime(self.current_user, self.machine_id)
 
@@ -77,11 +80,17 @@ class Machine(object):
 		if ((self.plug.state == MachineStates.STATE_ALL_OFF) and (prev_state == MachineStates.STATE_ALL_ON)):
 			need_record_time_used = True
                         logged_out_user = self.current_user
+			clear_current_user_from_db = True
 
 		## if the current state is ALL_OFF, and the user is set, then we just transitioned to ALL_OFF
 		## so reset the user 
 		if ((self.plug.state == MachineStates.STATE_ALL_OFF) and (self.current_user != "")):
                         self.current_user = ""
+			clear_current_user_from_db = True
+
+		## clear the current user from the machine in the database
+		if (clear_current_user_from_db == True):
+			MakerPassDatabase.clearMachineUser(self.machine_id)
 	
 		## set time_logged in database for the previous user if applicable 	
 		if (need_record_time_used == True):
@@ -89,4 +98,7 @@ class Machine(object):
                         print "Recording time used for user:"
                         print "User = " + logged_out_user
                         print "Machine = " + self.machine_description
-                        MakerPassDatabase.recordTimeUsed(logged_out_user, self.machine_id)
+			if (self.current_user == ""):
+				clear_current_user_from_db = True
+				
+                        MakerPassDatabase.recordTimeUsed(logged_out_user, self.machine_id, clear_current_user_from_db)

@@ -2,12 +2,24 @@
 
 from MachineStates import MachineStates
 from SmartPlug import SmartPlug
+from datetime import datetime
+
 
 class SmartPlugWemoInsight(SmartPlug):
         
-	def __init__(self, plug_id, description, ip_address):
-		super(SmartPlugWemoInsight, self).__init__(plug_id, description, ip_address)
-		self.switched_on_threshold = 12345  ## need to address what this value should be
+	def __init__(self, plug_id, description, ip_address, plug_name):
+		super(SmartPlugWemoInsight, self).__init__(plug_id, description, ip_address, plug_name)
+
+		## we delay calls to isSwitchedOn() to reduce network overhead -- these
+		## vars help us perform timeouts 
+		self.switched_on_timeout_start = datetime.now()
+	
+		## time delay before calling isSwitchedOn() functionality again (seconds)
+		self.switched_on_delay_time = 10
+
+		## store continuous state of plug switch as we will not always
+		## recalculate the value on each call of isSwitchedOn()
+		self.switch_state = False
 
 
         ##  ----- METHODS -------------------------------------
@@ -17,52 +29,92 @@ class SmartPlugWemoInsight(SmartPlug):
                 print " SmartPlugWemoInsight.disableMachinePlug() called "
         def isMachinePlugEnabled(self):
                 print " SmartPlugWemoInsight.isMachinePlugPlugEnabled() called "
-        def isSwitchedOn(self):
-		pass
-                #print " SmartPlugWemoInsight.isSwitchedOn() called "
 
-        def manageState(self, scan_detected, is_new_user):
-                #print "SmartPlugTestBrand.manageState() called"
+	def checkSwitchState(self):
+
+                try:
+
+                        fd = open("switch_machine_on","r+")
+                        if (fd != None):
+                                fd.close()
+                                return True
+
+                except IOError:
+                        pass
+
+                return False
+		
+        def isSwitchedOn(self):
+
+
+		## calculate how long since last call 
+        	switch_on_timeout_end = datetime.now()
+        	timediff_millis = (switch_on_timeout_end - self.switched_on_timeout_start).total_seconds()
+		#print str(timediff_millis)
+
+		## wait at least switch_on_delay_time seconds before making actual check again
+        	if ( timediff_millis > self.switched_on_delay_time ):
+                	print "Making isSwitcheaOn() check after delay:  %.2gs" % timediff_millis
+			self.switch_state = self.checkSwitchState()
+			print "New switch state = " + str(self.switch_state)
+                	self.switched_on_timeout_start = datetime.now()
+		
+		return self.switch_state
+
+	def manageState(self, scan_detected, is_new_user):
+
 
 		if (self.state == MachineStates.STATE_ALL_OFF):
+
+			## machine and plug are both off in this state
+			## so we are just waiting for a scan
 	
 			if (is_new_user == True): 
+				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+				print "Transition to STATE_NEED_SWITCH_ON\n"
+				self.enableMachinePlug()
 				self.state = MachineStates.STATE_NEED_SWITCH_ON
 			
-			if (self.isSwitchedOn()): self.state = MachineStates.STATE_NEED_ENABLE
-	
 	
 		elif (self.state == MachineStates.STATE_NEED_SWITCH_ON):
-	
-			if (self.isSwitchedOn()):
-				enableMachinePlug()
-				self.state = MachineStates.STATE_ALL_ON
-
-			## detect an "unswipe"
-			if (scan_detected == True): 
-				if (is_new_user == False): self.state = ALL_OFF;
-
-		elif (self.state == MachineStates.STATE_NEED_ENABLE):	
-	
-			if ( is_new_user == True ): 
-				enableMachinePlug()
-				self.state = MachineStates.STATE_ALL_ON
 			
-			if (Not(self.isSwitchedOn())): self.state = MachineStates.STATE_ALL_OFF
-	
+			## in this state the user has swiped in successfully, and the plug
+			## is enabled, but the machine has not yet been switched on, so we
+			## are still giving the user the chance to swipe out if desired
+ 
+			if (self.isSwitchedOn()):
+				self.state = MachineStates.STATE_ALL_ON
+				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+				print "Transition to STATE_ALL_ON\n"
+
+			## detect new user
+			elif (scan_detected == True): 
+				
+				## detect an "unswipe" - no need to detect new user here
+				if (is_new_user == False): 
+					self.state = MachineStates.STATE_ALL_OFF;
+					print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+					print "Transition to STATE_ALL_OFF\n"
+
+
 		elif (self.state == MachineStates.STATE_ALL_ON):
 	
 			## note there is no "unswipe" option here - we do not
 			## automatically switch off a machine  - user must turn
 			## it off and then they will be automatically logged out
-			if (Not(self.isSwitchedOn())): 
+			## otherwise, if a new person has logged in, we stay in 
+			## this state
+			if (not(self.isSwitchedOn())): 
 				self.state = MachineStates.STATE_ALL_OFF
-				disableMachinePlug()
-	
+				self.disableMachinePlug()
+				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
+				print "Transition to STATE_ALL_OFF\n"
+
 		else: 
 			print "StatePlugWemoInsight.manageState():  oops..invalid state encountered..."
 			print " must have been those darn cosmic rays.."
 			raise SystemExit
 	
+
 	
 
