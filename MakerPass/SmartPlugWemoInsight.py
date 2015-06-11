@@ -3,15 +3,27 @@
 from MachineStates import MachineStates
 from SmartPlug import SmartPlug
 from datetime import datetime
-
+from ouimeaux.environment import Environment
 
 class SmartPlugWemoInsight(SmartPlug):
+
+	## static instance of the wemo environment
+	env = 0
         
 	def __init__(self, plug_id, description, ip_address, plug_name):
 		super(SmartPlugWemoInsight, self).__init__(plug_id, description, ip_address, plug_name)
 
+		## create the static/global WEMO environment variable if it doesn't exist
+		if (SmartPlugWemoInsight.env == 0):
+			SmartPlugWemoInsight.env = Environment()
+			SmartPlugWemoInsight.env.start()
+        		SmartPlugWemoInsight.env.discover(2)
+			
+		self.wemo_switch = SmartPlugWemoInsight.env.get_switch(plug_name)
+		print self.wemo_switch	
+
 		## we delay calls to isSwitchedOn() to reduce network overhead -- these
-		## vars help us perform timeouts 
+		## vars help us perform timeouts -- we re-mark this time when leaving ALL_OFF state
 		self.switched_on_timeout_start = datetime.now()
 	
 		## time delay before calling isSwitchedOn() functionality again (seconds)
@@ -21,26 +33,27 @@ class SmartPlugWemoInsight(SmartPlug):
 		## recalculate the value on each call of isSwitchedOn()
 		self.switch_state = False
 
+		## power threshold at which we determine the machine is running (in milliwatts)
+		self.power_threshold = 100
+
 
         ##  ----- METHODS -------------------------------------
         def enableMachinePlug(self):
                 print " SmartPlugWemoInsight.enableMachinePlug() called "
+		self.wemo_switch.basicevent.SetBinaryState(BinaryState=1)
         def disableMachinePlug(self):
                 print " SmartPlugWemoInsight.disableMachinePlug() called "
-        def isMachinePlugEnabled(self):
-                print " SmartPlugWemoInsight.isMachinePlugPlugEnabled() called "
+		self.wemo_switch.basicevent.SetBinaryState(BinaryState=0)
+        #def isMachinePlugEnabled(self):
+                #print " SmartPlugWemoInsight.isMachinePlugPlugEnabled() called "
 
-	def checkSwitchState(self):
+	def isPowerAboveThreshold(self):
 
-                try:
-
-                        fd = open("switch_machine_on","r+")
-                        if (fd != None):
-                                fd.close()
-                                return True
-
-                except IOError:
-                        pass
+		power = self.wemo_switch.current_power
+		print "power for " + self.plug_name + ": " + str(power)
+			
+		if (power > self.power_threshold):
+			return True
 
                 return False
 		
@@ -53,9 +66,11 @@ class SmartPlugWemoInsight(SmartPlug):
 		#print str(timediff_millis)
 
 		## wait at least switch_on_delay_time seconds before making actual check again
+		## this not only prevents killing the network, but gives time for the machine to 
+		## ramp up power before the next power check
         	if ( timediff_millis > self.switched_on_delay_time ):
                 	print "Making isSwitcheaOn() check after delay:  %.2gs" % timediff_millis
-			self.switch_state = self.checkSwitchState()
+			self.switch_state = self.isPowerAboveThreshold()
 			print "New switch state = " + str(self.switch_state)
                 	self.switched_on_timeout_start = datetime.now()
 		
@@ -73,6 +88,10 @@ class SmartPlugWemoInsight(SmartPlug):
 				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
 				print "Transition to STATE_NEED_SWITCH_ON\n"
 				self.enableMachinePlug()
+				## mark begin time for doing isSwitchedOn() check -- this
+				## is important to mark here as we need an initial delay
+				## to be x seconds to give machine time to power on
+				self.switched_on_timeout_start = datetime.now()
 				self.state = MachineStates.STATE_NEED_SWITCH_ON
 			
 	
@@ -95,7 +114,7 @@ class SmartPlugWemoInsight(SmartPlug):
 					self.state = MachineStates.STATE_ALL_OFF;
 					print "plug_id:  " + self.plug_id + " - " + self.ip_address 
 					print "Transition to STATE_ALL_OFF\n"
-
+					self.disableMachinePlug()
 
 		elif (self.state == MachineStates.STATE_ALL_ON):
 	

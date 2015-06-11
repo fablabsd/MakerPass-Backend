@@ -18,20 +18,29 @@ print "Content-type: text/html\n\n";
 print "<html>"
 print '<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">'
 print '<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">'
+print """
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>
+ function autoRefresh_div()
+ {
+      $("#machine_table").load("machine_table.cgi"); // a function which will load data from other file after x seconds
+  }
+ 
+  setInterval('autoRefresh_div()', 5000); // refresh div after 5 secs
+            </script>
+"""
 print "<body>"
 
 
 ## show heads-up display
 print "<br><br>"
 print "<h3>Machine Status:</h3><br>"
-print MakerPassWebClient.headsUpDisplay()
+print "<div id=\"machine_table\">"
+print MakerPassWebClient.printMachineRecTable()
+print "</div>"
 
 ## refresh button
-#print '<FORM>'
-#print '<INPUT Type="button" VALUE="Refresh" onClick="history.go(0)">'
-#print '</FORM>'
-
-print '<button onclick="window.location.href=\'/cgi-bin/HUD.cgi\'">Refresh</button>'
+#print '<button onclick="window.location.href=\'/cgi-bin/HUD.cgi\'">Refresh</button>'
 
 # Get data from fields
 scanner_id = form.getvalue('scanner_id')
@@ -51,7 +60,7 @@ print "<h3>Manual Login:</h3><br>"
 #print 'Machine ID: <input type="text" name="scanner_id"><br />'
 
 print MakerPassWebClient.printMachineSelectDropdown(MY_MASTER_CONTROLLER_ID)
-
+print "&nbsp&nbsp&nbsp"
 print 'ID Number: <input type="text" name="user_id" />'
 
 print '<input type="submit" value="Submit" />'

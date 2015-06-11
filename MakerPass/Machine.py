@@ -71,6 +71,11 @@ class Machine(object):
 		## if it should be enabled or not 
 		self.plug.manageState(scan_detected, is_new_user)
 
+		## if state changed, log it so we can see it in the heads-up display
+		if (self.plug.state != prev_state):
+			MakerPassDatabase.setMachineState(self.machine_id, MachineStates.toString(self.plug.state))
+		
+
 		## mark machine effective use time - this is the time the machine has actually been switched on
 		## we do this so the user is not charged for time between when they scanned and the machine was turned on
 		if ((self.plug.state == MachineStates.STATE_ALL_ON) and (prev_state != MachineStates.STATE_ALL_ON)):

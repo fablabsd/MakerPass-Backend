@@ -259,6 +259,34 @@ def markMachineEffectiveUseTime(username, machine_id):
 
 ## ----------------------------------------------------------
 
+def setMachineState(machine_id, state):
+
+
+
+        try:
+                con = lite.connect(database)
+
+                con.row_factory = lite.Row
+                cur = con.cursor()
+
+
+                ## update the machine's current state
+                sql = "update machine_rec set current_state = '" + state + "' where machine_id = '" + machine_id + "';"
+                cur.execute(sql)
+
+                con.commit()
+                return None
+
+        except lite.Error, e:
+                print "Error %s:" % e.args[0]
+                sys.exit(1)
+
+        finally:
+                if con: con.close()
+
+
+## ----------------------------------------------------------
+
 
 if __name__ == '__main__': 
 
