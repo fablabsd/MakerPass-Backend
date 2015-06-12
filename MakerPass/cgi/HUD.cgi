@@ -25,7 +25,8 @@ print """
  {
       $("#machine_table").load("machine_table.cgi"); // a function which will load data from other file after x seconds
   }
- 
+
+  autoRefresh_div(); 
   setInterval('autoRefresh_div()', 5000); // refresh div after 5 secs
             </script>
 """
@@ -36,7 +37,8 @@ print "<body>"
 print "<br><br>"
 print "<h3>Machine Status:</h3><br>"
 print "<div id=\"machine_table\">"
-print MakerPassWebClient.printMachineRecTable()
+#print MakerPassWebClient.printMachineRecTable()
+print "Waiting for data...<br>"
 print "</div>"
 
 ## refresh button
