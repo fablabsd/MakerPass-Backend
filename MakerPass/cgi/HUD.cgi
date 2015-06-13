@@ -58,7 +58,7 @@ if (scanner_id and user_id):
 
 print '<form action="/cgi-bin/HUD.cgi" method="post">'
 print "<br>"
-print "<h3>Manual Login:</h3><br>"
+print "<h3>Manual Login/Logout:</h3><br>"
 #print 'Machine ID: <input type="text" name="scanner_id"><br />'
 
 print MakerPassWebClient.printMachineSelectDropdown(MY_MASTER_CONTROLLER_ID)
