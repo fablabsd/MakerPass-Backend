@@ -2,7 +2,6 @@
 
 Dependencies:
 
-** POCO -- untar, and follow instructions for install in linux in the README
 
 ** WeMo API ("ouimeaux") -- follow instructions in the docs dirctory for easy_install 
 (note this is not how we did it initially for this install, but running easy_install 
