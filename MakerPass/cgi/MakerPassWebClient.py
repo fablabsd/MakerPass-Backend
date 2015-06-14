@@ -69,7 +69,12 @@ def getMachineScannerData(MY_MASTER_CONTROLLER_ID):
 
                 # select data from a table
                 sql = """
-		select * from machine_rec join machine_scanner_table on (machine_scanner_table.machine_id = machine_rec.machine_id) where parent_machine_id = '""" + MY_MASTER_CONTROLLER_ID + """';"""
+		select * 
+		from 
+		machine_rec 
+		join machine_scanner_table on (machine_scanner_table.machine_id = machine_rec.machine_id) 
+		join smartplug_rec on (machine_rec.plug_id = smartplug_rec.plug_id) 
+		where parent_machine_id = '""" + MY_MASTER_CONTROLLER_ID + """';"""
                 
 		cur.execute(sql)
 

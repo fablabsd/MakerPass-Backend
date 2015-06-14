@@ -1,9 +1,12 @@
 #!/usr/bin/python
 
+import ouimeaux
+
 from MachineStates import MachineStates
 from SmartPlug import SmartPlug
 from datetime import datetime
 from ouimeaux.environment import Environment
+from ouimeaux.environment import UnknownDevice
 
 class SmartPlugWemoInsight(SmartPlug):
 
@@ -15,12 +18,12 @@ class SmartPlugWemoInsight(SmartPlug):
 
 		## create the static/global WEMO environment variable if it doesn't exist
 		if (SmartPlugWemoInsight.env == 0):
-			SmartPlugWemoInsight.env = Environment()
+			SmartPlugWemoInsight.env = Environment(with_cache=False, bind=None)
 			SmartPlugWemoInsight.env.start()
-        		SmartPlugWemoInsight.env.discover(2)
+        		SmartPlugWemoInsight.env.discover(3)
 			
-		self.wemo_switch = SmartPlugWemoInsight.env.get_switch(plug_name)
-		print self.wemo_switch	
+		self.wemo_switch = self.getSwitch(plug_name)
+		print "switch = " + str(self.wemo_switch)	
 
 		## we delay calls to isSwitchedOn() to reduce network overhead -- these
 		## vars help us perform timeouts -- we re-mark this time when leaving ALL_OFF state
@@ -38,6 +41,15 @@ class SmartPlugWemoInsight(SmartPlug):
 
 
         ##  ----- METHODS -------------------------------------
+
+	def getSwitch(self, plug_name):
+		try:
+			return SmartPlugWemoInsight.env.get_switch(plug_name)
+		except (UnknownDevice):
+			print "Unable to get switch:  " + self.plug_name
+			raise UnknownDevice
+			
+
         def enableMachinePlug(self):
                 print " SmartPlugWemoInsight.enableMachinePlug() called "
 		self.wemo_switch.basicevent.SetBinaryState(BinaryState=1)

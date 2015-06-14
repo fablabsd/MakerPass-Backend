@@ -18,19 +18,23 @@ res=0
 
 case "$1" in
   start)
+
 	## run makerpass
 	/home/pi/makerpass/MakerPass/run_makerpass.bash > /dev/null 2>&1 &
 
 	;;
   restart|reload|force-reload)
-	sudo killall python
+
+	#kill all associated processes
+	sudo python /home/pi/makerpass/install/KillAllMakerPassProcesses.py
 
 	## run makerpass
 	/home/pi/makerpass/MakerPass/run_makerpass.bash > /dev/null 2>&1 &
 	
 	;;
   stop)
-	sudo killall python
+	#kill all associated processes
+	sudo python /home/pi/makerpass/install/KillAllMakerPassProcesses.py
 	;;
   status)
 	

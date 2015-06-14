@@ -215,11 +215,18 @@ def InitMachines(shared_mem):
 	                
 			print "Creating machine ID: %s\nPaired With Plug: %s\nPlug IP Address %s\n" % \
 				(machine['machine_description'],machine['plug_description'],machine['ip_address'])
-                	new_machine = Machine.Machine(machine['machine_id'], machine['machine_description'], \
-			machine['plug_id'], machine['plug_description'], machine['ip_address'], machine['plug_type'], machine['plug_name'])
+			try:
+                		new_machine = Machine.Machine(machine['machine_id'], \
+				machine['machine_description'], \
+				machine['plug_id'], machine['plug_description'], \
+				machine['ip_address'], machine['plug_type'], \
+				machine['plug_name'])
 
-			machine_list.append(new_machine)
-			MakerPassDatabase.clearMachineUser(new_machine.machine_id)
+				machine_list.append(new_machine)
+				MakerPassDatabase.clearMachineUser(new_machine.machine_id)
+			except:
+				print "Failed to Instantiate machine:  " + machine['machine_description']
+				## continue...non-fatal 
 
 	return machine_list
 

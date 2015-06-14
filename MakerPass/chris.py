@@ -9,18 +9,22 @@ from ouimeaux.environment import Environment
 if __name__ == "__main__":
     print ""
     print "---------------"
-    env = Environment()
+    env = Environment(with_cache=False, bind=None)
     # TODO: run from 10am to 10pm
     try:
+	print "calling env.start()"
         env.start()
-        env.discover(2)
+	print "calling env.discover()"
+        env.discover(15)
+	print "listing switches"
         print env.list_switches()
         #print env.list_motions()
         print "---------------"
         #while True:
             # http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python
             #switchRND = env.get_switch( random.choice( env.list_switches() ) )
-        switchRND = env.get_switch( "WEMO LASER ROOM" )
+	print "calling get_switch()"
+        switchRND = env.get_switch( "WEMO CNC ROOM" )
         print switchRND
 	power = switchRND.current_power
 	print "turning off"

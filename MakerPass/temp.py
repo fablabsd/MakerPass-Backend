@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import subprocess
 from MachineStates import MachineStates
 
 #config_fd = open("pipe_scan", "r")
@@ -16,4 +17,9 @@ print value2
 
 print MachineStates.toString(MachineStates.STATE_ALL_ON)
 
+process_exists =  subprocess.Popen("ps -elf | \grep  makerpass | \grep -v grep", shell=True, stdout=subprocess.PIPE).stdout.read()
 
+if (process_exists):
+	print "yes\n"
+else:
+	print "no\n"
