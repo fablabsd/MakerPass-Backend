@@ -216,6 +216,10 @@ def InitMachines(shared_mem):
 			print "Creating machine ID: %s\nPaired With Plug: %s\nPlug IP Address %s\n" % \
 				(machine['machine_description'],machine['plug_description'],machine['ip_address'])
 			try:
+				## First default this machine state to "unrecognized" in the database
+				## so we will know if there was an issue initializing (in the web client) 
+				MakerPassDatabase.setMachineState(machine['machine_id'], "Unrecognized")
+
                 		new_machine = Machine.Machine(machine['machine_id'], \
 				machine['machine_description'], \
 				machine['plug_id'], machine['plug_description'], \

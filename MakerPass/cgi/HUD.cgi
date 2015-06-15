@@ -14,21 +14,31 @@ config_fd.close()
 
 ## headers
 print "Content-type: text/html\n\n";
-#print "<html><meta http-equiv=\"refresh\" content=\"9\" ><body>"
 print "<html>"
 print '<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">'
 print '<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">'
 print """
+    <head>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+   <script>
+$(document).ready(function() {
+    $('#machine_table').DataTable();
+} );
+   </script>
    <script>
  function autoRefresh_div()
  {
-      $("#machine_table").load("machine_table.cgi"); // a function which will load data from other file after x seconds
+      $("#machine_table_div").load("machine_table.cgi"); // a function which will load data from other file after x seconds
   }
 
   autoRefresh_div(); 
   setInterval('autoRefresh_div()', 5000); // refresh div after 5 secs
             </script>
+
+</head>
 """
 print "<body>"
 
@@ -36,7 +46,7 @@ print "<body>"
 ## show heads-up display
 print "<br><br>"
 print "<h3>Machine Status:</h3><br>"
-print "<div id=\"machine_table\">"
+print "<div id=\"machine_table_div\">"
 #print MakerPassWebClient.printMachineRecTable()
 print "Waiting for data...<br>"
 print "</div>"

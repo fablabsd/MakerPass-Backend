@@ -28,7 +28,8 @@ class Machine(object):
 			print "FATAL:  Invalid plug_type received: " + plug_type
 			raise SystemExit
 
-		## update the database to reflect default state (for cases where we just restarted and state is out of sync)
+		## update the database to reflect default state (for cases where 
+		## we just restarted and state is out of sync)
 		MakerPassDatabase.setMachineState(self.machine_id, MachineStates.toString(self.plug.state))
 	
 	def manageState(self, scanned_user, selected_machine_id):

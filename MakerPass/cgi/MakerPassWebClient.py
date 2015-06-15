@@ -94,7 +94,7 @@ def getMachineScannerData(MY_MASTER_CONTROLLER_ID):
 def printMachineRecTable():
         rows = getMachineUsageData()
 
-        response = '<table border="4" >'
+        response = '<table id="machine_table"  class="display"  border="4" >'
 	response += "<tr><th>Machine</th><th>Current User</th><th>Last Scan</th><th>Machine State</th><th>Running Time (min)</th></tr>" 
         for row in rows:
 

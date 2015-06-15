@@ -19,6 +19,7 @@ th, td {
 </style>"""
 
 print MakerPassWebClient.printMachineRecTable()
+
 print "</body></html>"
 
 
