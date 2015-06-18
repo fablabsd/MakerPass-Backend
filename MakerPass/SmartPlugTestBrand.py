@@ -7,8 +7,8 @@ from datetime import datetime
 
 class SmartPlugTestBrand(SmartPlug):
         
-	def __init__(self, plug_id, description, ip_address, plug_name):
-		super(SmartPlugTestBrand, self).__init__(plug_id, description, ip_address, plug_name)
+	def __init__(self, plug_id, description, ip_address, plug_name, machine_power_threshold):
+		super(SmartPlugTestBrand, self).__init__(plug_id, description, ip_address, plug_name, machine_power_threshold)
 
 		## we delay calls to isSwitchedOn() to reduce network overhead -- these
 		## vars help us perform timeouts 

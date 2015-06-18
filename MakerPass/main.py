@@ -59,7 +59,10 @@ def main():
 	## main loop
 	print "Entering main processing loop..."
 
-	
+	## clear feedback on web client
+	logUserFeedback("")
+
+	## begin timer for cpu load control
 	loop_time_start = datetime.now()
 
 	while (True):	
@@ -132,6 +135,7 @@ def main():
 						scanned_username, selected_machine_id)
 
 				if (usermachineinfo == None):
+					logUserFeedback("User " + scanned_username + " has no permission to machine: " + selected_machine_id)
 					print "The given user (" + scanned_username + " )" 
 					print "has no permission to the given machine (" + selected_machine_id + ")"
 					print "Please check user_machine_allocation_rec to ensure user"
@@ -190,7 +194,13 @@ def isUserAlreadyUsingAnotherMachine(scanned_username, selected_machine_id, mach
 
 	return False
 
+## --------------------------------------------------------
+## Respond to web client with this feedback
 		
+def logUserFeedback(feedbackString):
+	feedback_file = open('cgi/user_feedback.txt', "w")
+        feedback_file.write(feedbackString)
+        feedback_file.close()
 
 
 ## --------------------------------------------------------
@@ -216,6 +226,7 @@ def InitMachines(shared_mem):
 			print "Creating machine ID: %s\nPaired With Plug: %s\nPlug IP Address %s\n" % \
 				(machine['machine_description'],machine['plug_description'],machine['ip_address'])
 			try:
+
 				## First default this machine state to "unrecognized" in the database
 				## so we will know if there was an issue initializing (in the web client) 
 				MakerPassDatabase.setMachineState(machine['machine_id'], "Unrecognized")
@@ -224,12 +235,14 @@ def InitMachines(shared_mem):
 				machine['machine_description'], \
 				machine['plug_id'], machine['plug_description'], \
 				machine['ip_address'], machine['plug_type'], \
-				machine['plug_name'])
+				machine['plug_name'], machine['power_threshold'])
 
 				machine_list.append(new_machine)
 				MakerPassDatabase.clearMachineUser(new_machine.machine_id)
-			except:
+
+			except Exception, ex:
 				print "Failed to Instantiate machine:  " + machine['machine_description']
+				print "Exception:  " + str(ex)
 				## continue...non-fatal 
 
 	return machine_list

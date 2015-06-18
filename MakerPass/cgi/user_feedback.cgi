@@ -9,18 +9,16 @@ print "Content-type: text/html\n\n";
 print "<html><body>"
 print """
 <style>
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 15px;
-}
+
+
 </style>"""
+print "<font color='red'>" 
 
-print MakerPassWebClient.printMachineRecTable()
+feedback_file = open("/home/pi/makerpass/MakerPass/cgi/user_feedback.txt", "r+")
+print feedback_file.read()
+feedback_file.close()
 
-print "This table will refresh every 5 seconds or so..."
+print "</font>"
 print "</body></html>"
 
 

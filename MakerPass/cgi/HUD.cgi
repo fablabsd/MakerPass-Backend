@@ -31,7 +31,11 @@ $(document).ready(function() {
    <script>
  function autoRefresh_div()
  {
-      $("#machine_table_div").load("machine_table.cgi"); // a function which will load data from other file after x seconds
+	// a function which will load data from other file after x seconds
+      $("#machine_table_div").load("machine_table.cgi"); 
+     
+	// show response from makerpass to attempted user login or other issues/info 
+	$("#feedback_div").load("user_feedback.cgi"); 
   }
 
   autoRefresh_div(); 
@@ -47,7 +51,6 @@ print "<body>"
 print "<br><br>"
 print "<h3>Machine Status:</h3><br>"
 print "<div id=\"machine_table_div\">"
-#print MakerPassWebClient.printMachineRecTable()
 print "Waiting for data...<br>"
 print "</div>"
 
@@ -65,7 +68,7 @@ user_id  = form.getvalue('user_id')
 if (scanner_id and user_id):
 	print MakerPassWebClient.loginUser(scanner_id, user_id)
 
-
+## print the manual login controls 
 print '<form action="/cgi-bin/HUD.cgi" method="post">'
 print "<br>"
 print "<h3>Manual Login/Logout:</h3><br>"
@@ -77,6 +80,12 @@ print 'ID Number: <input type="text" name="user_id" />'
 
 print '<input type="submit" value="Submit" />'
 print '</form>'
+
+## print user feedback from submission
+print "<div id=\"feedback_div\">"
+print "Waiting for data...<br>"
+print "</div>"
+
 
 
 ##  footers

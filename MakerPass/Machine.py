@@ -10,7 +10,7 @@ from MachineStates import MachineStates
 class Machine(object):
 
 
-	def __init__(self, machine_id, machine_desc, plug_id, plug_desc, plug_ip_addr, plug_type, plug_name):
+	def __init__(self, machine_id, machine_desc, plug_id, plug_desc, plug_ip_addr, plug_type, plug_name, machine_power_threshold):
 
 		## set member properties
 		self.machine_id = machine_id
@@ -20,10 +20,10 @@ class Machine(object):
 		## instantiate the appropriate plug handler for this Machine
 		if (plug_type == "WEMO_INSIGHT"):
 			print "Instatiating a WEMO_INSIGHT machine\n"
-			self.plug = SmartPlugWemoInsight.SmartPlugWemoInsight(plug_id, plug_desc,plug_ip_addr, plug_name)
+			self.plug = SmartPlugWemoInsight.SmartPlugWemoInsight(plug_id, plug_desc,plug_ip_addr, plug_name, machine_power_threshold)
 		elif (plug_type == "TEST_BRAND"):
 			print "Instantiating a TEST_BRAND machine\n"
-			self.plug = SmartPlugTestBrand.SmartPlugTestBrand(plug_id, plug_desc,plug_ip_addr,plug_name)
+			self.plug = SmartPlugTestBrand.SmartPlugTestBrand(plug_id, plug_desc,plug_ip_addr,plug_name, machine_power_threshold)
 		else:
 			print "FATAL:  Invalid plug_type received: " + plug_type
 			raise SystemExit

@@ -13,8 +13,8 @@ class SmartPlugWemoInsight(SmartPlug):
 	## static instance of the wemo environment
 	env = 0
         
-	def __init__(self, plug_id, description, ip_address, plug_name):
-		super(SmartPlugWemoInsight, self).__init__(plug_id, description, ip_address, plug_name)
+	def __init__(self, plug_id, description, ip_address, plug_name, machine_power_threshold):
+		super(SmartPlugWemoInsight, self).__init__(plug_id, description, ip_address, plug_name, machine_power_threshold)
 
 		## create the static/global WEMO environment variable if it doesn't exist
 		if (SmartPlugWemoInsight.env == 0):
@@ -35,9 +35,6 @@ class SmartPlugWemoInsight(SmartPlug):
 		## store continuous state of plug switch as we will not always
 		## recalculate the value on each call of isSwitchedOn()
 		self.switch_state = False
-
-		## power threshold at which we determine the machine is running (in milliwatts)
-		self.power_threshold = 100
 
 
         ##  ----- METHODS -------------------------------------
@@ -64,7 +61,7 @@ class SmartPlugWemoInsight(SmartPlug):
 		power = self.wemo_switch.current_power
 		print "power for " + self.plug_name + ": " + str(power)
 			
-		if (power > self.power_threshold):
+		if (power > self.machine_power_threshold):
 			return True
 
                 return False
