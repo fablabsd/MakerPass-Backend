@@ -5,6 +5,8 @@
 ## PLNU_IDCardSwipe.py -- Read a string from a rawHID device in /dev and print the ascii converted contents
 ##
 import sys
+from MakerPassLogger import PLNU_IDCardSwipe_logger as logger
+
 
 ## define number of bytes to read into buffer - 
 ## Note:  This value is set low as we will loop through
@@ -38,14 +40,14 @@ def main(shared_mem, scanner_id):
 	## if device name not found, we have no mag stripe attached
 	## so just exit
 	if (device_name.rstrip() == ""):
-		print "No PLNU mag stripe found as STMMicroelectronics Keyboard"
+		logger.debug( "No PLNU mag stripe found as STMMicroelectronics Keyboard")
 		sys.exit(0)
 
 	
 	## Open the device for reading 
-	print "Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe"
+	logger.debug( "Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe")
 	fd = open("/dev/" + device_name, "r+")
-	print "Device name: ", fd.name
+	logger.debug( "Device name: " + fd.name)
 
 	while(True): 
 
@@ -67,7 +69,7 @@ def main(shared_mem, scanner_id):
 
 				## save value if we reached end of swipe
 				if (intval == STOP_BYTE):   
-					#print "\n"
+					#logger.debug( "\n")
 					## strip out only the values from our input string that we care about
 					outstring = str(keymap[rawdata[10]]) + str(keymap[rawdata[11]]) + \
 					str(keymap[rawdata[12]]) + str(keymap[rawdata[13]]) +  \

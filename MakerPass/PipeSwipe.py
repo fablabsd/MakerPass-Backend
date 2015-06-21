@@ -6,6 +6,7 @@
 ##
 import sys
 
+from MakerPassLogger import PipeSwipe_logger as logger
 
 ## ------- main------------------------------------------------------
 
@@ -21,7 +22,7 @@ def main(shared_mem, null_param):
 			scan = pipe.read().rstrip()
 			pipe.close()
 			
-			print scan + "\n"
+			logger.debug( scan + "\n")
 			
 			## strip out machine id and username
 			scanner_id, scan_id = scan.split("|")
@@ -29,8 +30,8 @@ def main(shared_mem, null_param):
 		 	#scan_id = "439003"
 			
 
-			print "scanned scanner_id from pipe:  " + scanner_id
-			print "scanned scan_id from pipe:  " + scan_id
+			logger.debug( "scanned scanner_id from pipe:  " + scanner_id)
+			logger.debug( "scanned scan_id from pipe:  " + scan_id)
 					
 			## register complete scan by updating synchronized variables 	
 			shared_mem.set_shared_mem_values(scan_id, scanner_id)

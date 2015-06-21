@@ -1,0 +1,340 @@
+
+DEBUG:06-21-2015 03:49:52:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:49:52:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:50:02:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:50:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:50:02:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:50:02:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:50:12:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:50:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:50:12:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:50:12:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:50:22:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:50:22:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:50:22:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:50:22:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:50:32:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:50:32:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:50:32:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:50:32:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:50:42:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:50:42:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:50:42:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:50:42:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:50:52:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:50:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:50:53:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:50:53:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:51:03:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:51:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:51:03:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:51:03:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:51:13:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:51:13:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:51:13:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:51:13:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:51:23:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:51:23:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:51:23:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:51:23:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:51:33:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:51:33:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:51:33:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:51:33:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:51:43:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:51:43:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:51:43:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:51:43:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:51:53:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:51:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:51:53:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:51:53:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:52:03:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:52:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:52:03:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:52:03:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:52:13:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:52:13:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:52:13:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:52:13:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:52:23:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:52:23:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:52:23:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:52:23:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:52:33:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:52:33:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:52:33:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:52:34:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:52:44:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:52:44:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:52:44:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:52:44:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:52:54:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:52:54:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:52:54:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:52:54:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:53:04:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:53:04:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:53:04:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:53:04:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:53:14:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:53:14:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:53:14:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:53:14:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:53:24:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:53:24:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:53:24:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:53:24:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:53:34:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:53:34:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:53:34:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:53:34:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:53:44:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:53:44:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:53:44:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:53:44:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:53:55:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:53:55:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:53:55:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:53:55:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:54:05:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:54:05:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:54:05:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:54:05:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:54:15:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:54:15:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:54:15:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:54:15:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:54:25:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:54:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:54:25:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:54:25:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:54:35:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:54:35:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:54:35:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:54:35:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:54:45:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:54:45:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:54:45:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:54:46:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:54:56:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:54:56:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:54:56:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:54:56:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:55:06:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:55:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:55:06:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:55:06:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:55:16:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:55:16:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:55:16:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:55:16:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:55:26:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:55:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:55:26:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:55:26:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:55:36:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:55:36:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:55:36:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:55:36:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:55:46:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:55:46:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:55:46:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:55:46:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:55:56:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:55:56:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:55:56:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:55:56:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:56:06:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:56:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:56:06:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:56:06:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:56:16:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:56:17:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:56:17:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:56:17:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:56:27:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:56:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:56:27:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:56:27:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:56:37:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:56:37:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:56:37:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:56:37:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:56:47:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:56:47:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:56:47:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:56:47:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:56:57:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:56:57:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:56:57:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:56:57:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:57:07:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:57:07:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:57:07:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:57:07:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:57:17:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:57:17:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:57:17:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:57:17:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:57:27:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:57:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:57:28:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:57:28:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:57:38:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:57:38:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:57:38:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:57:38:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:57:48:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:57:48:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:57:48:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:57:48:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:57:58:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:57:58:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:57:58:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:57:58:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:58:08:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:58:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:58:08:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:58:08:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:58:18:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:58:18:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:58:18:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:58:18:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:58:28:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:58:28:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:58:28:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:58:28:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:58:38:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:58:38:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:58:38:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:58:38:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:58:48:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:58:48:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:58:48:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:58:48:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:58:58:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:58:58:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:58:58:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:58:58:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:59:08:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:59:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:59:08:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:59:08:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:59:18:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:59:18:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:59:19:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:59:19:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:59:29:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:59:29:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:59:29:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:59:30:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 03:59:40:SmartPlugWemoInsight:Making isSwitchedOn() check after delay:  10s
+INFO:06-21-2015 03:59:40:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 03:59:40:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-21-2015 03:59:40:SmartPlugWemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-21-2015 04:00:23:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:06-21-2015 04:00:23:main:Creating Shared mem
+DEBUG:06-21-2015 04:00:23:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:06-21-2015 04:00:23:main:Instantiating Machine Objects
+DEBUG:06-21-2015 04:00:23:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+Plug IP Address NA
+
+DEBUG:06-21-2015 04:00:24:Machine:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-21-2015 04:00:24:ouimeaux.discovery:Binding datagram server to 192.168.1.200:54321
+INFO:06-21-2015 04:00:24:ouimeaux.environment:Discovering devices
+DEBUG:06-21-2015 04:00:24:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-21-2015 04:00:24:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-21-2015 04:00:24:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-21-2015 04:00:24:ouimeaux.discovery:Received a response from 192.168.1.10:3098
+DEBUG:06-21-2015 04:00:24:ouimeaux.discovery:Found WeMo at 192.168.1.10:3098
+INFO:06-21-2015 04:00:24:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:24:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4082
+INFO:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 16962
+INFO:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 6319
+INFO:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 653
+INFO:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3673
+INFO:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:25:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 6971
+INFO:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-21-2015 04:00:26:ouimeaux.environment:Found device <WeMo Insight "WEMO LASER ROOM"> at ('192.168.1.10', 3098)
+INFO:06-21-2015 04:00:26:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO LASER ROOM">
+INFO:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-21-2015 04:00:26:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-21-2015 04:00:26:ouimeaux.discovery:Received a response from 192.168.1.8:3086
+DEBUG:06-21-2015 04:00:26:ouimeaux.discovery:Found WeMo at 192.168.1.8:3086
+DEBUG:06-21-2015 04:00:26:ouimeaux.discovery:Received a response from 192.168.1.10:3098
+INFO:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4756
+INFO:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 18263
+INFO:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:26:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 7233
+INFO:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 1132
+INFO:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3974
+INFO:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 7810
+INFO:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:"GET /smartsetup.xml HTTP/1.1" 200 2539
+INFO:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:"GET /manufacture.xml HTTP/1.1" 200 642
+INFO:06-21-2015 04:00:27:ouimeaux.environment:Found device <WeMo Insight "WEMO CNC ROOM"> at ('192.168.1.8', 3086)
+INFO:06-21-2015 04:00:27:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO CNC ROOM">
+INFO:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-21-2015 04:00:27:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-21-2015 04:00:27:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-21-2015 04:00:27:SmartPlugWemoInsight:switch = <WeMo Insight "WEMO CNC ROOM">
+DEBUG:06-21-2015 04:00:27:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+Plug IP Address NA
+
+DEBUG:06-21-2015 04:00:27:Machine:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-21-2015 04:00:27:SmartPlugWemoInsight:switch = <WeMo Insight "WEMO LASER ROOM">
+DEBUG:06-21-2015 04:00:28:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+Plug IP Address NA
+
+DEBUG:06-21-2015 04:00:28:Machine:Instantiating a TEST_BRAND machine
+
+DEBUG:06-21-2015 04:00:28:main:Spawning PLNU magstripe handler process
+DEBUG:06-21-2015 04:00:28:main:Spawning Pipe scan handler process
+DEBUG:06-21-2015 04:00:28:main:Entering main processing loop...
+DEBUG:06-21-2015 04:00:28:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:06-21-2015 04:00:28:PLNU_IDCardSwipe:Device name: /dev/hidraw1

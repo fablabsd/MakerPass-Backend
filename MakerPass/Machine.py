@@ -6,6 +6,7 @@ import SmartPlugTestBrand
 import MakerPassDatabase
 
 from MachineStates import MachineStates
+from MakerPassLogger import Machine_logger as logger
 	
 class Machine(object):
 
@@ -19,13 +20,13 @@ class Machine(object):
 
 		## instantiate the appropriate plug handler for this Machine
 		if (plug_type == "WEMO_INSIGHT"):
-			print "Instatiating a WEMO_INSIGHT machine\n"
+			logger.debug( "Instantiating a WEMO_INSIGHT machine\n")
 			self.plug = SmartPlugWemoInsight.SmartPlugWemoInsight(plug_id, plug_desc,plug_ip_addr, plug_name, machine_power_threshold)
 		elif (plug_type == "TEST_BRAND"):
-			print "Instantiating a TEST_BRAND machine\n"
+			logger.debug( "Instantiating a TEST_BRAND machine\n")
 			self.plug = SmartPlugTestBrand.SmartPlugTestBrand(plug_id, plug_desc,plug_ip_addr,plug_name, machine_power_threshold)
 		else:
-			print "FATAL:  Invalid plug_type received: " + plug_type
+			logger.debug( "FATAL:  Invalid plug_type received: " + plug_type)
 			raise SystemExit
 
 		## update the database to reflect default state (for cases where 
@@ -65,13 +66,13 @@ class Machine(object):
 
 	                                ## Update last scan time in user_rec and user_machine_allocation_rec
                                 	## and register a scan in user_scan_rec
-                                	print "Registering scan in for user: " + scanned_user
+                                	logger.debug( "Registering scan in for user: " + scanned_user)
                                 	MakerPassDatabase.updateUserScanRecords(scanned_user, selected_machine_id)
 
 					## set the current user
-					print "Setting current user:"
-					print "User = " + scanned_user
-					print "Machine = " + selected_machine_id
+					logger.debug( "Setting current user:")
+					logger.debug( "User = " + scanned_user)
+					logger.debug( "Machine = " + selected_machine_id)
 					self.current_user = scanned_user
 					
 		## now enter main state management for the plug to determine
@@ -107,9 +108,9 @@ class Machine(object):
 		## set time_logged in database for the previous user if applicable 	
 		if (need_record_time_used == True):
 			##  record/subtract time used
-                        print "Recording time used for user:"
-                        print "User = " + logged_out_user
-                        print "Machine = " + self.machine_description
+                        logger.debug( "Recording time used for user:")
+                        logger.debug( "User = " + logged_out_user)
+                        logger.debug( "Machine = " + self.machine_description)
 			if (self.current_user == ""):
 				clear_current_user_from_db = True
 				

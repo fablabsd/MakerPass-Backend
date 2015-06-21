@@ -2,6 +2,19 @@
 
 import subprocess
 from MachineStates import MachineStates
+from MakerPassLogger import logger
+
+
+def test_logger():
+	logger.debug("logger output")
+	
+	
+import logging
+logging.basicConfig(filename='/home/pi/makerpass/MakerPass/logs/example.log',level=logging.DEBUG)
+logging.debug('This message should go to the log file')
+
+
+
 
 #config_fd = open("pipe_scan", "r")
 #device_name = config_fd.read().rstrip()
@@ -23,3 +36,5 @@ if (process_exists):
 	print "yes\n"
 else:
 	print "no\n"
+
+test_logger()

@@ -7,16 +7,17 @@ import SharedMem
 import Machine
 import PLNU_IDCardSwipe
 import PipeSwipe
+import logging
 import MakerPassDatabase
+import MakerPassLogger
 
 from datetime import datetime
 from multiprocessing import Process
-
+from MakerPassLogger import main_logger as logger
 
 ## -------global variables---------------------------------
 
 ## set controller ID for this controller
-#MY_MASTER_CONTROLLER_ID = os.environ["MY_MASTER_CONTROLLER_ID"]
 MY_MASTER_CONTROLLER_ID = ""
 
 
@@ -26,38 +27,41 @@ MY_MASTER_CONTROLLER_ID = ""
 
 def main():
 
+	## print a restarting message...
+	logger.debug("\n\n\n\n\t\t\t ---- Restarting MakerPass ------\n\n\n\n")
+
 	## Set up shared mem, default scan_id and machine_id
-	print "Creating Shared mem" 
+	logger.debug( "Creating Shared mem" )
 	shared_mem = SharedMem.Mem()
 	shared_mem.set_shared_mem_values('','')
 
-        ## get which cluster controller this is from config
-        config_fd = open("cluster_controller.config", "r")
-        global MY_MASTER_CONTROLLER_ID
-        MY_MASTER_CONTROLLER_ID = config_fd.read().rstrip()
-        config_fd.close()
+	## get which cluster controller this is from config
+	config_fd = open("cluster_controller.config", "r")
+	global MY_MASTER_CONTROLLER_ID
+	MY_MASTER_CONTROLLER_ID = config_fd.read().rstrip()
+	config_fd.close()
 
-	print "Cluster Controller for this machine = " + MY_MASTER_CONTROLLER_ID
+	logger.debug( "Cluster Controller for this machine = " + str(MY_MASTER_CONTROLLER_ID))
 
 	## Create/Init the various machines
-	print "Instantiating Machine Objects"
+	logger.debug( "Instantiating Machine Objects")
 	machine_list = InitMachines(shared_mem)
 
 	## make sure we actually successfully retrieved machine definitions
 	## from databse before continuing
 	if (len(machine_list) == 0):
-		print "No machine definitions were retrieved from database...exiting"
+		logger.debug( "No machine definitions were retrieved from database...exiting")
 		sys.exit()
 	
 	## Spawn any/all scan device processes which will use
 	## the shared mem to populate a scan  
-        print "Spawning PLNU magstripe handler process";
-        Process(target=PLNU_IDCardSwipe.main, args=(shared_mem,"PLNU_MAG_SWIPE")).start()
-        print "Spawning Pipe scan handler process";
-        Process(target=PipeSwipe.main, args=(shared_mem, "null")).start()
+	logger.debug( "Spawning PLNU magstripe handler process")
+    	Process(target=PLNU_IDCardSwipe.main, args=(shared_mem,"PLNU_MAG_SWIPE")).start()
+    	logger.debug( "Spawning Pipe scan handler process")
+    	Process(target=PipeSwipe.main, args=(shared_mem, "null")).start()
 	
 	## main loop
-	print "Entering main processing loop..."
+	logger.debug( "Entering main processing loop...")
 
 	## clear feedback on web client
 	logUserFeedback("")
@@ -67,17 +71,15 @@ def main():
 
 	while (True):	
 
-                ## control loop timing to save CPU from blowing up
-                loop_time_end = datetime.now()
-        	timediff_millis = (loop_time_end - loop_time_start).total_seconds()
-
-		#print "sleeping - timediff = " + str(timediff_millis)
+        	## control loop timing to save CPU from blowing up
+		loop_time_end = datetime.now()
+      		timediff_millis = (loop_time_end - loop_time_start).total_seconds()
 
 		## quantize loop timing to about 30ms or so
-                if ( timediff_millis <  0.030 ):
+        	if ( timediff_millis <  0.030 ):
+		
 			time.sleep(0.030 - timediff_millis)
-	
-		loop_time_start = datetime.now()
+			loop_time_start = datetime.now()
 
 		try:
 			
@@ -87,13 +89,11 @@ def main():
 	
 			## retrieve scan/swipe info if a scan has been made
 			scan_id, scanner_id = shared_mem.get_shared_mem_values()
-
-
 		
 			## handle a valid scan
 			if (scan_id != ""):
 				
-				print "scan_id = " + scan_id
+				logger.debug( "scan_id = " + scan_id)
 
 				## first reset the shared mem, to minimize potential 
 				## for failed scans from other machines
@@ -104,7 +104,7 @@ def main():
 				## i.e. map scanning device to machine being scanned to
 				selected_machine_id_data = MakerPassDatabase.getMachineId(scanner_id)
 				if (selected_machine_id_data == None):
-					print "Unable to associate a machine with this scanner:  " + scanner_id
+					logger.debug( "Unable to associate a machine with this scanner:  " + scanner_id)
 					continue
 
 				## found machine id
@@ -113,21 +113,21 @@ def main():
 				## Get the user associated with this can id
 				userinfo = MakerPassDatabase.getUserInfo(scan_id)
 				if (userinfo == None):
-					print "No User found with scan_id = " + str(scan_id)	
+					logger.debug( "No User found with scan_id = " + str(scan_id))
 					continue
 				
 				## found user
 				scanned_username = userinfo['username']
-			
-				print "Scan Detected for User ID: " + str(scan_id)
-				print "Scanner ID: " + scanner_id
-				print "Username = " + scanned_username
-				print "Firstname = " + userinfo['firstname']
-				print "Lastname = " + userinfo['lastname']
-				print "Last Scan = " + userinfo['last_scan']
-				print "Total Time Allocated = " + str(userinfo['total_time_allocated'])
-				print "Total Time Logged = " + str(userinfo['total_time_logged'])
-				print ""
+	
+				logger.debug( "Scan Detected for User ID: " + str(scan_id))
+				logger.debug( "Scanner ID: " + scanner_id)
+				logger.debug( "Username = " + scanned_username)
+				logger.debug( "Firstname = " + userinfo['firstname'])
+				logger.debug( "Lastname = " + userinfo['lastname'])
+				logger.debug( "Last Scan = " + userinfo['last_scan'])
+				logger.debug( "Total Time Allocated = " + str(userinfo['total_time_allocated']))
+				logger.debug( "Total Time Logged = " + str(userinfo['total_time_logged']))
+				logger.debug( "") 
 
 				## If no user_machine_allocation_rec (i.e. permission 
 				## to the given machine) -- error
@@ -136,39 +136,39 @@ def main():
 
 				if (usermachineinfo == None):
 					logUserFeedback("User " + scanned_username + " has no permission to machine: " + selected_machine_id)
-					print "The given user (" + scanned_username + " )" 
-					print "has no permission to the given machine (" + selected_machine_id + ")"
-					print "Please check user_machine_allocation_rec to ensure user"
-					print "is registered for time on this machine" 
+					logger.debug( "The given user (" + scanned_username + " )" )
+					logger.debug( "has no permission to the given machine (" + selected_machine_id + ")")
+					logger.debug( "Please check user_machine_allocation_rec to ensure user")
+					logger.debug( "is registered for time on this machine" )
 					continue
 				
 				## If no alloted time left for user (total from user_rec) -- error
 				if (userinfo['total_time_logged'] >= userinfo['total_time_allocated']):
-					print "The given user (%s)" % scanned_username
-					print " has exceeded the total alloted to them"
-					print " for all machines.  Please ensure user record is up to date"
+					logger.debug( "The given user (%s)" % scanned_username)
+					logger.debug( " has exceeded the total alloted to them")
+					logger.debug( " for all machines.  Please ensure user record is up to date")
 					continue
 			
 				
-                                print "Time Allocated for " + selected_machine_id + " = " + str(usermachineinfo['time_allocated'])
-                                print "Time Logged for " + selected_machine_id + " = " + str(usermachineinfo['time_logged'])
+                                logger.debug( "Time Allocated for " + selected_machine_id + " = " + str(usermachineinfo['time_allocated']))
+                                logger.debug( "Time Logged for " + selected_machine_id + " = " + str(usermachineinfo['time_logged']))
 
 				## If no alloted time left for user on THIS machine 
 				## (from user_machine_allocation_rec) -- error
 				if (usermachineinfo['time_logged'] >= usermachineinfo['time_allocated']):
-					print "The given user (%s)" % scanned_username
-					print " has no more time left on the scanned machine (%s)" % selected_machine_id
+					logger.debug( "The given user (%s)" % scanned_username)
+					logger.debug( " has no more time left on the scanned machine (%s)" % selected_machine_id)
 					continue
 			
 				## Prevent same user from logging into multiple machines
 				if (isUserAlreadyUsingAnotherMachine(scanned_username, selected_machine_id, machine_list)): 
-					print "You can't do that you're already logged into another machine"
+					logger.debug( "You can't do that you're already logged into another machine")
 					continue
 
 						
 
 				## display successful swipe and machine selected	
-				print "User is authorized for machine:  " + selected_machine_id
+				logger.debug( "User is authorized for machine:  " + selected_machine_id)
 
 
 
@@ -223,8 +223,8 @@ def InitMachines(shared_mem):
 
 		if (machine['parent_machine_id'] == MY_MASTER_CONTROLLER_ID ):
 	                
-			print "Creating machine ID: %s\nPaired With Plug: %s\nPlug IP Address %s\n" % \
-				(machine['machine_description'],machine['plug_description'],machine['ip_address'])
+			logger.debug( "Creating machine ID: %s\nPaired With Plug: %s\nPlug IP Address %s\n" % \
+				(machine['machine_description'],machine['plug_description'],machine['ip_address']))
 			try:
 
 				## First default this machine state to "unrecognized" in the database
@@ -241,8 +241,8 @@ def InitMachines(shared_mem):
 				MakerPassDatabase.clearMachineUser(new_machine.machine_id)
 
 			except Exception, ex:
-				print "Failed to Instantiate machine:  " + machine['machine_description']
-				print "Exception:  " + str(ex)
+				logger.debug( "Failed to Instantiate machine:  " + machine['machine_description'])
+				logger.debug( "Exception:  " + str(ex))
 				## continue...non-fatal 
 
 	return machine_list

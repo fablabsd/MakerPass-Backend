@@ -2,8 +2,10 @@
 
 import sqlite3 as lite
 import sys
+from MakerPassLogger import MakerPassDatabase_logger as logger
 
 database = 'database/makerpass_database.db'
+
 
 ## return all the values as row data from machine_rec
 def getMachineRecords():
@@ -22,7 +24,7 @@ def getMachineRecords():
 		return rows
 
 	except lite.Error, e:
-    		print "Error %s:" % e.args[0]
+    		logger.debug( "Error %s:" % e.args[0])
     		sys.exit(1)
     
 	finally:
@@ -52,7 +54,7 @@ def getUserInfo(scan_id):
 
 
         except lite.Error, e:
-                print "Error %s:" % e.args[0]
+                logger.debug( "Error %s:" % e.args[0])
                 sys.exit(1)
 
         finally:
@@ -82,7 +84,7 @@ def getMachineId(scanner_id):
 
 
         except lite.Error, e:
-                print "Error %s:" % e.args[0]
+                logger.debug( "Error %s:" % e.args[0])
                 sys.exit(1)
 
         finally:
@@ -114,7 +116,7 @@ def getUserMachineInfo(username, machine_id):
 		return None
 
         except lite.Error, e:
-                print "Error %s:" % e.args[0]
+                logger.debug( "Error %s:" % e.args[0])
                 sys.exit(1)
 
         finally:
@@ -133,16 +135,16 @@ def updateUserScanRecords(username, machine_id):
                 cur = con.cursor()
 
                 # first insert a scan record
-		sql = "insert into user_machine_scan_rec (username, machine_id, scan_timestamp) values ('" + username + "', '" + machine_id + "', (DATETIME('now')));"
+		sql = "insert into user_machine_scan_rec (username, machine_id, scan_timestamp) values ('" + username + "', '" + machine_id + "', (datetime('now','localtime')));"
 
                 cur.execute(sql)
 
 		## update the machine-specific last scan
-		sql = "update user_machine_allocation_rec set last_scan = (DATETIME('now')) where username = '" + username + "' and machine_id = '" + machine_id + "';"
+		sql = "update user_machine_allocation_rec set last_scan = (datetime('now','localtime')) where username = '" + username + "' and machine_id = '" + machine_id + "';"
 		cur.execute(sql)
 
 		## update the user-specific last scan
-		sql = "update user_rec set last_scan = (DATETIME('now')) where username = '" + username + "';"
+		sql = "update user_rec set last_scan = (datetime('now','localtime')) where username = '" + username + "';"
 		cur.execute(sql)
 
 		## show current user on the machine
@@ -153,7 +155,7 @@ def updateUserScanRecords(username, machine_id):
                 return None
 
         except lite.Error, e:
-                print "Error %s:" % e.args[0]
+                logger.debug( "Error %s:" % e.args[0])
                 sys.exit(1)
 
         finally:
@@ -173,11 +175,11 @@ def recordTimeUsed(username, machine_id, clear_current_user):
                 ## update user_machine_allocation_rec by setting time_logged to now minus last scan time
 		## julinaday() is used, but note this still has time info after decimal point so we just
 		## cast to minutes by multiplying by number of minutes in a day 
-                sql = "update user_machine_allocation_rec set time_logged= cast((time_logged + (julianday(datetime('now')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "' and machine_id='" + machine_id + "';"
+                sql = "update user_machine_allocation_rec set time_logged= cast((time_logged + (julianday(datetime('now', 'localtime')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "' and machine_id='" + machine_id + "';"
                 cur.execute(sql)
 
                 ## update the user-specific time_logged - same as above but for user_rec
-                sql = "update user_rec set total_time_logged= cast((total_time_logged + (julianday(datetime('now')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "';"
+                sql = "update user_rec set total_time_logged= cast((total_time_logged + (julianday(datetime('now','localtime')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "';"
                 cur.execute(sql)
 
 
@@ -191,7 +193,7 @@ def recordTimeUsed(username, machine_id, clear_current_user):
                 return None
 
         except lite.Error, e:
-                print "Error %s:" % e.args[0]
+                logger.debug( "Error %s:" % e.args[0])
                 sys.exit(1)
 
         finally:
@@ -217,7 +219,7 @@ def clearMachineUser(machine_id):
                 return None
 
         except lite.Error, e:
-                print "Error %s:" % e.args[0]
+                logger.debug( "Error %s:" % e.args[0])
                 sys.exit(1)
 
         finally:
@@ -239,18 +241,18 @@ def markMachineEffectiveUseTime(username, machine_id):
                 ## update the machine effective_use_time -- this is the time
 		## the machine was turned off (if supported, otherwise this will be the same as 
 		## the scan time
-                sql = "update user_machine_allocation_rec set last_scan = (DATETIME('now')) where username = '" + username + "' and machine_id = '" + machine_id + "';"
+                sql = "update user_machine_allocation_rec set last_scan = (datetime('now', 'localtime')) where username = '" + username + "' and machine_id = '" + machine_id + "';"
                 cur.execute(sql)
 
                 ## update the user-specific last scan
-                sql = "update user_rec set last_scan = (DATETIME('now')) where username = '" + username + "';"
+                sql = "update user_rec set last_scan = (datetime('now','localtime')) where username = '" + username + "';"
                 cur.execute(sql)
 
                 con.commit()
                 return None
 
         except lite.Error, e:
-                print "Error %s:" % e.args[0]
+                logger.debug( "Error %s:" % e.args[0])
                 sys.exit(1)
 
         finally:
@@ -278,7 +280,7 @@ def setMachineState(machine_id, state):
                 return None
 
         except lite.Error, e:
-                print "Error %s:" % e.args[0]
+                logger.debug( "Error %s:" % e.args[0])
                 sys.exit(1)
 
         finally:
@@ -292,19 +294,19 @@ if __name__ == '__main__':
 
 	rows = getMachineRecords()
         for row in rows:
-		#print "keys = ",row.keys()
-		print row['machine_id'], row['parent_machine_id']
+		#logger.debug( "keys = ",row.keys())
+		logger.debug( row['machine_id'] +  row['parent_machine_id'])
      		#for col in row:
-                        #print col + " ",
-                        #print
+                        #logger.debug( col + " ",)
+                        #logger.debug("")
 	#for key in rows[0]:
-	#print rows
-		#print "key = ",key
+	#logger.debug( rows)
+		#logger.debug( "key = ",key)
 
 	updateUserScanRecords("testuser","FABLAB_CNC1")
 
 	row = getMachineId("PLNU_MAG_SWIPE")
-	print row['machine_id']
+	logger.debug( row['machine_id'])
 
 	row = getUserMachineInfo("testuser", "FABLAB_CNC1") 
-	print row['last_scan']
+	logger.debug( row['last_scan'])

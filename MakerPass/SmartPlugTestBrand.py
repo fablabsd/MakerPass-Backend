@@ -1,9 +1,11 @@
 #!/usr/bin/python
 
+import logging
+
 from MachineStates import MachineStates
 from SmartPlug import SmartPlug
 from datetime import datetime
-
+from MakerPassLogger import SmartPlugTestBrand_logger as logger
 
 class SmartPlugTestBrand(SmartPlug):
         
@@ -24,11 +26,11 @@ class SmartPlugTestBrand(SmartPlug):
 
         ##  ----- METHODS -------------------------------------
         def enableMachinePlug(self):
-                print " SmartPlugTestBrand.enableMachinePlug() called "
+                logger.debug( " SmartPlugTestBrand.enableMachinePlug() called ")
         def disableMachinePlug(self):
-                print " SmartPlugTestBrand.disableMachinePlug() called "
+                logger.debug( " SmartPlugTestBrand.disableMachinePlug() called ")
         def isMachinePlugEnabled(self):
-                print " SmartPlugTestBrand.isMachinePlugPlugEnabled() called "
+                logger.debug( " SmartPlugTestBrand.isMachinePlugPlugEnabled() called ")
 
 	def checkSwitchState(self):
 
@@ -50,13 +52,12 @@ class SmartPlugTestBrand(SmartPlug):
 		## calculate how long since last call 
         	switch_on_timeout_end = datetime.now()
         	timediff_millis = (switch_on_timeout_end - self.switched_on_timeout_start).total_seconds()
-		#print str(timediff_millis)
+		#logger.debug( str(timediff_millis))
 
 		## wait at least switch_on_delay_time seconds before making actual check again
         	if ( timediff_millis > self.switched_on_delay_time ):
-                	print "Making isSwitcheaOn() check after delay:  %.2gs" % timediff_millis
+                	logger.debug( "Making isSwitchedOn() check after delay:  %.2gs" % timediff_millis)
 			self.switch_state = self.checkSwitchState()
-			print "New switch state = " + str(self.switch_state)
                 	self.switched_on_timeout_start = datetime.now()
 		
 		return self.switch_state
@@ -70,8 +71,8 @@ class SmartPlugTestBrand(SmartPlug):
 			## so we are just waiting for a scan
 	
 			if (is_new_user == True): 
-				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
-				print "Transition to STATE_NEED_SWITCH_ON\n"
+				logger.debug( "plug_id:  " + self.plug_id + " - " + self.ip_address )
+				logger.debug( "Transition to STATE_NEED_SWITCH_ON\n")
 				self.enableMachinePlug()
 				self.state = MachineStates.STATE_NEED_SWITCH_ON
 			
@@ -84,17 +85,17 @@ class SmartPlugTestBrand(SmartPlug):
  
 			if (self.isSwitchedOn()):
 				self.state = MachineStates.STATE_ALL_ON
-				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
-				print "Transition to STATE_ALL_ON\n"
+				logger.debug( "plug_id:  " + self.plug_id + " - " + self.ip_address )
+				logger.debug( "Transition to STATE_ALL_ON\n")
 
 			## detect new user
 			elif (scan_detected == True): 
 				
-				## detect an "unswipe" - no need to detect new user here
+				## detect an "unswipe" 
 				if (is_new_user == False): 
 					self.state = MachineStates.STATE_ALL_OFF;
-					print "plug_id:  " + self.plug_id + " - " + self.ip_address 
-					print "Transition to STATE_ALL_OFF\n"
+					logger.debug( "plug_id:  " + self.plug_id + " - " + self.ip_address )
+					logger.debug( "Transition to STATE_ALL_OFF\n")
 
 
 		elif (self.state == MachineStates.STATE_ALL_ON):
@@ -107,12 +108,12 @@ class SmartPlugTestBrand(SmartPlug):
 			if (not(self.isSwitchedOn())): 
 				self.state = MachineStates.STATE_ALL_OFF
 				self.disableMachinePlug()
-				print "plug_id:  " + self.plug_id + " - " + self.ip_address 
-				print "Transition to STATE_ALL_OFF\n"
+				logger.debug( "plug_id:  " + self.plug_id + " - " + self.ip_address )
+				logger.debug( "Transition to STATE_ALL_OFF\n")
 
 		else: 
-			print "StatePlugWemoInsight.manageState():  oops..invalid state encountered..."
-			print " must have been those darn cosmic rays.."
+			logger.debug( "StatePlugWemoInsight.manageState():  oops..invalid state encountered...")
+			logger.debug( " must have been those darn cosmic rays..")
 			raise SystemExit
 	
 
