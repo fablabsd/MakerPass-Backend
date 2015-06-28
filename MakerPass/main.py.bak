@@ -8,7 +8,6 @@ import Machine
 import PLNU_IDCardSwipe
 import PipeSwipe
 import logging
-import MachinePlugCreator
 import MakerPassDatabase
 import MakerPassLogger
 
@@ -176,15 +175,11 @@ def main():
 			## Now manage each of the machine states
 			for machine in machine_list:
 			
-			
 				## pass in scanned user (if any) and which machine was selected
 				## to main state handling routines for various machines/plugs
 				machine.manageState(scanned_username, selected_machine_id)
 
                 except (KeyboardInterrupt):
-                        break
-                except Exception as ex:
-			logger.error("General Exception: \n\n" + ex.message) 
                         break
 
 ## --------------------------------------------------------
@@ -236,10 +231,10 @@ def InitMachines(shared_mem):
 				## so we will know if there was an issue initializing (in the web client) 
 				MakerPassDatabase.setMachineState(machine['machine_id'], "Unrecognized")
 
-                		new_machine = MachinePlugCreator.instantiateMachinePlug(machine['machine_id'], \
+                		new_machine = Machine.Machine(machine['machine_id'], \
 				machine['machine_description'], \
 				machine['plug_id'], machine['plug_description'], \
-				machine['plug_type'], \
+				machine['ip_address'], machine['plug_type'], \
 				machine['plug_name'], machine['power_threshold'])
 
 				machine_list.append(new_machine)

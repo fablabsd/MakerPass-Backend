@@ -182,6 +182,7 @@ def main():
 				machine.manageState(scanned_username, selected_machine_id)
 
                 except (KeyboardInterrupt):
+						logger.debug("Keyboard Interrupt\n\n")
                         break
                 except Exception as ex:
 			logger.error("General Exception: \n\n" + ex.message) 
@@ -229,7 +230,7 @@ def InitMachines(shared_mem):
 		if (machine['parent_machine_id'] == MY_MASTER_CONTROLLER_ID ):
 	                
 			logger.debug( "Creating machine ID: %s\nPaired With Plug: %s\nPlug IP Address %s\n" % \
-				(machine['machine_description'],machine['plug_description'],machine['ip_address']))
+				(machine['machine_description'],machine['plug_description']))
 			try:
 
 				## First default this machine state to "unrecognized" in the database
