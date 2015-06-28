@@ -4,7 +4,6 @@ import os
 import sys
 import time
 import SharedMem
-import Machine
 import PLNU_IDCardSwipe
 import PipeSwipe
 import logging
@@ -182,11 +181,11 @@ def main():
 				machine.manageState(scanned_username, selected_machine_id)
 
                 except (KeyboardInterrupt):
-						logger.debug("Keyboard Interrupt\n\n")
-                        break
+			logger.debug("Keyboard Interrupt\n\n")
+			sys.exit(0)
                 except Exception as ex:
 			logger.error("General Exception: \n\n" + ex.message) 
-                        break
+			sys.exit(1)
 
 ## --------------------------------------------------------
 ## this function checks user=machine.user for all machines that do no match 
@@ -229,7 +228,7 @@ def InitMachines(shared_mem):
 
 		if (machine['parent_machine_id'] == MY_MASTER_CONTROLLER_ID ):
 	                
-			logger.debug( "Creating machine ID: %s\nPaired With Plug: %s\nPlug IP Address %s\n" % \
+			logger.debug( "Creating machine ID: %s\nPaired With Plug: %s\n" % \
 				(machine['machine_description'],machine['plug_description']))
 			try:
 

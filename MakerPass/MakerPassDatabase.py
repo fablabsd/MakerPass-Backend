@@ -124,7 +124,7 @@ def getUserMachineInfo(username, machine_id):
 
 
 ## ----------------------------------------------------------
-def updateUserScanRecords(username, machine_id):
+def loginUser(username, machine_id):
 
         con = None
 
@@ -162,42 +162,44 @@ def updateUserScanRecords(username, machine_id):
                 if con: con.close()
 
 ## ----------------------------------------------------------
-def recordTimeUsed(username, machine_id, clear_current_user):
+## Record the amount time this user used the machine
+def logoutUser(username, machine_id):
 
-        con = None
+	con = None
 
-        try:
-                con = lite.connect(database)
+	try:
+        
+		##  record/subtract time used
+		logger.debug( "Recording time used for user:")
+		logger.debug( "User = " + username)
+		logger.debug( "Machine = " + machine_id)
 
-                con.row_factory = lite.Row
-                cur = con.cursor()
+		con = lite.connect(database)
+		con.row_factory = lite.Row
+		cur = con.cursor()
 
-                ## update user_machine_allocation_rec by setting time_logged to now minus last scan time
+		## update user_machine_allocation_rec by setting time_logged to now minus last scan time
 		## julinaday() is used, but note this still has time info after decimal point so we just
 		## cast to minutes by multiplying by number of minutes in a day 
-                sql = "update user_machine_allocation_rec set time_logged= cast((time_logged + (julianday(datetime('now', 'localtime')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "' and machine_id='" + machine_id + "';"
-                cur.execute(sql)
+		sql = "update user_machine_allocation_rec set time_logged= cast((time_logged + (julianday(datetime('now', 'localtime')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "' and machine_id='" + machine_id + "';"
+		cur.execute(sql)
 
-                ## update the user-specific time_logged - same as above but for user_rec
-                sql = "update user_rec set total_time_logged= cast((total_time_logged + (julianday(datetime('now','localtime')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "';"
-                cur.execute(sql)
+		## update the user-specific time_logged - same as above but for user_rec
+		sql = "update user_rec set total_time_logged= cast((total_time_logged + (julianday(datetime('now','localtime')) - julianday(last_scan)) * 1440) as integer) where username='" + username + "';"
+		cur.execute(sql)
 
 
 		con.commit()
 
-                ## clear out the current user from machine_rec if indicated (doing this when transitioning to ALL_OFF state)
-		if (clear_current_user == True):
-			clearMachineUser(machine_id)                	
+		## clear out the current user from machine_rec if indicated (doing this when transitioning to ALL_OFF state)
+		return None
 
+	except lite.Error, e:
+		logger.debug( "Error %s:" % e.args[0])
+		sys.exit(1)
 
-                return None
-
-        except lite.Error, e:
-                logger.debug( "Error %s:" % e.args[0])
-                sys.exit(1)
-
-        finally:
-                if con: con.close()
+	finally:
+		if con: con.close()
 
 ## ----------------------------------------------------------
 def clearMachineUser(machine_id):
@@ -303,7 +305,7 @@ if __name__ == '__main__':
 	#logger.debug( rows)
 		#logger.debug( "key = ",key)
 
-	updateUserScanRecords("testuser","FABLAB_CNC1")
+	loginUser("testuser","FABLAB_CNC1")
 
 	row = getMachineId("PLNU_MAG_SWIPE")
 	logger.debug( row['machine_id'])

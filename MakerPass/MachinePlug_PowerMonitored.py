@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
-from MachinePlug import MachinePlug
+import MakerPassDatabase
 
+from MachinePlug import MachinePlug
 from MachineStates import MachineStates
 from datetime import datetime
 from MakerPassLogger import MachinePlug_PowerMonitored_logger as logger
@@ -73,6 +74,7 @@ class MachinePlug_PowerMonitored(MachinePlug):
 				## otherwise
 				self.switched_on_timeout_start = datetime.now()
 				self.state = MachineStates.STATE_NEED_SWITCH_ON
+				MakerPassDatabase.setMachineState(self.machine_id, MachineStates.toString(self.state))
 			
 	
 		elif (self.state == MachineStates.STATE_NEED_SWITCH_ON):
@@ -82,19 +84,30 @@ class MachinePlug_PowerMonitored(MachinePlug):
 			## are still giving the user the chance to swipe out if desired
  
 			if (self.isSwitchedOn()):
-				self.state = MachineStates.STATE_ALL_ON
+			
 				logger.debug( "plug_id:  " + self.plug_id  )
 				logger.debug( "Transition to STATE_ALL_ON\n")
-
+				
+				self.state = MachineStates.STATE_ALL_ON
+				MakerPassDatabase.setMachineState(self.machine_id, MachineStates.toString(self.state))
+				
+				## mark machine effective use time - this is the time the machine has actually been switched on
+				## we do this so the user is not charged for time between when they scanned and the machine was turned on				
+				MakerPassDatabase.markMachineEffectiveUseTime(self.current_user, self.machine_id)
+				
+				
 			## detect new user
 			elif (scan_detected == True): 
 				
 				## detect an "unswipe" - no need to detect new user here
 				if (is_new_user == False): 
-					self.state = MachineStates.STATE_ALL_OFF;
 					logger.debug( "plug_id:  " + self.plug_id)
 					logger.debug( "Transition to STATE_ALL_OFF\n")
+					self.state = MachineStates.STATE_ALL_OFF;
 					self.disableMachinePlug()
+					self.current_user = ""
+					MakerPassDatabase.clearMachineUser(self.machine_id)
+					MakerPassDatabase.setMachineState(self.machine_id, MachineStates.toString(self.state))
 
 		elif (self.state == MachineStates.STATE_ALL_ON):
 	
@@ -104,10 +117,14 @@ class MachinePlug_PowerMonitored(MachinePlug):
 			## otherwise, if a new person has logged in, we stay in 
 			## this state
 			if (not(self.isSwitchedOn())): 
-				self.state = MachineStates.STATE_ALL_OFF
-				self.disableMachinePlug()
 				logger.debug( "plug_id:  " + self.plug_id  )
 				logger.debug( "Transition to STATE_ALL_OFF\n")
+				self.state = MachineStates.STATE_ALL_OFF
+				self.disableMachinePlug()
+				MakerPassDatabase.logoutUser(self.current_user, self.machine_id)
+				self.current_user = ""
+				MakerPassDatabase.clearMachineUser(self.machine_id)
+				MakerPassDatabase.setMachineState(self.machine_id, MachineStates.toString(self.state))
 
 		else: 
 			logger.debug( "MachinePlug_PowerMonitored.doManageState():  oops..invalid state encountered...")

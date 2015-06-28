@@ -963,3 +963,1333 @@ DEBUG:06-27-2015 17:44:42:MachinePlug_PowerMonitored:Making isSwitchedOn() check
 INFO:06-27-2015 17:44:42:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
 DEBUG:06-27-2015 17:44:42:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 349
 DEBUG:06-27-2015 17:44:42:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 5620
+DEBUG:06-28-2015 00:53:19:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:06-28-2015 00:53:19:main:Creating Shared mem
+DEBUG:06-28-2015 00:53:19:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:06-28-2015 00:53:19:main:Instantiating Machine Objects
+DEBUG:06-28-2015 00:54:59:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:06-28-2015 00:54:59:main:Creating Shared mem
+DEBUG:06-28-2015 00:55:00:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:06-28-2015 00:55:00:main:Instantiating Machine Objects
+DEBUG:06-28-2015 00:55:00:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:06-28-2015 00:55:00:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 00:55:00:ouimeaux.discovery:Binding datagram server to 192.168.1.200:54321
+INFO:06-28-2015 00:55:00:ouimeaux.environment:Discovering devices
+DEBUG:06-28-2015 00:55:00:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 00:55:00:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 00:55:00:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 00:55:01:ouimeaux.discovery:Received a response from 192.168.1.10:3124
+DEBUG:06-28-2015 00:55:01:ouimeaux.discovery:Found WeMo at 192.168.1.10:3124
+DEBUG:06-28-2015 00:55:01:ouimeaux.discovery:Received a response from 192.168.1.8:3093
+DEBUG:06-28-2015 00:55:01:ouimeaux.discovery:Found WeMo at 192.168.1.8:3093
+INFO:06-28-2015 00:55:01:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:01:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4082
+INFO:06-28-2015 00:55:01:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:01:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 00:55:01:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:01:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 00:55:01:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:01:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 16962
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 6319
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 653
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3673
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 6971
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 00:55:02:ouimeaux.environment:Found device <WeMo Insight "WEMO LASER ROOM"> at ('192.168.1.10', 3124)
+INFO:06-28-2015 00:55:02:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO LASER ROOM">
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4756
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 00:55:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 18263
+INFO:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 7233
+INFO:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 1132
+INFO:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3974
+INFO:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 7810
+INFO:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:03:requests.packages.urllib3.connectionpool:"GET /smartsetup.xml HTTP/1.1" 200 2539
+INFO:06-28-2015 00:55:04:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:04:requests.packages.urllib3.connectionpool:"GET /manufacture.xml HTTP/1.1" 200 642
+INFO:06-28-2015 00:55:04:ouimeaux.environment:Found device <WeMo Insight "WEMO CNC ROOM"> at ('192.168.1.8', 3093)
+INFO:06-28-2015 00:55:04:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO CNC ROOM">
+INFO:06-28-2015 00:55:04:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:04:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 00:55:04:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:04:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-28-2015 00:55:04:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 00:55:04:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO CNC ROOM">
+DEBUG:06-28-2015 00:55:04:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:06-28-2015 00:55:04:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 00:55:04:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO LASER ROOM">
+DEBUG:06-28-2015 00:55:04:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:06-28-2015 00:55:04:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:06-28-2015 00:55:05:main:Spawning PLNU magstripe handler process
+DEBUG:06-28-2015 00:55:05:main:Spawning Pipe scan handler process
+DEBUG:06-28-2015 00:55:05:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:06-28-2015 00:55:05:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:06-28-2015 00:55:05:main:Entering main processing loop...
+DEBUG:06-28-2015 00:55:25:PipeSwipe:PLNU_MAG_SWIPE|439003
+
+DEBUG:06-28-2015 00:55:25:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 00:55:25:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 00:55:25:main:scan_id = 439003
+DEBUG:06-28-2015 00:55:25:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 00:55:25:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 00:55:25:main:Username = chrisanderson
+DEBUG:06-28-2015 00:55:25:main:Firstname = Chris
+DEBUG:06-28-2015 00:55:25:main:Lastname = Anderson
+DEBUG:06-28-2015 00:55:25:main:Last Scan = 2015-06-27 17:39:13
+DEBUG:06-28-2015 00:55:25:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 00:55:25:main:Total Time Logged = 545
+DEBUG:06-28-2015 00:55:25:main:
+DEBUG:06-28-2015 00:55:25:main:Time Allocated for FABLAB_CNC1 = 1000
+DEBUG:06-28-2015 00:55:25:main:Time Logged for FABLAB_CNC1 = 334
+DEBUG:06-28-2015 00:55:25:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 00:55:25:MachinePlug:Registering scan in for user: chrisanderson
+DEBUG:06-28-2015 00:55:26:MachinePlug:Setting current user:
+DEBUG:06-28-2015 00:55:26:MachinePlug:User = chrisanderson
+DEBUG:06-28-2015 00:55:26:MachinePlug:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 00:55:26:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 00:55:26:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:06-28-2015 00:55:26:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:06-28-2015 00:55:26:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doEnableMachinePlug() called 
+INFO:06-28-2015 00:55:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:55:26:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 295
+ERROR:06-28-2015 00:55:26:main:General Exception: 
+
+global name 'MakerPassDatabase' is not defined
+DEBUG:06-28-2015 00:59:37:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:06-28-2015 00:59:37:main:Creating Shared mem
+DEBUG:06-28-2015 00:59:37:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:06-28-2015 00:59:37:main:Instantiating Machine Objects
+DEBUG:06-28-2015 00:59:37:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:06-28-2015 00:59:38:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 00:59:38:ouimeaux.discovery:Binding datagram server to 192.168.1.200:54321
+INFO:06-28-2015 00:59:38:ouimeaux.environment:Discovering devices
+DEBUG:06-28-2015 00:59:38:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 00:59:38:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 00:59:38:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 00:59:38:ouimeaux.discovery:Received a response from 192.168.1.10:3124
+DEBUG:06-28-2015 00:59:38:ouimeaux.discovery:Found WeMo at 192.168.1.10:3124
+INFO:06-28-2015 00:59:38:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:38:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4082
+INFO:06-28-2015 00:59:38:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:38:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 00:59:38:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:38:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 16962
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 6319
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 653
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3673
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 6971
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 00:59:39:ouimeaux.environment:Found device <WeMo Insight "WEMO LASER ROOM"> at ('192.168.1.10', 3124)
+INFO:06-28-2015 00:59:39:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO LASER ROOM">
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-28-2015 00:59:39:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 00:59:39:ouimeaux.discovery:Received a response from 192.168.1.8:3093
+DEBUG:06-28-2015 00:59:39:ouimeaux.discovery:Found WeMo at 192.168.1.8:3093
+DEBUG:06-28-2015 00:59:39:ouimeaux.discovery:Received a response from 192.168.1.10:3124
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4756
+INFO:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:39:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 18263
+INFO:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 7233
+INFO:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 1132
+INFO:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:40:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3974
+INFO:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 7810
+INFO:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:"GET /smartsetup.xml HTTP/1.1" 200 2539
+INFO:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:"GET /manufacture.xml HTTP/1.1" 200 642
+INFO:06-28-2015 00:59:41:ouimeaux.environment:Found device <WeMo Insight "WEMO CNC ROOM"> at ('192.168.1.8', 3093)
+INFO:06-28-2015 00:59:41:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO CNC ROOM">
+INFO:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:41:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-28-2015 00:59:42:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 00:59:42:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO CNC ROOM">
+DEBUG:06-28-2015 00:59:42:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:06-28-2015 00:59:42:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 00:59:42:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO LASER ROOM">
+DEBUG:06-28-2015 00:59:42:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:06-28-2015 00:59:42:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:06-28-2015 00:59:42:main:Spawning PLNU magstripe handler process
+DEBUG:06-28-2015 00:59:42:main:Spawning Pipe scan handler process
+DEBUG:06-28-2015 00:59:42:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:06-28-2015 00:59:42:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:06-28-2015 00:59:42:main:Entering main processing loop...
+DEBUG:06-28-2015 00:59:53:PipeSwipe:PLNU_MAG_SWIPE|439003
+
+DEBUG:06-28-2015 00:59:53:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 00:59:53:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 00:59:53:main:scan_id = 439003
+DEBUG:06-28-2015 00:59:53:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 00:59:53:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 00:59:53:main:Username = chrisanderson
+DEBUG:06-28-2015 00:59:53:main:Firstname = Chris
+DEBUG:06-28-2015 00:59:53:main:Lastname = Anderson
+DEBUG:06-28-2015 00:59:53:main:Last Scan = 2015-06-28 00:55:25
+DEBUG:06-28-2015 00:59:53:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 00:59:53:main:Total Time Logged = 545
+DEBUG:06-28-2015 00:59:53:main:
+DEBUG:06-28-2015 00:59:53:main:Time Allocated for FABLAB_CNC1 = 1000
+DEBUG:06-28-2015 00:59:53:main:Time Logged for FABLAB_CNC1 = 334
+DEBUG:06-28-2015 00:59:53:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 00:59:53:MachinePlug:Registering scan in for user: chrisanderson
+DEBUG:06-28-2015 00:59:53:MachinePlug:Setting current user:
+DEBUG:06-28-2015 00:59:53:MachinePlug:User = chrisanderson
+DEBUG:06-28-2015 00:59:53:MachinePlug:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 00:59:53:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 00:59:53:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:06-28-2015 00:59:53:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:06-28-2015 00:59:53:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doEnableMachinePlug() called 
+INFO:06-28-2015 00:59:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 00:59:53:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 295
+ERROR:06-28-2015 00:59:53:main:General Exception: 
+
+global name 'MakerPassDatabase' is not defined
+DEBUG:06-28-2015 01:00:51:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:06-28-2015 01:00:51:main:Creating Shared mem
+DEBUG:06-28-2015 01:00:51:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:06-28-2015 01:00:51:main:Instantiating Machine Objects
+DEBUG:06-28-2015 01:00:51:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:06-28-2015 01:00:51:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 01:00:51:ouimeaux.discovery:Binding datagram server to 192.168.1.200:54321
+INFO:06-28-2015 01:00:51:ouimeaux.environment:Discovering devices
+DEBUG:06-28-2015 01:00:51:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 01:00:51:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 01:00:51:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 01:00:51:ouimeaux.discovery:Received a response from 192.168.1.10:3124
+DEBUG:06-28-2015 01:00:51:ouimeaux.discovery:Found WeMo at 192.168.1.10:3124
+INFO:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4082
+INFO:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 16962
+INFO:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 6319
+INFO:06-28-2015 01:00:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 653
+INFO:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3673
+INFO:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 6971
+INFO:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 01:00:53:ouimeaux.environment:Found device <WeMo Insight "WEMO LASER ROOM"> at ('192.168.1.10', 3124)
+INFO:06-28-2015 01:00:53:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO LASER ROOM">
+INFO:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-28-2015 01:00:53:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 01:00:53:ouimeaux.discovery:Received a response from 192.168.1.8:3093
+DEBUG:06-28-2015 01:00:53:ouimeaux.discovery:Found WeMo at 192.168.1.8:3093
+DEBUG:06-28-2015 01:00:53:ouimeaux.discovery:Received a response from 192.168.1.10:3124
+INFO:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4756
+INFO:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:53:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 18263
+INFO:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 7233
+INFO:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 1132
+INFO:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3974
+INFO:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:54:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 7810
+INFO:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:"GET /smartsetup.xml HTTP/1.1" 200 2539
+INFO:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:"GET /manufacture.xml HTTP/1.1" 200 642
+INFO:06-28-2015 01:00:55:ouimeaux.environment:Found device <WeMo Insight "WEMO CNC ROOM"> at ('192.168.1.8', 3093)
+INFO:06-28-2015 01:00:55:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO CNC ROOM">
+INFO:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:00:55:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-28-2015 01:00:55:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 01:00:55:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO CNC ROOM">
+DEBUG:06-28-2015 01:00:55:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:06-28-2015 01:00:55:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 01:00:55:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO LASER ROOM">
+DEBUG:06-28-2015 01:00:56:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:06-28-2015 01:00:56:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:06-28-2015 01:00:56:main:Spawning PLNU magstripe handler process
+DEBUG:06-28-2015 01:00:56:main:Spawning Pipe scan handler process
+DEBUG:06-28-2015 01:00:56:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:06-28-2015 01:00:56:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:06-28-2015 01:00:56:main:Entering main processing loop...
+DEBUG:06-28-2015 01:01:01:PipeSwipe:PLNU_MAG_SWIPE|439003
+
+DEBUG:06-28-2015 01:01:01:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:01:01:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:01:01:main:scan_id = 439003
+DEBUG:06-28-2015 01:01:01:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:01:01:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:01:01:main:Username = chrisanderson
+DEBUG:06-28-2015 01:01:01:main:Firstname = Chris
+DEBUG:06-28-2015 01:01:01:main:Lastname = Anderson
+DEBUG:06-28-2015 01:01:01:main:Last Scan = 2015-06-28 00:59:53
+DEBUG:06-28-2015 01:01:01:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:01:01:main:Total Time Logged = 545
+DEBUG:06-28-2015 01:01:01:main:
+DEBUG:06-28-2015 01:01:01:main:Time Allocated for FABLAB_CNC1 = 1000
+DEBUG:06-28-2015 01:01:01:main:Time Logged for FABLAB_CNC1 = 334
+DEBUG:06-28-2015 01:01:01:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 01:01:01:MachinePlug:Registering scan in for user: chrisanderson
+DEBUG:06-28-2015 01:01:02:MachinePlug:Setting current user:
+DEBUG:06-28-2015 01:01:02:MachinePlug:User = chrisanderson
+DEBUG:06-28-2015 01:01:02:MachinePlug:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:01:02:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:01:02:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:06-28-2015 01:01:02:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:06-28-2015 01:01:02:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doEnableMachinePlug() called 
+INFO:06-28-2015 01:01:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:01:02:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 295
+ERROR:06-28-2015 01:01:02:main:General Exception: 
+
+global name 'MakerPassDatabase' is not defined
+DEBUG:06-28-2015 01:04:26:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:06-28-2015 01:04:26:main:Creating Shared mem
+DEBUG:06-28-2015 01:04:26:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:06-28-2015 01:04:26:main:Instantiating Machine Objects
+DEBUG:06-28-2015 01:04:26:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:06-28-2015 01:04:26:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 01:04:27:ouimeaux.discovery:Binding datagram server to 192.168.1.200:54321
+INFO:06-28-2015 01:04:27:ouimeaux.environment:Discovering devices
+DEBUG:06-28-2015 01:04:27:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 01:04:27:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 01:04:27:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 01:04:27:ouimeaux.discovery:Received a response from 192.168.1.10:3124
+DEBUG:06-28-2015 01:04:27:ouimeaux.discovery:Found WeMo at 192.168.1.10:3124
+INFO:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4082
+INFO:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 16962
+INFO:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:28:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 6319
+INFO:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 653
+INFO:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3673
+INFO:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 6971
+INFO:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 01:04:29:ouimeaux.environment:Found device <WeMo Insight "WEMO LASER ROOM"> at ('192.168.1.10', 3124)
+INFO:06-28-2015 01:04:29:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO LASER ROOM">
+INFO:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-28-2015 01:04:29:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 01:04:29:ouimeaux.discovery:Received a response from 192.168.1.8:3093
+DEBUG:06-28-2015 01:04:29:ouimeaux.discovery:Found WeMo at 192.168.1.8:3093
+DEBUG:06-28-2015 01:04:29:ouimeaux.discovery:Received a response from 192.168.1.10:3124
+INFO:06-28-2015 01:04:29:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4756
+INFO:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 18263
+INFO:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:30:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 7233
+INFO:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 1132
+INFO:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3974
+INFO:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 7810
+INFO:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:"GET /smartsetup.xml HTTP/1.1" 200 2539
+INFO:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:"GET /manufacture.xml HTTP/1.1" 200 642
+INFO:06-28-2015 01:04:31:ouimeaux.environment:Found device <WeMo Insight "WEMO CNC ROOM"> at ('192.168.1.8', 3093)
+INFO:06-28-2015 01:04:31:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO CNC ROOM">
+INFO:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:31:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-28-2015 01:04:31:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 01:04:31:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO CNC ROOM">
+DEBUG:06-28-2015 01:04:31:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:06-28-2015 01:04:31:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 01:04:31:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO LASER ROOM">
+DEBUG:06-28-2015 01:04:32:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:06-28-2015 01:04:32:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:06-28-2015 01:04:32:main:Spawning PLNU magstripe handler process
+DEBUG:06-28-2015 01:04:32:main:Spawning Pipe scan handler process
+DEBUG:06-28-2015 01:04:32:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:06-28-2015 01:04:32:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:06-28-2015 01:04:32:main:Entering main processing loop...
+DEBUG:06-28-2015 01:04:41:PipeSwipe:PLNU_MAG_SWIPE|439003
+
+DEBUG:06-28-2015 01:04:41:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:04:41:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:04:41:main:scan_id = 439003
+DEBUG:06-28-2015 01:04:41:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:04:41:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:04:41:main:Username = chrisanderson
+DEBUG:06-28-2015 01:04:41:main:Firstname = Chris
+DEBUG:06-28-2015 01:04:41:main:Lastname = Anderson
+DEBUG:06-28-2015 01:04:41:main:Last Scan = 2015-06-28 01:01:02
+DEBUG:06-28-2015 01:04:41:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:04:41:main:Total Time Logged = 545
+DEBUG:06-28-2015 01:04:41:main:
+DEBUG:06-28-2015 01:04:41:main:Time Allocated for FABLAB_CNC1 = 1000
+DEBUG:06-28-2015 01:04:41:main:Time Logged for FABLAB_CNC1 = 334
+DEBUG:06-28-2015 01:04:41:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 01:04:41:MachinePlug:Registering scan in for user: chrisanderson
+DEBUG:06-28-2015 01:04:41:MachinePlug:Setting current user:
+DEBUG:06-28-2015 01:04:41:MachinePlug:User = chrisanderson
+DEBUG:06-28-2015 01:04:41:MachinePlug:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:04:41:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:04:41:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:06-28-2015 01:04:41:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:06-28-2015 01:04:41:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doEnableMachinePlug() called 
+INFO:06-28-2015 01:04:41:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:42:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 295
+DEBUG:06-28-2015 01:04:52:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:04:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:04:52:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 340
+DEBUG:06-28-2015 01:04:52:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 0
+DEBUG:06-28-2015 01:05:02:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:05:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:05:02:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 343
+DEBUG:06-28-2015 01:05:02:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 3435
+DEBUG:06-28-2015 01:05:02:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:05:02:MachinePlug_PowerMonitored:Transition to STATE_ALL_ON
+
+DEBUG:06-28-2015 01:05:12:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:05:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:05:12:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 343
+DEBUG:06-28-2015 01:05:12:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2620
+DEBUG:06-28-2015 01:05:22:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:05:22:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:05:22:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 341
+DEBUG:06-28-2015 01:05:22:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 40
+DEBUG:06-28-2015 01:05:22:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:05:22:MachinePlug_PowerMonitored:Transition to STATE_ALL_OFF
+
+DEBUG:06-28-2015 01:05:22:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.disableMachinePlug() called 
+DEBUG:06-28-2015 01:05:22:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doDisableMachinePlug() called 
+INFO:06-28-2015 01:05:22:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:05:22:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 295
+DEBUG:06-28-2015 01:05:22:MakerPassDatabase:Recording time used for user:
+DEBUG:06-28-2015 01:05:22:MakerPassDatabase:User = chrisanderson
+DEBUG:06-28-2015 01:05:22:MakerPassDatabase:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:05:40:PipeSwipe:PLNU_MAG_SWIPE|274457
+
+DEBUG:06-28-2015 01:05:40:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:05:40:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:06-28-2015 01:05:40:main:scan_id = 274457
+DEBUG:06-28-2015 01:05:41:main:Scan Detected for User ID: 274457
+DEBUG:06-28-2015 01:05:41:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:05:41:main:Username = testuser
+DEBUG:06-28-2015 01:05:41:main:Firstname = TestFirst
+DEBUG:06-28-2015 01:05:41:main:Lastname = TestLast
+DEBUG:06-28-2015 01:05:41:main:Last Scan = 2015-06-27 17:38:57
+DEBUG:06-28-2015 01:05:41:main:Total Time Allocated = 100
+DEBUG:06-28-2015 01:05:41:main:Total Time Logged = 72
+DEBUG:06-28-2015 01:05:41:main:
+DEBUG:06-28-2015 01:05:41:main:Time Allocated for FABLAB_CNC1 = 100
+DEBUG:06-28-2015 01:05:41:main:Time Logged for FABLAB_CNC1 = 22
+DEBUG:06-28-2015 01:05:41:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 01:05:41:MachinePlug:Registering scan in for user: testuser
+DEBUG:06-28-2015 01:05:41:MachinePlug:Setting current user:
+DEBUG:06-28-2015 01:05:41:MachinePlug:User = testuser
+DEBUG:06-28-2015 01:05:41:MachinePlug:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:05:41:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:05:41:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:06-28-2015 01:05:41:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:06-28-2015 01:05:41:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doEnableMachinePlug() called 
+INFO:06-28-2015 01:05:41:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:05:41:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 295
+DEBUG:06-28-2015 01:05:51:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:05:51:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:05:51:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 340
+DEBUG:06-28-2015 01:05:51:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 0
+DEBUG:06-28-2015 01:06:01:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:06:02:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 340
+DEBUG:06-28-2015 01:06:02:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 0
+DEBUG:06-28-2015 01:06:04:PipeSwipe:MANUAL_WEB_CLIENT|439003
+
+DEBUG:06-28-2015 01:06:04:PipeSwipe:scanned scanner_id from pipe:  MANUAL_WEB_CLIENT
+DEBUG:06-28-2015 01:06:04:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:06:04:main:scan_id = 439003
+DEBUG:06-28-2015 01:06:04:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:06:04:main:Scanner ID: MANUAL_WEB_CLIENT
+DEBUG:06-28-2015 01:06:04:main:Username = chrisanderson
+DEBUG:06-28-2015 01:06:04:main:Firstname = Chris
+DEBUG:06-28-2015 01:06:04:main:Lastname = Anderson
+DEBUG:06-28-2015 01:06:04:main:Last Scan = 2015-06-28 01:05:02
+DEBUG:06-28-2015 01:06:04:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:06:04:main:Total Time Logged = 545
+DEBUG:06-28-2015 01:06:04:main:
+DEBUG:06-28-2015 01:06:04:main:Time Allocated for FABLAB_LASER1 = 1000
+DEBUG:06-28-2015 01:06:04:main:Time Logged for FABLAB_LASER1 = 511
+DEBUG:06-28-2015 01:06:04:main:User is authorized for machine:  FABLAB_LASER1
+DEBUG:06-28-2015 01:06:04:MachinePlug:Registering scan in for user: chrisanderson
+DEBUG:06-28-2015 01:06:04:MachinePlug:Setting current user:
+DEBUG:06-28-2015 01:06:04:MachinePlug:User = chrisanderson
+DEBUG:06-28-2015 01:06:04:MachinePlug:Machine = FABLAB_LASER1
+DEBUG:06-28-2015 01:06:04:MachinePlug_PowerMonitored:plug_id:  WEMO_LASER1
+DEBUG:06-28-2015 01:06:04:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:06-28-2015 01:06:04:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:06-28-2015 01:06:04:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doEnableMachinePlug() called 
+INFO:06-28-2015 01:06:04:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:06:04:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 318
+DEBUG:06-28-2015 01:06:12:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:06:12:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 342
+DEBUG:06-28-2015 01:06:12:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 0
+DEBUG:06-28-2015 01:06:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:14:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:06:14:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:06:14:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:06:22:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:22:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:06:22:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:06:22:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 4820
+DEBUG:06-28-2015 01:06:22:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:06:22:MachinePlug_PowerMonitored:Transition to STATE_ALL_ON
+
+DEBUG:06-28-2015 01:06:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:24:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:06:24:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:06:24:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:06:32:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:32:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:06:32:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:06:32:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 3845
+DEBUG:06-28-2015 01:06:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:34:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:06:34:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:06:34:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:06:42:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:42:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:06:42:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:06:42:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 3135
+DEBUG:06-28-2015 01:06:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:44:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:06:44:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:06:44:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:06:52:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:06:52:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:06:52:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 3045
+DEBUG:06-28-2015 01:06:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:06:54:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:06:54:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:06:54:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:07:02:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:07:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:07:02:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:07:02:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2865
+DEBUG:06-28-2015 01:07:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:07:04:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:07:04:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:07:04:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:07:12:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:07:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:07:12:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:07:13:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2835
+DEBUG:06-28-2015 01:07:15:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:07:15:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:07:15:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:07:15:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:07:22:PipeSwipe:MANUAL_WEB_CLIENT|439003
+
+DEBUG:06-28-2015 01:07:22:PipeSwipe:scanned scanner_id from pipe:  MANUAL_WEB_CLIENT
+DEBUG:06-28-2015 01:07:22:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:07:22:main:scan_id = 439003
+DEBUG:06-28-2015 01:07:22:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:07:22:main:Scanner ID: MANUAL_WEB_CLIENT
+DEBUG:06-28-2015 01:07:22:main:Username = chrisanderson
+DEBUG:06-28-2015 01:07:22:main:Firstname = Chris
+DEBUG:06-28-2015 01:07:22:main:Lastname = Anderson
+DEBUG:06-28-2015 01:07:22:main:Last Scan = 2015-06-28 01:06:04
+DEBUG:06-28-2015 01:07:22:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:07:22:main:Total Time Logged = 545
+DEBUG:06-28-2015 01:07:22:main:
+DEBUG:06-28-2015 01:07:22:main:Time Allocated for FABLAB_LASER1 = 1000
+DEBUG:06-28-2015 01:07:22:main:Time Logged for FABLAB_LASER1 = 511
+DEBUG:06-28-2015 01:07:22:main:User is authorized for machine:  FABLAB_LASER1
+DEBUG:06-28-2015 01:07:22:MachinePlug_PowerMonitored:plug_id:  WEMO_LASER1
+DEBUG:06-28-2015 01:07:22:MachinePlug_PowerMonitored:Transition to STATE_ALL_OFF
+
+DEBUG:06-28-2015 01:07:22:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.disableMachinePlug() called 
+DEBUG:06-28-2015 01:07:22:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doDisableMachinePlug() called 
+INFO:06-28-2015 01:07:22:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:07:22:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 318
+DEBUG:06-28-2015 01:07:23:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:07:23:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:07:23:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:07:23:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2815
+DEBUG:06-28-2015 01:07:33:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:07:33:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:07:33:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:07:33:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2735
+DEBUG:06-28-2015 01:07:43:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:07:43:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:07:43:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:07:43:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2675
+DEBUG:06-28-2015 01:07:53:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:07:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:07:53:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:07:53:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2630
+DEBUG:06-28-2015 01:08:03:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:08:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:08:03:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:08:03:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2845
+DEBUG:06-28-2015 01:08:13:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:08:13:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:08:14:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:08:14:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2605
+DEBUG:06-28-2015 01:08:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:08:24:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:08:24:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:08:24:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2550
+DEBUG:06-28-2015 01:08:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:08:34:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:08:34:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:08:34:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2505
+DEBUG:06-28-2015 01:08:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:08:44:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:08:44:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:08:44:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2485
+DEBUG:06-28-2015 01:08:51:PipeSwipe:PLNU_MAG_SWIPE|439003
+
+DEBUG:06-28-2015 01:08:51:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:08:51:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:08:51:main:scan_id = 439003
+DEBUG:06-28-2015 01:08:51:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:08:51:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:08:51:main:Username = chrisanderson
+DEBUG:06-28-2015 01:08:51:main:Firstname = Chris
+DEBUG:06-28-2015 01:08:51:main:Lastname = Anderson
+DEBUG:06-28-2015 01:08:51:main:Last Scan = 2015-06-28 01:06:04
+DEBUG:06-28-2015 01:08:51:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:08:51:main:Total Time Logged = 545
+DEBUG:06-28-2015 01:08:51:main:
+DEBUG:06-28-2015 01:08:51:main:Time Allocated for FABLAB_CNC1 = 1000
+DEBUG:06-28-2015 01:08:51:main:Time Logged for FABLAB_CNC1 = 334
+DEBUG:06-28-2015 01:08:51:main:User is authorized for machine:  FABLAB_CNC1
+ERROR:06-28-2015 01:08:51:main:General Exception: 
+
+logoutUser() takes exactly 2 arguments (1 given)
+DEBUG:06-28-2015 01:09:01:PipeSwipe:TEST_SCANNER|274457
+
+DEBUG:06-28-2015 01:09:01:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:06-28-2015 01:09:01:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:06-28-2015 01:12:04:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:06-28-2015 01:12:04:main:Creating Shared mem
+DEBUG:06-28-2015 01:12:04:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:06-28-2015 01:12:04:main:Instantiating Machine Objects
+DEBUG:06-28-2015 01:12:04:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:06-28-2015 01:12:04:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 01:12:04:ouimeaux.discovery:Binding datagram server to 192.168.1.200:54321
+INFO:06-28-2015 01:12:04:ouimeaux.environment:Discovering devices
+DEBUG:06-28-2015 01:12:04:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 01:12:04:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 01:12:04:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:06-28-2015 01:12:05:ouimeaux.discovery:Received a response from 192.168.1.10:3124
+DEBUG:06-28-2015 01:12:05:ouimeaux.discovery:Found WeMo at 192.168.1.10:3124
+INFO:06-28-2015 01:12:05:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:05:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4082
+INFO:06-28-2015 01:12:05:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:05:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 01:12:05:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:05:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 01:12:05:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:05:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 16962
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 6319
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 653
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3673
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 6971
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 01:12:06:ouimeaux.environment:Found device <WeMo Insight "WEMO LASER ROOM"> at ('192.168.1.10', 3124)
+INFO:06-28-2015 01:12:06:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO LASER ROOM">
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-28-2015 01:12:06:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 01:12:06:ouimeaux.discovery:Received a response from 192.168.1.8:3093
+DEBUG:06-28-2015 01:12:06:ouimeaux.discovery:Found WeMo at 192.168.1.8:3093
+DEBUG:06-28-2015 01:12:06:ouimeaux.discovery:Received a response from 192.168.1.10:3124
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4756
+INFO:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:06:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 18263
+INFO:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 7233
+INFO:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 1132
+INFO:06-28-2015 01:12:07:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3974
+INFO:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 7810
+INFO:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:"GET /smartsetup.xml HTTP/1.1" 200 2539
+INFO:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:"GET /manufacture.xml HTTP/1.1" 200 642
+INFO:06-28-2015 01:12:08:ouimeaux.environment:Found device <WeMo Insight "WEMO CNC ROOM"> at ('192.168.1.8', 3093)
+INFO:06-28-2015 01:12:08:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO CNC ROOM">
+INFO:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:12:08:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:06-28-2015 01:12:08:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:06-28-2015 01:12:08:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO CNC ROOM">
+DEBUG:06-28-2015 01:12:09:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:06-28-2015 01:12:09:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:06-28-2015 01:12:09:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO LASER ROOM">
+DEBUG:06-28-2015 01:12:09:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:06-28-2015 01:12:09:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:06-28-2015 01:12:09:main:Spawning PLNU magstripe handler process
+DEBUG:06-28-2015 01:12:09:main:Spawning Pipe scan handler process
+DEBUG:06-28-2015 01:12:09:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:06-28-2015 01:12:10:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:06-28-2015 01:12:10:main:Entering main processing loop...
+DEBUG:06-28-2015 01:31:55:PipeSwipe:MANUAL_WEB_CLIENT|439003
+
+DEBUG:06-28-2015 01:31:55:PipeSwipe:scanned scanner_id from pipe:  MANUAL_WEB_CLIENT
+DEBUG:06-28-2015 01:31:55:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:31:55:main:scan_id = 439003
+DEBUG:06-28-2015 01:31:55:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:31:55:main:Scanner ID: MANUAL_WEB_CLIENT
+DEBUG:06-28-2015 01:31:55:main:Username = chrisanderson
+DEBUG:06-28-2015 01:31:55:main:Firstname = Chris
+DEBUG:06-28-2015 01:31:55:main:Lastname = Anderson
+DEBUG:06-28-2015 01:31:55:main:Last Scan = 2015-06-28 01:06:04
+DEBUG:06-28-2015 01:31:55:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:31:55:main:Total Time Logged = 545
+DEBUG:06-28-2015 01:31:55:main:
+DEBUG:06-28-2015 01:31:55:main:Time Allocated for FABLAB_LASER1 = 1000
+DEBUG:06-28-2015 01:31:55:main:Time Logged for FABLAB_LASER1 = 511
+DEBUG:06-28-2015 01:31:55:main:User is authorized for machine:  FABLAB_LASER1
+DEBUG:06-28-2015 01:31:55:MachinePlug:Registering scan in for user: chrisanderson
+DEBUG:06-28-2015 01:31:55:MachinePlug:Setting current user:
+DEBUG:06-28-2015 01:31:55:MachinePlug:User = chrisanderson
+DEBUG:06-28-2015 01:31:55:MachinePlug:Machine = FABLAB_LASER1
+DEBUG:06-28-2015 01:31:55:MachinePlug_PowerMonitored:plug_id:  WEMO_LASER1
+DEBUG:06-28-2015 01:31:55:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:06-28-2015 01:31:55:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:06-28-2015 01:31:55:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doEnableMachinePlug() called 
+INFO:06-28-2015 01:31:55:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:31:55:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 318
+DEBUG:06-28-2015 01:32:05:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:32:05:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:32:05:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:32:05:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:32:15:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:32:15:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:32:15:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:32:15:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:32:20:PipeSwipe:PLNU_MAG_SWIPE|274457
+
+DEBUG:06-28-2015 01:32:20:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:32:20:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:06-28-2015 01:32:20:main:scan_id = 274457
+DEBUG:06-28-2015 01:32:20:main:Scan Detected for User ID: 274457
+DEBUG:06-28-2015 01:32:20:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:32:20:main:Username = testuser
+DEBUG:06-28-2015 01:32:20:main:Firstname = TestFirst
+DEBUG:06-28-2015 01:32:20:main:Lastname = TestLast
+DEBUG:06-28-2015 01:32:20:main:Last Scan = 2015-06-28 01:06:22
+DEBUG:06-28-2015 01:32:20:main:Total Time Allocated = 100
+DEBUG:06-28-2015 01:32:20:main:Total Time Logged = 72
+DEBUG:06-28-2015 01:32:20:main:
+DEBUG:06-28-2015 01:32:20:main:Time Allocated for FABLAB_CNC1 = 100
+DEBUG:06-28-2015 01:32:20:main:Time Logged for FABLAB_CNC1 = 22
+DEBUG:06-28-2015 01:32:20:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 01:32:20:MachinePlug:Registering scan in for user: testuser
+DEBUG:06-28-2015 01:32:20:MachinePlug:Setting current user:
+DEBUG:06-28-2015 01:32:20:MachinePlug:User = testuser
+DEBUG:06-28-2015 01:32:20:MachinePlug:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:32:20:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:32:20:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:06-28-2015 01:32:20:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:06-28-2015 01:32:20:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doEnableMachinePlug() called 
+INFO:06-28-2015 01:32:20:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:32:20:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 295
+DEBUG:06-28-2015 01:32:25:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:32:25:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:32:25:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:32:25:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:32:30:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:32:30:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:32:30:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:32:30:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1175
+DEBUG:06-28-2015 01:32:30:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:32:30:MachinePlug_PowerMonitored:Transition to STATE_ALL_ON
+
+DEBUG:06-28-2015 01:32:35:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:32:35:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:32:36:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:32:36:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:32:40:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:32:40:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:32:40:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:32:40:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1720
+DEBUG:06-28-2015 01:32:46:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:32:46:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:32:46:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:32:46:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:32:50:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:32:50:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:32:50:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:32:50:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2520
+DEBUG:06-28-2015 01:32:56:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:32:56:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:32:56:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:32:56:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:33:00:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:01:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:33:01:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:33:01:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1255
+DEBUG:06-28-2015 01:33:06:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:06:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:33:06:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:33:06:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:33:11:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:33:11:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:33:11:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1350
+DEBUG:06-28-2015 01:33:16:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:16:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:33:16:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:33:16:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:33:21:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:21:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:33:21:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:33:21:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1125
+DEBUG:06-28-2015 01:33:26:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:33:26:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:33:26:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:33:31:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:31:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:33:31:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:33:31:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1100
+DEBUG:06-28-2015 01:33:36:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:36:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:33:36:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:33:36:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:33:41:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:41:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:33:41:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:33:41:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1240
+DEBUG:06-28-2015 01:33:46:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:46:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:33:46:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:33:46:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:33:51:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:51:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:33:51:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:33:51:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1090
+DEBUG:06-28-2015 01:33:56:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:33:56:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:33:58:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:33:58:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:34:01:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:01:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:34:01:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:34:01:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1125
+DEBUG:06-28-2015 01:34:08:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:34:08:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:34:08:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:34:11:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:34:12:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:34:12:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1080
+DEBUG:06-28-2015 01:34:18:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:18:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:34:18:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:34:18:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:34:22:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:22:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:34:22:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:34:22:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1130
+DEBUG:06-28-2015 01:34:28:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:28:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:34:28:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:34:28:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:34:32:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:32:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:34:32:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:34:32:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1065
+DEBUG:06-28-2015 01:34:38:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:38:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:34:38:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:34:38:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:34:42:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:42:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:34:42:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:34:42:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1140
+DEBUG:06-28-2015 01:34:48:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:48:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:34:48:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:34:48:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:34:52:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:52:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:34:52:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:34:52:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1065
+DEBUG:06-28-2015 01:34:58:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:34:58:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:34:58:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:34:58:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:35:02:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:35:02:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:35:02:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:35:02:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1065
+DEBUG:06-28-2015 01:35:08:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:35:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:35:08:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 336
+DEBUG:06-28-2015 01:35:08:MachinePlug_WemoInsight:power for WEMO LASER ROOM: 0
+DEBUG:06-28-2015 01:35:12:PipeSwipe:MANUAL_WEB_CLIENT|439003
+
+DEBUG:06-28-2015 01:35:12:PipeSwipe:scanned scanner_id from pipe:  MANUAL_WEB_CLIENT
+DEBUG:06-28-2015 01:35:12:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:35:12:main:scan_id = 439003
+DEBUG:06-28-2015 01:35:12:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:35:12:main:Scanner ID: MANUAL_WEB_CLIENT
+DEBUG:06-28-2015 01:35:12:main:Username = chrisanderson
+DEBUG:06-28-2015 01:35:12:main:Firstname = Chris
+DEBUG:06-28-2015 01:35:12:main:Lastname = Anderson
+DEBUG:06-28-2015 01:35:12:main:Last Scan = 2015-06-28 01:31:55
+DEBUG:06-28-2015 01:35:12:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:35:12:main:Total Time Logged = 545
+DEBUG:06-28-2015 01:35:12:main:
+DEBUG:06-28-2015 01:35:12:main:Time Allocated for FABLAB_LASER1 = 1000
+DEBUG:06-28-2015 01:35:12:main:Time Logged for FABLAB_LASER1 = 511
+DEBUG:06-28-2015 01:35:12:main:User is authorized for machine:  FABLAB_LASER1
+DEBUG:06-28-2015 01:35:12:MachinePlug_PowerMonitored:plug_id:  WEMO_LASER1
+DEBUG:06-28-2015 01:35:12:MachinePlug_PowerMonitored:Transition to STATE_ALL_OFF
+
+DEBUG:06-28-2015 01:35:12:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.disableMachinePlug() called 
+DEBUG:06-28-2015 01:35:12:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doDisableMachinePlug() called 
+INFO:06-28-2015 01:35:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.10
+DEBUG:06-28-2015 01:35:12:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 318
+DEBUG:06-28-2015 01:35:12:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:35:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:35:12:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:35:13:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1050
+DEBUG:06-28-2015 01:35:23:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:35:23:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:35:23:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:35:23:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1100
+DEBUG:06-28-2015 01:35:33:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:35:33:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:35:33:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:35:33:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1080
+DEBUG:06-28-2015 01:35:43:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:35:43:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:35:43:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:35:43:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1095
+DEBUG:06-28-2015 01:35:45:PipeSwipe:PLNU_MAG_SWIPE|439003
+
+DEBUG:06-28-2015 01:35:45:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:35:45:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:35:45:main:scan_id = 439003
+DEBUG:06-28-2015 01:35:45:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:35:45:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:35:45:main:Username = chrisanderson
+DEBUG:06-28-2015 01:35:45:main:Firstname = Chris
+DEBUG:06-28-2015 01:35:45:main:Lastname = Anderson
+DEBUG:06-28-2015 01:35:45:main:Last Scan = 2015-06-28 01:31:55
+DEBUG:06-28-2015 01:35:45:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:35:45:main:Total Time Logged = 545
+DEBUG:06-28-2015 01:35:45:main:
+DEBUG:06-28-2015 01:35:45:main:Time Allocated for FABLAB_CNC1 = 1000
+DEBUG:06-28-2015 01:35:45:main:Time Logged for FABLAB_CNC1 = 334
+DEBUG:06-28-2015 01:35:45:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 01:35:45:MakerPassDatabase:Recording time used for user:
+DEBUG:06-28-2015 01:35:45:MakerPassDatabase:User = testuser
+DEBUG:06-28-2015 01:35:45:MakerPassDatabase:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:35:45:MachinePlug:Registering scan in for user: chrisanderson
+DEBUG:06-28-2015 01:35:45:MachinePlug:Setting current user:
+DEBUG:06-28-2015 01:35:45:MachinePlug:User = chrisanderson
+DEBUG:06-28-2015 01:35:45:MachinePlug:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:35:53:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:35:53:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:35:53:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:35:53:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1040
+DEBUG:06-28-2015 01:36:03:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:36:03:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:36:03:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:36:03:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1120
+DEBUG:06-28-2015 01:36:13:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:36:13:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:36:14:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:36:14:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1040
+DEBUG:06-28-2015 01:36:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:36:24:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:36:24:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:36:24:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1070
+DEBUG:06-28-2015 01:36:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:36:34:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:36:34:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:36:34:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1030
+DEBUG:06-28-2015 01:36:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:36:44:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:36:44:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:36:44:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1035
+DEBUG:06-28-2015 01:36:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:36:54:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:36:54:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:36:54:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1010
+DEBUG:06-28-2015 01:37:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:37:04:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:37:04:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:37:04:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1100
+DEBUG:06-28-2015 01:37:08:PipeSwipe:PLNU_MAG_SWIPE|439003
+
+DEBUG:06-28-2015 01:37:08:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:37:09:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:37:09:main:scan_id = 439003
+DEBUG:06-28-2015 01:37:09:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:37:09:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:37:09:main:Username = chrisanderson
+DEBUG:06-28-2015 01:37:09:main:Firstname = Chris
+DEBUG:06-28-2015 01:37:09:main:Lastname = Anderson
+DEBUG:06-28-2015 01:37:09:main:Last Scan = 2015-06-28 01:35:45
+DEBUG:06-28-2015 01:37:09:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:37:09:main:Total Time Logged = 545
+DEBUG:06-28-2015 01:37:09:main:
+DEBUG:06-28-2015 01:37:09:main:Time Allocated for FABLAB_CNC1 = 1000
+DEBUG:06-28-2015 01:37:09:main:Time Logged for FABLAB_CNC1 = 334
+DEBUG:06-28-2015 01:37:09:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 01:37:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:37:14:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:37:14:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:37:14:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1010
+DEBUG:06-28-2015 01:37:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:37:24:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:37:24:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 346
+DEBUG:06-28-2015 01:37:24:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 995
+DEBUG:06-28-2015 01:37:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:37:35:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:37:35:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 346
+DEBUG:06-28-2015 01:37:35:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 110
+DEBUG:06-28-2015 01:37:45:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:37:45:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:37:45:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 344
+DEBUG:06-28-2015 01:37:45:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 0
+DEBUG:06-28-2015 01:37:45:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:37:45:MachinePlug_PowerMonitored:Transition to STATE_ALL_OFF
+
+DEBUG:06-28-2015 01:37:45:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.disableMachinePlug() called 
+DEBUG:06-28-2015 01:37:45:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doDisableMachinePlug() called 
+INFO:06-28-2015 01:37:45:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:37:45:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 295
+DEBUG:06-28-2015 01:37:45:MakerPassDatabase:Recording time used for user:
+DEBUG:06-28-2015 01:37:45:MakerPassDatabase:User = chrisanderson
+DEBUG:06-28-2015 01:37:45:MakerPassDatabase:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:38:26:PipeSwipe:PLNU_MAG_SWIPE|274457
+
+DEBUG:06-28-2015 01:38:26:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:38:26:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:06-28-2015 01:38:26:main:scan_id = 274457
+DEBUG:06-28-2015 01:38:26:main:Scan Detected for User ID: 274457
+DEBUG:06-28-2015 01:38:26:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:38:26:main:Username = testuser
+DEBUG:06-28-2015 01:38:26:main:Firstname = TestFirst
+DEBUG:06-28-2015 01:38:26:main:Lastname = TestLast
+DEBUG:06-28-2015 01:38:26:main:Last Scan = 2015-06-28 01:32:30
+DEBUG:06-28-2015 01:38:26:main:Total Time Allocated = 100
+DEBUG:06-28-2015 01:38:26:main:Total Time Logged = 75
+DEBUG:06-28-2015 01:38:26:main:
+DEBUG:06-28-2015 01:38:26:main:Time Allocated for FABLAB_CNC1 = 100
+DEBUG:06-28-2015 01:38:26:main:Time Logged for FABLAB_CNC1 = 25
+DEBUG:06-28-2015 01:38:26:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 01:38:26:MachinePlug:Registering scan in for user: testuser
+DEBUG:06-28-2015 01:38:26:MachinePlug:Setting current user:
+DEBUG:06-28-2015 01:38:26:MachinePlug:User = testuser
+DEBUG:06-28-2015 01:38:26:MachinePlug:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:38:26:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:38:26:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:06-28-2015 01:38:26:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:06-28-2015 01:38:26:MachinePlug_WemoInsight: MachinePlug_WemoInsight.doEnableMachinePlug() called 
+INFO:06-28-2015 01:38:26:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:38:27:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 295
+DEBUG:06-28-2015 01:38:37:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:38:37:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:38:37:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 344
+DEBUG:06-28-2015 01:38:37:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 0
+DEBUG:06-28-2015 01:38:47:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:38:47:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:38:47:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:38:47:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 25
+DEBUG:06-28-2015 01:38:57:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:38:57:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:38:57:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 344
+DEBUG:06-28-2015 01:38:57:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 5
+DEBUG:06-28-2015 01:39:07:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:39:07:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:39:07:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 344
+DEBUG:06-28-2015 01:39:07:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 0
+DEBUG:06-28-2015 01:39:08:PipeSwipe:PLNU_MAG_SWIPE|439003
+
+DEBUG:06-28-2015 01:39:08:PipeSwipe:scanned scanner_id from pipe:  PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:39:09:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:06-28-2015 01:39:09:main:scan_id = 439003
+DEBUG:06-28-2015 01:39:09:main:Scan Detected for User ID: 439003
+DEBUG:06-28-2015 01:39:09:main:Scanner ID: PLNU_MAG_SWIPE
+DEBUG:06-28-2015 01:39:09:main:Username = chrisanderson
+DEBUG:06-28-2015 01:39:09:main:Firstname = Chris
+DEBUG:06-28-2015 01:39:09:main:Lastname = Anderson
+DEBUG:06-28-2015 01:39:09:main:Last Scan = 2015-06-28 01:35:45
+DEBUG:06-28-2015 01:39:09:main:Total Time Allocated = 1000
+DEBUG:06-28-2015 01:39:09:main:Total Time Logged = 546
+DEBUG:06-28-2015 01:39:09:main:
+DEBUG:06-28-2015 01:39:09:main:Time Allocated for FABLAB_CNC1 = 1000
+DEBUG:06-28-2015 01:39:09:main:Time Logged for FABLAB_CNC1 = 335
+DEBUG:06-28-2015 01:39:09:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:06-28-2015 01:39:09:MachinePlug:Registering scan in for user: chrisanderson
+DEBUG:06-28-2015 01:39:09:MachinePlug:Setting current user:
+DEBUG:06-28-2015 01:39:09:MachinePlug:User = chrisanderson
+DEBUG:06-28-2015 01:39:09:MachinePlug:Machine = FABLAB_CNC1
+DEBUG:06-28-2015 01:39:17:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:39:17:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:39:17:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 345
+DEBUG:06-28-2015 01:39:17:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 25
+DEBUG:06-28-2015 01:39:27:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:39:27:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:39:27:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 346
+DEBUG:06-28-2015 01:39:27:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 265
+DEBUG:06-28-2015 01:39:27:MachinePlug_PowerMonitored:plug_id:  WEMO_CNC1
+DEBUG:06-28-2015 01:39:27:MachinePlug_PowerMonitored:Transition to STATE_ALL_ON
+
+DEBUG:06-28-2015 01:39:37:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:39:37:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:39:37:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:39:38:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 2480
+DEBUG:06-28-2015 01:39:48:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:39:48:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:39:48:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:39:48:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1405
+DEBUG:06-28-2015 01:39:58:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:39:58:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:39:58:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:39:58:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1275
+DEBUG:06-28-2015 01:40:08:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:40:08:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:40:08:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:40:08:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1205
+DEBUG:06-28-2015 01:40:18:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:40:18:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:40:18:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:40:18:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1180
+DEBUG:06-28-2015 01:40:28:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:40:28:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:40:28:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:40:28:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1190
+DEBUG:06-28-2015 01:40:38:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:40:38:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:40:38:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:40:38:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1130
+DEBUG:06-28-2015 01:40:48:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:40:48:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:40:48:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:40:48:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1095
+DEBUG:06-28-2015 01:40:58:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+INFO:06-28-2015 01:40:58:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:06-28-2015 01:40:58:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 347
+DEBUG:06-28-2015 01:40:58:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 1105
+DEBUG:06-28-2015 01:41:02:main:Keyboard Interrupt
+
+
