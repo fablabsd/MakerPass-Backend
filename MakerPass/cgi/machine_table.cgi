@@ -20,7 +20,7 @@ th, td {
 
 print MakerPassWebClient.printMachineRecTable()
 
-print "This table will refresh every 5 seconds or so..."
+print "This table will refresh every 15 seconds or so..."
 print "</body></html>"
 
 

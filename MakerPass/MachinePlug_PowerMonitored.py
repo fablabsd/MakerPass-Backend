@@ -38,22 +38,22 @@ class MachinePlug_PowerMonitored(MachinePlug):
 
 		return self.doIsPowerAboveThreshold()
 		
-        def isSwitchedOn(self):
+	def isSwitchedOn(self):
 
 
 		## calculate how long since last call 
-        	switch_on_timeout_end = datetime.now()
-        	timediff_millis = (switch_on_timeout_end - self.switched_on_timeout_start).total_seconds()
+		switch_on_timeout_end = datetime.now()
+		timediff_millis = (switch_on_timeout_end - self.switched_on_timeout_start).total_seconds()
 		#logger.debug( str(timediff_millis))
 
 		## wait at least switch_on_delay_time seconds before making actual check again
 		## this not only prevents killing the network, but gives time for the machine to 
 		## ramp up power before the next power check
-        	if ( timediff_millis > self.switched_on_delay_time ):
-                	logger.debug( "Making isSwitchedOn() check after delay:  %.2gs" % timediff_millis)
+		if ( timediff_millis > self.switched_on_delay_time ):
+			logger.debug( "Making isSwitchedOn() check after delay:  %.2gs" % timediff_millis)
 			self.switch_state = self.isPowerAboveThreshold()
-                	self.switched_on_timeout_start = datetime.now()
-		
+			self.switched_on_timeout_start = datetime.now()
+	
 		return self.switch_state
 
 	def doManageState(self, scan_detected, is_new_user):

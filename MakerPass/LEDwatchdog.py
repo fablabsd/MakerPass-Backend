@@ -23,6 +23,7 @@ while (True):
 	else:
 		GPIO.output(17, GPIO.LOW)
 
+	## sleep 10 seconds to take it easy on CPU
 	time.sleep(10)
 
  

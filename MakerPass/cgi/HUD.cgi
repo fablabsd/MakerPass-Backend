@@ -3,6 +3,7 @@
 # Import modules for CGI handling 
 import cgi, cgitb
 import MakerPassWebClient
+import subprocess
 
 # Create instance of FieldStorage 
 form = cgi.FieldStorage() 
@@ -39,15 +40,22 @@ $(document).ready(function() {
   }
 
   autoRefresh_div(); 
-  setInterval('autoRefresh_div()', 5000); // refresh div after 5 secs
+  setInterval('autoRefresh_div()', 15000); // refresh div after 15 secs
             </script>
 
 </head>
 """
 print "<body>"
 
-
 ## show heads-up display
+print "<h1>Welcome to Makerpass</h1><br><br>"
+
+
+## print user feedback from submission if applicable
+print "<div id=\"feedback_div\">"
+print "</div>"
+
+## machine/user table
 print "<br><br>"
 print "<h3>Machine Status:</h3><br>"
 print "<div id=\"machine_table_div\">"
@@ -80,12 +88,8 @@ print 'ID Number: <input type="text" name="user_id" />'
 print '<input type="submit" value="Submit" />'
 print '</form>'
 
-## print user feedback from submission
-print "<div id=\"feedback_div\">"
-print "Waiting for data...<br>"
-print "</div>"
-
-
+system_load_str =  subprocess.Popen("uptime | cut -d\":\" -f5", shell=True, stdout=subprocess.PIPE).stdout.read()
+print "System Load: " + str(system_load_str)
 
 ##  footers
 print "</body>"
