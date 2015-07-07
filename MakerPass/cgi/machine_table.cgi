@@ -18,6 +18,7 @@ th, td {
 }
 </style>"""
 
+print MakerPassWebClient.printSystemStatus()
 print MakerPassWebClient.printMachineRecTable()
 
 print "This table will refresh every 15 seconds or so..."

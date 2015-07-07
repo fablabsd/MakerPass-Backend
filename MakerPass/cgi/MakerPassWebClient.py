@@ -2,6 +2,8 @@
 
 import sqlite3 as lite
 import sys
+import os.path 
+
 
 ## add main makerpass dir to path for import search
 sys.path.insert(0, '/home/pi/makerpass/MakerPass')
@@ -88,6 +90,18 @@ def getMachineScannerData(MY_MASTER_CONTROLLER_ID):
         finally:
                 if con: con.close()
 
+
+## ----------------------------------------------------------
+
+def printSystemStatus():
+
+	## check if makerpass is running
+	if (os.path.exists("/home/pi/makerpass/MakerPass/process_online")):
+        	status = "<font color='green'>ONLINE</font>"
+	else:
+        	status = "<font color='red'>OFFLINE</font>"
+
+	return "The system is:  " + status + "<br><br>"
 
 ## ----------------------------------------------------------
 

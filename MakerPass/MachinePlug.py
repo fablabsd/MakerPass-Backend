@@ -27,10 +27,6 @@ class MachinePlug(object):
 		## used to determine whether machine is switch one - in milliwatts
 		self.machine_power_threshold = machine_power_threshold
 
-		## update the database to reflect default state (for cases where 
-		## we just restarted and state is out of sync)
-		MakerPassDatabase.setMachineState(self.machine_id, MachineStates.toString(self.state))
-	
 	def manageState(self, scanned_user, selected_machine_id):
 
 		scan_detected = False

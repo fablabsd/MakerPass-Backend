@@ -26,10 +26,11 @@ print """
     <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
    <script>
 $(document).ready(function() {
-    $('#machine_table').DataTable();
+	$('#machine_table').DataTable();
+	autoRefresh_div();
 } );
    </script>
-   <script>
+   <script type="text/javascript">
  function autoRefresh_div()
  {
 	// a function which will load data from other file after x seconds
@@ -39,9 +40,9 @@ $(document).ready(function() {
 	$("#feedback_div").load("user_feedback.cgi"); 
   }
 
-  autoRefresh_div(); 
   setInterval('autoRefresh_div()', 15000); // refresh div after 15 secs
             </script>
+
 
 </head>
 """
@@ -50,14 +51,13 @@ print "<body>"
 ## show heads-up display
 print "<h1>Welcome to Makerpass</h1><br><br>"
 
-
 ## print user feedback from submission if applicable
 print "<div id=\"feedback_div\">"
 print "</div>"
 
 ## machine/user table
 print "<br><br>"
-print "<h3>Machine Status:</h3><br>"
+print "<h3>Machine Status:</h3>"
 print "<div id=\"machine_table_div\">"
 print "Waiting for data...<br>"
 print "</div>"

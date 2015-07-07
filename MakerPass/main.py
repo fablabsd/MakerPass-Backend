@@ -14,6 +14,7 @@ import MakerPassLogger
 from datetime import datetime
 from multiprocessing import Process
 from MakerPassLogger import main_logger as logger
+from MachineStates import MachineStates
 
 ## -------global variables---------------------------------
 
@@ -128,6 +129,7 @@ def registerScan():
 		selected_machine_id_data = MakerPassDatabase.getMachineId(scanner_id)
 		if (selected_machine_id_data == None):
 			logger.debug( "Unable to associate a machine with this scanner:  " + scanner_id)
+			logUserFeedback( "Unable to associate a machine with this scanner:  " + scanner_id)
 			return -1
 
 		## found machine id
@@ -137,6 +139,7 @@ def registerScan():
 		userinfo = MakerPassDatabase.getUserInfo(scan_id)
 		if (userinfo == None):
 			logger.debug( "No User found with scan_id = " + str(scan_id))
+			logUserFeedback( "No User found with scan_id = " + str(scan_id))
 			return -1
 		
 		## found user
@@ -163,6 +166,7 @@ def registerScan():
 			logger.debug( "has no permission to the given machine (" + selected_machine_id + ")")
 			logger.debug( "Please check user_machine_allocation_rec to ensure user")
 			logger.debug( "is registered for time on this machine" )
+			logUserFeedback( "Unauthorized User:  " + scanned_username + " has no permission to " + selected_machine_id) 
 			return -1
 		
 		## If no alloted time left for user (total from user_rec) -- error
@@ -170,6 +174,7 @@ def registerScan():
 			logger.debug( "The given user (%s)" % scanned_username)
 			logger.debug( " has exceeded the total alloted to them")
 			logger.debug( " for all machines.  Please ensure user record is up to date")
+			logUserFeedback("User " + scanned_username + " Exceeded total time allotment - see administrator for details")
 			return -1
 	
 		
@@ -181,17 +186,20 @@ def registerScan():
 		if (usermachineinfo['time_logged'] >= usermachineinfo['time_allocated']):
 			logger.debug( "The given user (%s)" % scanned_username)
 			logger.debug( " has no more time left on the scanned machine (%s)" % selected_machine_id)
+			logUserFeedback("User " + scanned_username + " Exceeded time allotment on the given machine - see administrator for details")
 			return -1
 	
 		## Prevent same user from logging into multiple machines
 		if (isUserAlreadyUsingAnotherMachine(scanned_username, selected_machine_id, machine_list)): 
 			logger.debug( "You can't do that you're already logged into another machine")
-			return -1
+			logUserFeedback("User " + scanned_user + " is already logged into another machine")
+  			return -1
 
 				
 
 		## display successful swipe and machine selected	
 		logger.debug( "User is authorized for machine:  " + selected_machine_id)
+		logUserFeedback("Successfully scanned " + scanned_username + " for machine:  " + selected_machine_id)
 		
 		return 0
 
@@ -288,15 +296,24 @@ def InitMachines(shared_mem):
 				## First default this machine state to "unrecognized" in the database
 				## so we will know if there was an issue initializing (in the web client) 
 				MakerPassDatabase.setMachineState(machine['machine_id'], "Unrecognized")
+			
+				## clear out any pre-existing users this machine might have had on last exit	
+				MakerPassDatabase.clearMachineUser(machine['machine_id'])
 
+				## instantiate the machine
                 		new_machine = MachinePlugCreator.instantiateMachinePlug(machine['machine_id'], \
 				machine['machine_description'], \
 				machine['plug_id'], machine['plug_description'], \
 				machine['plug_type'], \
 				machine['plug_name'], machine['power_threshold'])
 
+				## add machine to list of machines to run through update loop
 				machine_list.append(new_machine)
-				MakerPassDatabase.clearMachineUser(new_machine.machine_id)
+
+				## update the database to reflect default state (we must do this 
+				## after the machine is fully instantiated so we know it's valid)
+				MakerPassDatabase.setMachineState(new_machine.machine_id, MachineStates.toString(new_machine.state))
+				
 
 			except Exception, ex:
 				logger.debug( "Failed to Instantiate machine:  " + machine['machine_description'])
