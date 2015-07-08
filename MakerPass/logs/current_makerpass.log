@@ -28204,3 +28204,85 @@ DEBUG:07-07-2015 14:02:55:main:Spawning Pipe scan handler process
 DEBUG:07-07-2015 14:02:55:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
 DEBUG:07-07-2015 14:02:55:PLNU_IDCardSwipe:Device name: /dev/hidraw1
 DEBUG:07-07-2015 14:02:55:main:Entering main processing loop...
+DEBUG:07-07-2015 14:31:09:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:07-07-2015 14:31:09:main:Creating Shared mem
+DEBUG:07-07-2015 14:31:09:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:07-07-2015 14:31:09:main:Instantiating Machine Objects
+DEBUG:07-07-2015 14:31:09:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:07-07-2015 14:31:10:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:07-07-2015 14:31:10:ouimeaux.discovery:Binding datagram server to 192.168.1.200:54321
+INFO:07-07-2015 14:31:10:ouimeaux.environment:Discovering devices
+DEBUG:07-07-2015 14:31:10:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:07-07-2015 14:31:10:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:07-07-2015 14:31:10:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:07-07-2015 14:31:10:ouimeaux.discovery:Received a response from 192.168.1.8:3078
+DEBUG:07-07-2015 14:31:10:ouimeaux.discovery:Found WeMo at 192.168.1.8:3078
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /setup.xml HTTP/1.1" 200 4756
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /setupservice.xml HTTP/1.1" 200 3279
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /timesyncservice.xml HTTP/1.1" 200 1718
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /eventservice.xml HTTP/1.1" 200 18263
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /firmwareupdate.xml HTTP/1.1" 200 1826
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /rulesservice.xml HTTP/1.1" 200 7233
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /metainfoservice.xml HTTP/1.1" 200 1132
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /remoteaccess.xml HTTP/1.1" 200 3974
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /deviceinfoservice.xml HTTP/1.1" 200 7810
+INFO:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:11:requests.packages.urllib3.connectionpool:"GET /insightservice.xml HTTP/1.1" 200 6336
+INFO:07-07-2015 14:31:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:12:requests.packages.urllib3.connectionpool:"GET /smartsetup.xml HTTP/1.1" 200 2539
+INFO:07-07-2015 14:31:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:12:requests.packages.urllib3.connectionpool:"GET /manufacture.xml HTTP/1.1" 200 642
+INFO:07-07-2015 14:31:12:ouimeaux.environment:Found device <WeMo Insight "WEMO CNC ROOM"> at ('192.168.1.8', 3078)
+INFO:07-07-2015 14:31:12:ouimeaux.subscribe:Subscribing to basic events from <WeMo Insight "WEMO CNC ROOM">
+INFO:07-07-2015 14:31:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:12:requests.packages.urllib3.connectionpool:"SUBSCRIBE /upnp/event/basicevent1 HTTP/1.1" 200 0
+INFO:07-07-2015 14:31:12:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.8
+DEBUG:07-07-2015 14:31:12:requests.packages.urllib3.connectionpool:"POST /upnp/control/basicevent1 HTTP/1.1" 200 285
+DEBUG:07-07-2015 14:31:12:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:07-07-2015 14:31:12:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:07-07-2015 14:31:12:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:07-07-2015 14:31:12:ouimeaux.discovery:Received a response from 192.168.1.8:3078
+DEBUG:07-07-2015 14:31:12:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:07-07-2015 14:31:13:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:07-07-2015 14:31:13:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:07-07-2015 14:31:13:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:07-07-2015 14:31:13:ouimeaux.discovery:Received a response from 192.168.1.8:3078
+DEBUG:07-07-2015 22:22:17:MachinePlug_WemoInsight:switch = <WeMo Insight "WEMO CNC ROOM">
+DEBUG:07-07-2015 22:22:17:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:07-07-2015 22:22:18:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:07-07-2015 22:22:18:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:07-07-2015 22:22:18:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:07-07-2015 22:22:18:main:Exception:  
+DEBUG:07-07-2015 22:22:18:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:07-07-2015 22:22:18:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:07-07-2015 22:22:18:main:Spawning PLNU magstripe handler process
+DEBUG:07-07-2015 22:22:18:main:Spawning Pipe scan handler process
+DEBUG:07-07-2015 22:22:18:main:Entering main processing loop...
+DEBUG:07-07-2015 22:22:18:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:07-07-2015 22:22:18:PLNU_IDCardSwipe:Device name: /dev/hidraw1

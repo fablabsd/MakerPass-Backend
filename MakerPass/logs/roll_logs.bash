@@ -6,7 +6,7 @@ BASEPATH=/home/pi/makerpass/MakerPass/logs
 ## remove logs older than 30 days -- this script is called 
 ## from /etc/cron.daily (i.e. used by anacron to run even 
 ## if machine was off during normal time to be run)
-#find /home/pi/makerpass/MakerPass/logs/archive/ -name "makerpass.log.*" -mtime +30 -exec rm -f {} \;
+#find $BASEPATH/archive/ -name "makerpass.log.*" -mtime +30 -exec rm -f {} \;
 find $BASEPATH/archive/ -name "makerpass.log.*" -mmin +30 -exec rm -f {} \;
 
 
