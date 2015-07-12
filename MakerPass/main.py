@@ -192,7 +192,7 @@ def registerScan():
 		## Prevent same user from logging into multiple machines
 		if (isUserAlreadyUsingAnotherMachine(scanned_username, selected_machine_id, machine_list)): 
 			logger.debug( "You can't do that you're already logged into another machine")
-			logUserFeedback("User " + scanned_user + " is already logged into another machine")
+			logUserFeedback("User " + scanned_username + " is already logged into another machine")
   			return -1
 
 				

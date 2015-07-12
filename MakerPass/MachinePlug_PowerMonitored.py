@@ -96,16 +96,18 @@ class MachinePlug_PowerMonitored(MachinePlug):
 				MakerPassDatabase.markMachineEffectiveUseTime(self.current_user, self.machine_id)
 				
 				
-			## detect new user
+			## detect an "unswipe" of the same user (no need to detect a different user)
 			elif (scan_detected == True): 
 				
-				## detect an "unswipe" - no need to detect new user here
 				if (is_new_user == False): 
 					logger.debug( "plug_id:  " + self.plug_id)
 					logger.debug( "Transition to STATE_ALL_OFF\n")
 					self.state = MachineStates.STATE_ALL_OFF;
 					self.disableMachinePlug()
 					self.current_user = ""
+
+					## note:  no need to call logoutUser() as we did not effectively use
+					## the machine (and hence no need to reduce time allocations)
 					MakerPassDatabase.clearMachineUser(self.machine_id)
 					MakerPassDatabase.setMachineState(self.machine_id, MachineStates.toString(self.state))
 

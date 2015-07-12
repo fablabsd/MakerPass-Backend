@@ -51,6 +51,19 @@ print "<body>"
 ## show heads-up display
 print "<h1>Welcome to Makerpass</h1><br><br>"
 
+## print the manual login controls 
+print '<form action="/cgi-bin/HUD.cgi" method="post">'
+print "<br>"
+print "<h3>Manual Login/Logout:</h3><br>"
+
+print MakerPassWebClient.printMachineSelectDropdown(MY_MASTER_CONTROLLER_ID)
+print "&nbsp&nbsp&nbsp"
+print 'ID Number: <input type="text" name="user_id" />'
+
+print '<input type="submit" value="Submit" />'
+print '</form>'
+print '<br>'
+
 ## print user feedback from submission if applicable
 print "<div id=\"feedback_div\">"
 print "</div>"
@@ -76,17 +89,7 @@ user_id  = form.getvalue('user_id')
 if (scanner_id and user_id):
 	print MakerPassWebClient.loginUser(scanner_id, user_id)
 
-## print the manual login controls 
-print '<form action="/cgi-bin/HUD.cgi" method="post">'
 print "<br>"
-print "<h3>Manual Login/Logout:</h3><br>"
-
-print MakerPassWebClient.printMachineSelectDropdown(MY_MASTER_CONTROLLER_ID)
-print "&nbsp&nbsp&nbsp"
-print 'ID Number: <input type="text" name="user_id" />'
-
-print '<input type="submit" value="Submit" />'
-print '</form>'
 
 system_load_str =  subprocess.Popen("uptime | cut -d\":\" -f5", shell=True, stdout=subprocess.PIPE).stdout.read()
 print "System Load: " + str(system_load_str)
