@@ -161,12 +161,11 @@ def registerScan():
 				scanned_username, selected_machine_id)
 
 		if (usermachineinfo == None):
-			logUserFeedback("User " + scanned_username + " has no permission to machine: " + selected_machine_id)
+			logUserFeedback("User " + userinfo['firstname'] + " " + userinfo['lastname'] + " has no permission to machine: " + selected_machine_id)
 			logger.debug( "The given user (" + scanned_username + " )" )
 			logger.debug( "has no permission to the given machine (" + selected_machine_id + ")")
 			logger.debug( "Please check user_machine_allocation_rec to ensure user")
 			logger.debug( "is registered for time on this machine" )
-			logUserFeedback( "Unauthorized User:  " + scanned_username + " has no permission to " + selected_machine_id) 
 			return -1
 		
 		## If no alloted time left for user (total from user_rec) -- error
@@ -174,7 +173,7 @@ def registerScan():
 			logger.debug( "The given user (%s)" % scanned_username)
 			logger.debug( " has exceeded the total alloted to them")
 			logger.debug( " for all machines.  Please ensure user record is up to date")
-			logUserFeedback("User " + scanned_username + " Exceeded total time allotment - see administrator for details")
+			logUserFeedback("User " +  userinfo['firstname'] + " " + userinfo['lastname']  + " Exceeded total time allotment - see administrator for details")
 			return -1
 	
 		
@@ -186,20 +185,20 @@ def registerScan():
 		if (usermachineinfo['time_logged'] >= usermachineinfo['time_allocated']):
 			logger.debug( "The given user (%s)" % scanned_username)
 			logger.debug( " has no more time left on the scanned machine (%s)" % selected_machine_id)
-			logUserFeedback("User " + scanned_username + " Exceeded time allotment on the given machine - see administrator for details")
+			logUserFeedback("User " +  userinfo['firstname'] + " " + userinfo['lastname']  + " Exceeded time allotment on the given machine - see administrator for details")
 			return -1
 	
 		## Prevent same user from logging into multiple machines
 		if (isUserAlreadyUsingAnotherMachine(scanned_username, selected_machine_id, machine_list)): 
 			logger.debug( "You can't do that you're already logged into another machine")
-			logUserFeedback("User " + scanned_username + " is already logged into another machine")
+			logUserFeedback("User " +  userinfo['firstname'] + " " + userinfo['lastname']  + " is already logged into another machine")
   			return -1
 
 				
 
 		## display successful swipe and machine selected	
 		logger.debug( "User is authorized for machine:  " + selected_machine_id)
-		logUserFeedback("Successfully scanned " + scanned_username + " for machine:  " + selected_machine_id)
+		logUserFeedback("Successfully scanned " +  userinfo['firstname'] + " " + userinfo['lastname']  + " for machine:  " + selected_machine_id)
 		
 		return 0
 
