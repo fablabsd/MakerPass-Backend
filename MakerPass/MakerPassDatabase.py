@@ -290,6 +290,33 @@ def setMachineState(machine_id, state):
 
 
 ## ----------------------------------------------------------
+def getMachineUsers():
+
+        con = None
+
+        try:
+                con = lite.connect(database)
+
+                con.row_factory = lite.Row
+                cur = con.cursor()
+
+                # select data from a table
+                sql = "select * from user_rec;" 
+
+
+                cur.execute(sql)
+                rows = cur.fetchall()
+
+                return rows
+
+        except lite.Error, e:
+                logger.debug( "Error %s:" % e.args[0])
+                sys.exit(1)
+
+        finally:
+                if con: con.close()
+
+## ----------------------------------------------------------
 
 
 if __name__ == '__main__': 
