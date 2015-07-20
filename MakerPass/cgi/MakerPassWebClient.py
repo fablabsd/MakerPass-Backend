@@ -23,7 +23,14 @@ def getMachineUsageData():
     		con.row_factory = lite.Row 
     		cur = con.cursor()    
 
-    		# select data from a table 
+    		# select machine usage data into temp table.  This query is selecting data as a union of 
+		# machines with active users and machines without.  This is because the active user machines
+		# calculate the active running time for the user, whereas the ones with no active user just
+		# use null as the running time....note: can this be re-written as just a case statement for 
+		# the running_time rather than a union?  Note 2:  Currently this query returns any machine with
+		# an associated plug and an associated user in user_machine_allocation_rec....this is as 
+		# opposed to only selecting machines that this controller is master for...a calculated step, 
+		# but there is an argument for not doing that way...we erred on the side of too much data.  
 		sql = """
 create temporary table a as select distinct machine_rec.machine_id, machine_description, parent_machine_id, current_state, current_user, last_scan, cast(((julianday(datetime('now', 'localtime')) - julianday(last_scan)) * 1440) as integer) running_time 
 from machine_rec
