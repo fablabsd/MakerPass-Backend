@@ -24,7 +24,7 @@ def getMachineUsageData():
     		cur = con.cursor()    
 
     		# select machine usage data into temp table.  This query is selecting data as a union of 
-		# machines with active users and machines without.  This is because the active user machines
+		# machines with active/running users and machines without.  This is because the active user machines
 		# calculate the active running time for the user, whereas the ones with no active user just
 		# use null as the running time....note: can this be re-written as just a case statement for 
 		# the running_time rather than a union?  Note 2:  Currently this query returns any machine with

@@ -1,8 +1,0 @@
-user_id,username,firstname,lastname,machine_id,time_allocated
-439003,chrisanderson,Chris,Anderson,FABLAB_CNC1,1000
-439003,chrisanderson,Chris,Anderson,FABLAB_CNC2,1000
-439003,chrisanderson,Chris,Anderson,FABLAB_LASER1,1000
-439003,chrisanderson,Chris,Anderson,TEST_GPIO_MACHINE,2000
-439003,chrisanderson,Chris,Anderson,TEST_GPIO_MACHINE2,2000
-274457,testuser,TestFirst,TestLast,FABLAB_CNC1,100
-274457,testuser,TestFirst,TestLast,TEST_MACHINE,1000

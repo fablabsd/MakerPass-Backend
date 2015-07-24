@@ -42,7 +42,7 @@ def getUserInfo(scan_id):
                 cur = con.cursor()
 
                 # select data from a table
-                sql = 'select * from user_rec where user_id = ' + scan_id + ';'
+                sql = 'select * from user_rec where user_id = ' + scan_id + ' and inactive_date is null;'
                 cur.execute(sql)
                 rows = cur.fetchall()
 
@@ -103,7 +103,7 @@ def getUserMachineInfo(username, machine_id):
 
                 # select data from a table
                 sql = """ select * from user_machine_allocation_rec where username = '"""  + username + """'
-			 and machine_id = '""" + machine_id + """';"""
+			 and machine_id = '""" + machine_id + """' and inactive_date is null;"""
 
 
                 cur.execute(sql)
@@ -301,7 +301,7 @@ def getMachineUsers():
                 cur = con.cursor()
 
                 # select data from a table
-                sql = "select * from user_rec;" 
+                sql = "select * from user_rec where inactive_date is null;" 
 
 
                 cur.execute(sql)

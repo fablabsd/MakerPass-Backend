@@ -150,7 +150,7 @@ def registerScan():
 		logger.debug( "Username = " + scanned_username)
 		logger.debug( "Firstname = " + userinfo['firstname'])
 		logger.debug( "Lastname = " + userinfo['lastname'])
-		logger.debug( "Last Scan = " + userinfo['last_scan'])
+		logger.debug( "Last Scan = " + str(userinfo['last_scan']))
 		logger.debug( "Total Time Allocated = " + str(userinfo['total_time_allocated']))
 		logger.debug( "Total Time Logged = " + str(userinfo['total_time_logged']))
 		logger.debug( "") 
