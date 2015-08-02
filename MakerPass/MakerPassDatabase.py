@@ -76,7 +76,7 @@ def getMachineId(scanner_id):
                 cur.execute(sql)
                 rows = cur.fetchall()
 
-                ## return first, and only row
+                ## return first row
                 for row in rows:
                         return row
 

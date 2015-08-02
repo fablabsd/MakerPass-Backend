@@ -143,10 +143,10 @@ def printMachineSelectDropdown(MY_MASTER_CONTROLLER_ID):
 
 ## ----------------------------------------------------------
 
-def loginUser(machine_id, user_id):
+def loginUser(machine_id, user_id, client_ip):
 
 	pipe = open("/home/pi/makerpass/MakerPass/pipe_scan", "w")
-	pipe.write(str(machine_id) + "|" + str(user_id) + "\n")
+	pipe.write(str(machine_id) + "|" + str(user_id) + "|" + str(client_ip) + "\n")
 	pipe.close()
 
 	return ""

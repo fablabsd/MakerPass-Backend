@@ -76,7 +76,8 @@ def main(shared_mem, scanner_id):
 					str(keymap[rawdata[14]]) + str(keymap[rawdata[15]])
 					
 					## register complete scan by updating synchronized variables 	
-					shared_mem.set_shared_mem_values(outstring, MY_SCANNER_ID)
+					## -1 indicates client_ip address which is unused here
+					shared_mem.set_shared_mem_values(outstring, MY_SCANNER_ID, "-1")
 					
 					## clear the raw data for another scan
 					del rawdata[:]

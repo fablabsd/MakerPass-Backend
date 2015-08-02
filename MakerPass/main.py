@@ -24,6 +24,7 @@ shared_mem = ""
 machine_list = ""
 scanned_username = ""
 selected_machine_id = ""
+client_ip = ""
 loop_time_start = ""
 
 
@@ -54,15 +55,30 @@ def main():
 		
 			global scanned_username
 			global selected_machine_id
+			global client_ip
 			
 			scanned_username = ""
 			selected_machine_id = ""
+			client_ip = ""
 	
 			## retrieve and validate any potential scan from 
 			## shared mem
 			ret_val = registerScan()
 			if (ret_val == -1): 
+				## we have the option of sending feedback to the scanner in event
+				## of failed scan registration -- do so here, and then continue event
+				## loop
+				logger.debug("Failed scan from IP: " + str(client_ip))
+				if (client_ip != "0.0.0.0"):
+					logger.debug("sending failed string to scanner")
+					
 				continue  ##
+			else:
+				## send success feedback if a scan was made
+				if (scanned_username != ""):
+					logger.debug("Successful scan from IP: " + str(client_ip))
+					if (client_ip != "0.0.0.0"):
+						logger.debug("sending success string to scanner")
 
 			## Now manage each of the machine states
 			for machine in machine_list:
@@ -107,22 +123,25 @@ def registerScan():
 
 	global scanned_username
 	global selected_machine_id 
+	global client_ip 
 
 	scan_id = ""
 	scanner_id = ""
 	
 	## retrieve scan/swipe info if a scan has been made
-	scan_id, scanner_id = shared_mem.get_shared_mem_values()
+	scan_id, scanner_id, client_ip = shared_mem.get_shared_mem_values()
 
 	## handle a valid scan
 	if (scan_id != ""):
 		
 		logger.debug( "scan_id = " + scan_id)
+		logger.debug( "scanner_id = " + scanner_id)
+		logger.debug( "client_ip = " + client_ip)
 
 		## first reset the shared mem, to minimize potential 
 		## for failed scans from other machines
-		shared_mem.set_shared_mem_values('','')
-		scan_id2, scanner_id2 = shared_mem.get_shared_mem_values()	
+		shared_mem.set_shared_mem_values('','','')
+		scan_id_dummy, scanner_id_dummy, client_id_dummy = shared_mem.get_shared_mem_values()	
 		
 		##  get machine_id from a mapping table of scanner IDs 
 		## i.e. map scanning device to machine being scanned to
@@ -189,8 +208,8 @@ def registerScan():
 			return -1
 	
 		## Prevent same user from logging into multiple machines
-		if (isUserAlreadyUsingAnotherMachine(scanned_username, selected_machine_id, machine_list)): 
-			logger.debug( "You can't do that you're already logged into another machine")
+		if (isUserAlreadyUsingAMachine(scanned_username, selected_machine_id, machine_list)): 
+			logger.debug( "You can't do that you're already logged into a machine")
 			logUserFeedback("User " +  userinfo['firstname'] + " " + userinfo['lastname']  + " is already logged into another machine")
   			return -1
 
@@ -215,7 +234,7 @@ def initMakerPass():
 	logger.debug( "Creating Shared mem" )
 	global shared_mem
 	shared_mem = SharedMem.Mem()
-	shared_mem.set_shared_mem_values('','')
+	shared_mem.set_shared_mem_values('','','')
 
 	## get which cluster controller this is from config
 	config_fd = open("cluster_controller.config", "r")
@@ -248,13 +267,14 @@ def initMakerPass():
 
 
 ## --------------------------------------------------------
-## this function checks user=machine.user for all machines that do no match 
-## selected_machine_id (and not counting blank users)
+## this function checks user=machine.user for all machines  
+## to ensure no attempt is made to log user in multiple machines
+## or same machine twice
 
-def isUserAlreadyUsingAnotherMachine(scanned_username, selected_machine_id, machine_list):
+def isUserAlreadyUsingAMachine(scanned_username, selected_machine_id, machine_list):
 
 	for machine in machine_list:
-		if ((machine.machine_id != selected_machine_id) and (scanned_username == machine.current_user)):
+		if (scanned_username == machine.current_user):
 			return True
 
 	return False

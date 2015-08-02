@@ -4,6 +4,8 @@
 import cgi, cgitb
 import MakerPassWebClient
 import subprocess
+import os
+
 
 # Create instance of FieldStorage 
 form = cgi.FieldStorage() 
@@ -81,18 +83,20 @@ print "</div>"
 # Get data from fields
 scanner_id = form.getvalue('scanner_id')
 user_id  = form.getvalue('user_id')
+client_ip = os.environ["REMOTE_ADDR"]
 
 #print "selected scanner_id = " + str(scanner_id) + "<br>"
 #print "selected user_id = " + str(user_id)
 
 ## if a login was submitted process it
 if (scanner_id and user_id):
-	print MakerPassWebClient.loginUser(scanner_id, user_id)
+	print MakerPassWebClient.loginUser(scanner_id, user_id, client_ip)
 
 print "<br>"
 
 system_load_str =  subprocess.Popen("uptime | cut -d\":\" -f5", shell=True, stdout=subprocess.PIPE).stdout.read()
 print "System Load: " + str(system_load_str)
+
 
 ##  footers
 print "</body>"
