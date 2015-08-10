@@ -15,6 +15,7 @@ from datetime import datetime
 from multiprocessing import Process
 from MakerPassLogger import main_logger as logger
 from MachineStates import MachineStates
+from RegisterScan import registerScan
 
 ## -------global variables---------------------------------
 
@@ -24,7 +25,6 @@ shared_mem = ""
 machine_list = ""
 scanned_username = ""
 selected_machine_id = ""
-client_ip = ""
 loop_time_start = ""
 
 
@@ -36,6 +36,7 @@ def main():
 
 	## print a restarting message...
 	logger.debug("\n\n\n\n\t\t\t ---- Restarting MakerPass ------\n\n\n\n")
+
 
 	## init shared mem, machines etc
 	initMakerPass()
@@ -53,17 +54,20 @@ def main():
 
 		try:
 		
-			global scanned_username
-			global selected_machine_id
-			global client_ip
-			
 			scanned_username = ""
 			selected_machine_id = ""
 			client_ip = ""
-	
-			## retrieve and validate any potential scan from 
-			## shared mem
-			ret_val = registerScan()
+
+		        ## retrieve scan/swipe info from shared mem if a scan has been made
+        		scan_id, scanner_id, client_ip = shared_mem.get_shared_mem_values()
+
+			## validate scan and retrieve user+machine
+			ret_val, scanned_username, selected_machine_id = registerScan(scan_id, scanner_id)
+                	
+			## reset shared mem
+                	shared_mem.set_shared_mem_values('','','')
+                	scan_id_dummy, scanner_id_dummy, client_id_dummy = shared_mem.get_shared_mem_values()
+			
 			if (ret_val == -1): 
 				## we have the option of sending feedback to the scanner in event
 				## of failed scan registration -- do so here, and then continue event
@@ -71,6 +75,7 @@ def main():
 				logger.debug("Failed scan from IP: " + str(client_ip))
 				if (client_ip != "0.0.0.0"):
 					logger.debug("sending failed string to scanner")
+					## TBD:  send failed string to scanner endpoint
 					
 				continue  ##
 			else:
@@ -79,10 +84,11 @@ def main():
 					logger.debug("Successful scan from IP: " + str(client_ip))
 					if (client_ip != "0.0.0.0"):
 						logger.debug("sending success string to scanner")
+						## TBD:  send success string to scanner endpoint
 
+						
 			## Now manage each of the machine states
 			for machine in machine_list:
-			
 				## pass in scanned user (if any) and which machine was selected
 				## to main state handling routines for various machines/plugs
 				machine.manageState(scanned_username, selected_machine_id)
@@ -119,7 +125,7 @@ def limitLoopFrameRate():
 ## Read and validate a scan input from various sources into
 ## shared mem
 
-def registerScan():
+def registerScan_bak():
 
 	global scanned_username
 	global selected_machine_id 
@@ -219,10 +225,18 @@ def registerScan():
   			return -1
 
 				
+		## Prevent scanning in to a machine that is in the "Unrecognized" state
+		machine_state_data = MakerPassDatabase.getMachineState(selected_machine_id)
+		if (machine_state_data['current_state'] == "Unrecognized"):
+			logger.debug( "Cannot log into a machine that is in the 'Unrecognized' state")
+			logUserFeedback(str(selected_machine_id) + " is unavailable/uninitialzed ")
+			MakerPassDatabase.setLastMessage("Machine unavailable/uninitialized ", selected_machine_id)
+                        return -1
 
 		## display successful swipe and machine selected	
 		logger.debug( "User is authorized for machine:  " + selected_machine_id)
 		logUserFeedback("Successfully scanned " +  userinfo['firstname'] + " " + userinfo['lastname']  + " for machine:  " + selected_machine_id)
+		MakerPassDatabase.setLastMessage( "Authorized Scan: " + scanned_username, selected_machine_id)
 		
 		return 0
 
@@ -277,7 +291,7 @@ def initMakerPass():
 ## this function checks user=machine.user for all machines  
 ## to ensure no attempt is made to log user in multiple machines
 
-def isUserAlreadyUsingAMachine(scanned_username, selected_machine_id, machine_list):
+def isUserAlreadyUsingAMachine_bak(scanned_username, selected_machine_id, machine_list):
 
 	## see if user is attempting to login to a machine other than the one they are
 	## already logged in to - we don't care about the one they are logged in to because

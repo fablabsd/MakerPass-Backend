@@ -4,7 +4,7 @@ import sqlite3 as lite
 import sys
 from MakerPassLogger import MakerPassDatabase_logger as logger
 
-database = 'database/makerpass_database.db'
+database = '/home/pi/makerpass/MakerPass/database/makerpass_database.db'
 
 
 ## return all the values as row data from machine_rec
@@ -338,6 +338,34 @@ def setMachineState(machine_id, state):
         finally:
                 if con: con.close()
 
+## ----------------------------------------------------------
+def getMachineState(machine_id):
+
+        con = None
+
+        try:
+                con = lite.connect(database)
+
+                con.row_factory = lite.Row
+                cur = con.cursor()
+
+                # select data from a table
+                sql = "select current_state from machine_rec where machine_id = '" + machine_id + "';"
+
+
+                cur.execute(sql)
+                rows = cur.fetchall()
+
+                ## return first, and only row
+                for row in rows:
+                        return row
+
+        except lite.Error, e:
+                logger.debug( "Error %s:" % e.args[0])
+                sys.exit(1)
+
+        finally:
+                if con: con.close()
 
 ## ----------------------------------------------------------
 def getMachineUsers():
