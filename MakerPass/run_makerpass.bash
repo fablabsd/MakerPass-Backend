@@ -15,6 +15,13 @@ wemo clear
 
 cd $BASE_PATH
 
+## create the user_feedback.txt file if it doesn't already exist, and ensure
+## that it is readable by the pi user (for cgi access)
+touch cgi/user_feedback.txt
+chown pi:pi cgi/user_feedback.txt 
+chmod 777 cgi/user_feedback.txt
+
+ 
 ## run the main thread which will spawn the reader threads for scanner input
 ## the cluster controller id  for this instance is in cluster_controller.config
 echo "Spawning main makerpass process"

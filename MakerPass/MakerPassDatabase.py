@@ -162,6 +162,30 @@ def loginUser(username, machine_id):
                 if con: con.close()
 
 ## ----------------------------------------------------------
+def setLastMessage(last_message, machine_id):
+
+        con = None
+
+        try:
+                con = lite.connect(database)
+
+                con.row_factory = lite.Row
+                cur = con.cursor()
+
+                sql = "update machine_rec set last_message = '" + last_message + "' where machine_id = '" + machine_id + "';"
+                cur.execute(sql)
+
+                con.commit()
+                return None
+
+        except lite.Error, e:
+                logger.debug( "Error %s:" % e.args[0])
+                sys.exit(1)
+
+        finally:
+                if con: con.close()
+
+## ----------------------------------------------------------
 ## Record the amount time this user used the machine
 def logoutUser(username, machine_id):
 
@@ -229,6 +253,32 @@ def clearMachineUser(machine_id):
 
 ## ----------------------------------------------------------
 
+def clearMachineLastMessage(machine_id):
+
+        con = None
+
+        try:
+                con = lite.connect(database)
+
+                con.row_factory = lite.Row
+                cur = con.cursor()
+
+                ## clear out the current user from machine_rec if indicated (doing this when transitioning to ALL_OFF state)
+                sql = "update machine_rec set last_message = '' where machine_id='" + machine_id + "';"
+                cur.execute(sql)
+
+
+                con.commit()
+                return None
+
+        except lite.Error, e:
+                logger.debug( "Error %s:" % e.args[0])
+                sys.exit(1)
+
+        finally:
+                if con: con.close()
+
+## ----------------------------------------------------------
 def markMachineEffectiveUseTime(username, machine_id):
 
 

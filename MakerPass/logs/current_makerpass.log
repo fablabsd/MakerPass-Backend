@@ -2472,3 +2472,1550 @@ DEBUG:08-01-2015 19:23:40:MachinePlug_PowerMonitored:Making isSwitchedOn() check
 INFO:08-01-2015 19:23:40:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): 192.168.1.244
 DEBUG:08-01-2015 19:23:40:requests.packages.urllib3.connectionpool:"POST /upnp/control/insight1 HTTP/1.1" 200 362
 DEBUG:08-01-2015 19:23:40:MachinePlug_WemoInsight:power for WEMO CNC ROOM: 64105
+DEBUG:08-01-2015 23:03:03:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-01-2015 23:03:03:main:Creating Shared mem
+DEBUG:08-01-2015 23:03:03:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-01-2015 23:03:03:main:Instantiating Machine Objects
+DEBUG:08-01-2015 23:03:03:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-01-2015 23:03:03:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-01-2015 23:03:03:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-01-2015 23:03:03:ouimeaux.environment:Discovering devices
+DEBUG:08-01-2015 23:03:03:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-01-2015 23:03:03:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-01-2015 23:03:04:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-01-2015 23:03:04:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-01-2015 23:03:04:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-01-2015 23:03:04:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-01-2015 23:03:05:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-01-2015 23:03:05:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-01-2015 23:03:05:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-01-2015 23:03:06:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-01-2015 23:03:06:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-01-2015 23:03:06:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-01-2015 23:03:06:main:Exception:  
+DEBUG:08-01-2015 23:03:06:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-01-2015 23:03:07:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-01-2015 23:03:07:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-01-2015 23:03:07:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-01-2015 23:03:07:main:Exception:  
+DEBUG:08-01-2015 23:03:07:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-05-2015 20:55:08:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-05-2015 20:55:08:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-05-2015 20:55:09:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-05-2015 20:55:09:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-05-2015 20:55:09:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-05-2015 20:55:09:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-05-2015 20:55:09:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-05-2015 20:55:09:main:Spawning PLNU magstripe handler process
+DEBUG:08-05-2015 20:55:09:main:Spawning Pipe scan handler process
+DEBUG:08-05-2015 20:55:09:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-05-2015 20:55:09:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-05-2015 20:55:09:main:Entering main processing loop...
+DEBUG:08-05-2015 23:02:48:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-05-2015 23:02:48:main:Creating Shared mem
+DEBUG:08-05-2015 23:02:48:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-05-2015 23:02:48:main:Instantiating Machine Objects
+DEBUG:08-05-2015 23:02:49:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-05-2015 23:02:49:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-05-2015 23:02:49:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-05-2015 23:02:49:ouimeaux.environment:Discovering devices
+DEBUG:08-05-2015 23:02:49:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-05-2015 23:02:49:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-05-2015 23:02:49:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-05-2015 23:02:50:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-05-2015 23:02:50:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-05-2015 23:02:50:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-05-2015 23:02:50:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-05-2015 23:02:51:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-05-2015 23:02:51:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-05-2015 23:02:51:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-05-2015 23:02:51:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-05-2015 23:02:52:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-05-2015 23:02:52:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-05-2015 23:02:52:main:Exception:  
+DEBUG:08-05-2015 23:02:52:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-05-2015 23:02:52:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-05-2015 23:02:52:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-05-2015 23:02:52:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-05-2015 23:02:52:main:Exception:  
+DEBUG:08-05-2015 23:02:52:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-05-2015 23:02:53:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-05-2015 23:02:53:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-05-2015 23:02:53:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-05-2015 23:02:53:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-08-2015 20:05:06:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-08-2015 20:05:06:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-08-2015 20:05:06:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-08-2015 20:05:06:main:Spawning PLNU magstripe handler process
+DEBUG:08-08-2015 20:05:06:main:Spawning Pipe scan handler process
+DEBUG:08-08-2015 20:05:06:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-08-2015 20:05:06:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-08-2015 20:05:06:main:Entering main processing loop...
+DEBUG:08-09-2015 00:24:17:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 00:24:17:main:Creating Shared mem
+DEBUG:08-09-2015 00:24:17:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 00:24:17:main:Instantiating Machine Objects
+DEBUG:08-09-2015 00:24:17:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 00:24:18:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 00:24:18:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 00:24:18:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 00:24:18:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 00:24:18:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 00:24:18:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 00:24:19:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 00:24:19:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 00:24:19:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 00:24:20:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 00:24:20:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 00:24:20:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 00:24:20:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 00:24:20:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 00:24:21:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 00:24:21:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 00:24:21:main:Exception:  
+DEBUG:08-09-2015 00:24:21:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 00:24:21:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 00:24:21:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 00:24:21:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 00:24:21:main:Exception:  
+DEBUG:08-09-2015 00:24:21:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 00:24:21:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 00:24:22:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 00:24:22:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 00:24:22:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 00:24:22:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 00:24:22:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 17:48:00:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 17:48:00:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 17:48:01:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 17:48:01:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 17:48:01:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 17:48:01:main:Entering main processing loop...
+DEBUG:08-09-2015 17:56:01:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 17:56:01:main:Creating Shared mem
+DEBUG:08-09-2015 17:56:01:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 17:56:01:main:Instantiating Machine Objects
+DEBUG:08-09-2015 17:56:01:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 17:56:01:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 17:56:01:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 17:56:01:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 17:56:01:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 17:56:01:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 17:56:01:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 17:56:02:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 17:56:02:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 17:56:02:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 17:56:03:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 17:56:03:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 17:56:03:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 17:56:03:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 17:56:04:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 17:56:04:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 17:56:04:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 17:56:04:main:Exception:  
+DEBUG:08-09-2015 17:56:04:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 17:56:04:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 17:56:04:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 17:56:04:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 17:56:04:main:Exception:  
+DEBUG:08-09-2015 17:56:04:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 17:56:05:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 17:56:05:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 17:56:05:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 17:56:05:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 17:56:05:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 17:56:05:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 17:56:05:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 17:56:05:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 17:56:05:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 17:56:05:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 17:56:05:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 17:56:05:main:Entering main processing loop...
+DEBUG:08-09-2015 18:24:59:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 18:24:59:main:Creating Shared mem
+DEBUG:08-09-2015 18:24:59:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 18:24:59:main:Instantiating Machine Objects
+DEBUG:08-09-2015 18:24:59:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 18:24:59:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:24:59:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 18:25:00:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 18:25:00:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:25:00:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:25:00:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:25:01:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:25:01:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:25:01:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:25:01:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 18:25:02:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:25:02:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:25:02:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:25:03:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 18:25:03:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 18:25:03:main:Exception:  
+DEBUG:08-09-2015 18:25:03:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 18:25:03:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:25:03:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 18:25:03:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 18:25:03:main:Exception:  
+DEBUG:08-09-2015 18:25:03:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 18:25:03:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 18:25:03:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 18:25:03:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:25:03:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 18:25:03:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 18:25:03:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:25:03:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 18:25:03:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 18:25:03:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 18:25:03:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 18:25:03:main:Entering main processing loop...
+DEBUG:08-09-2015 18:25:03:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 18:26:10:PipeSwipe:TEST_SCANNER|26175|192.168.1.3
+
+DEBUG:08-09-2015 18:26:10:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 18:26:10:PipeSwipe:scanned scan_id from pipe:  26175
+DEBUG:08-09-2015 18:26:10:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 18:26:10:main:scan_id = 26175
+DEBUG:08-09-2015 18:26:10:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 18:26:10:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 18:26:10:main:Scan Detected for User ID: 26175
+DEBUG:08-09-2015 18:26:10:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 18:26:10:main:Username = someuser2
+DEBUG:08-09-2015 18:26:10:main:Firstname = Some
+DEBUG:08-09-2015 18:26:10:main:Lastname = User
+DEBUG:08-09-2015 18:26:10:main:Last Scan = 2015-08-01 16:16:59
+DEBUG:08-09-2015 18:26:10:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 18:26:10:main:Total Time Logged = 0
+DEBUG:08-09-2015 18:26:10:main:
+DEBUG:08-09-2015 18:26:10:main:The given user (someuser2 )
+DEBUG:08-09-2015 18:26:10:main:has no permission to the given machine (TEST_MACHINE)
+DEBUG:08-09-2015 18:26:10:main:Please check user_machine_allocation_rec to ensure user
+DEBUG:08-09-2015 18:26:10:main:is registered for time on this machine
+DEBUG:08-09-2015 18:26:10:main:Failed scan from IP: 192.168.1.3
+DEBUG:08-09-2015 18:26:10:main:sending failed string to scanner
+DEBUG:08-09-2015 18:26:32:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 18:26:32:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 18:26:32:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 18:26:32:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 18:26:32:main:scan_id = 274457
+DEBUG:08-09-2015 18:26:32:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 18:26:32:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 18:26:32:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 18:26:32:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 18:26:32:main:Username = testuser
+DEBUG:08-09-2015 18:26:32:main:Firstname = TestFirst
+DEBUG:08-09-2015 18:26:32:main:Lastname = TestLast
+DEBUG:08-09-2015 18:26:32:main:Last Scan = 2015-07-19 13:26:48
+DEBUG:08-09-2015 18:26:32:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 18:26:32:main:Total Time Logged = 75
+DEBUG:08-09-2015 18:26:32:main:
+DEBUG:08-09-2015 18:26:32:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 18:26:32:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 18:26:32:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 18:26:32:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 18:26:32:main:sending success string to scanner
+DEBUG:08-09-2015 18:26:32:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-09-2015 18:26:32:MachinePlug:Setting current user:
+DEBUG:08-09-2015 18:26:32:MachinePlug:User = testuser
+DEBUG:08-09-2015 18:26:32:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-09-2015 18:26:32:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 18:26:32:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-09-2015 18:26:32:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-09-2015 18:26:32:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-09-2015 18:26:42:PipeSwipe:5001|274457|192.168.1.3
+
+DEBUG:08-09-2015 18:26:42:PipeSwipe:scanned scanner_id from pipe:  5001
+DEBUG:08-09-2015 18:26:42:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 18:26:42:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 18:26:42:main:scan_id = 274457
+DEBUG:08-09-2015 18:26:42:main:scanner_id = 5001
+DEBUG:08-09-2015 18:26:42:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 18:26:42:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 18:26:42:main:Scanner ID: 5001
+DEBUG:08-09-2015 18:26:42:main:Username = testuser
+DEBUG:08-09-2015 18:26:42:main:Firstname = TestFirst
+DEBUG:08-09-2015 18:26:42:main:Lastname = TestLast
+DEBUG:08-09-2015 18:26:42:main:Last Scan = 2015-08-09 18:26:32
+DEBUG:08-09-2015 18:26:42:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 18:26:42:main:Total Time Logged = 75
+DEBUG:08-09-2015 18:26:42:main:
+DEBUG:08-09-2015 18:26:42:main:Time Allocated for FABLAB_CNC1 = 100
+DEBUG:08-09-2015 18:26:42:main:Time Logged for FABLAB_CNC1 = 25
+DEBUG:08-09-2015 18:26:42:main:You can't do that you're already logged into a machine
+DEBUG:08-09-2015 18:26:42:main:Failed scan from IP: 192.168.1.3
+DEBUG:08-09-2015 18:26:42:main:sending failed string to scanner
+DEBUG:08-09-2015 18:26:42:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:26:52:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:27:01:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 18:27:01:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 18:27:01:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 18:27:01:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 18:27:01:main:scan_id = 274457
+DEBUG:08-09-2015 18:27:01:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 18:27:01:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 18:27:01:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 18:27:01:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 18:27:01:main:Username = testuser
+DEBUG:08-09-2015 18:27:01:main:Firstname = TestFirst
+DEBUG:08-09-2015 18:27:01:main:Lastname = TestLast
+DEBUG:08-09-2015 18:27:01:main:Last Scan = 2015-08-09 18:26:32
+DEBUG:08-09-2015 18:27:01:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 18:27:01:main:Total Time Logged = 75
+DEBUG:08-09-2015 18:27:01:main:
+DEBUG:08-09-2015 18:27:01:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 18:27:01:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 18:27:01:main:You can't do that you're already logged into a machine
+DEBUG:08-09-2015 18:27:01:main:Failed scan from IP: 192.168.1.3
+DEBUG:08-09-2015 18:27:01:main:sending failed string to scanner
+DEBUG:08-09-2015 18:27:02:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:41:04:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 18:41:04:main:Creating Shared mem
+DEBUG:08-09-2015 18:41:05:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 18:41:05:main:Instantiating Machine Objects
+DEBUG:08-09-2015 18:41:05:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 18:41:05:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:41:05:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 18:41:05:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 18:41:05:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:41:05:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:05:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:06:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 18:41:06:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:41:06:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:06:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:06:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 18:41:07:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:41:07:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:07:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:08:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 18:41:08:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 18:41:08:main:Exception:  
+DEBUG:08-09-2015 18:41:08:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 18:41:08:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:41:08:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 18:41:08:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 18:41:08:main:Exception:  
+DEBUG:08-09-2015 18:41:08:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 18:41:08:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 18:41:08:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 18:41:09:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:41:09:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 18:41:09:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 18:41:09:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:41:09:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 18:41:09:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 18:41:09:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 18:41:09:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 18:41:09:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 18:41:09:main:Entering main processing loop...
+DEBUG:08-09-2015 18:41:43:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 18:41:43:main:Creating Shared mem
+DEBUG:08-09-2015 18:41:43:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 18:41:43:main:Instantiating Machine Objects
+DEBUG:08-09-2015 18:41:43:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 18:41:44:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:41:44:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 18:41:44:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 18:41:44:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:41:44:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:44:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:44:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 18:41:45:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:41:45:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:45:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:46:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:41:46:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:46:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:41:47:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 18:41:47:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 18:41:47:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 18:41:47:main:Exception:  
+DEBUG:08-09-2015 18:41:47:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 18:41:47:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:41:47:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 18:41:47:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 18:41:47:main:Exception:  
+DEBUG:08-09-2015 18:41:47:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 18:41:47:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 18:41:47:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 18:41:48:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:41:48:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 18:41:48:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 18:41:48:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:41:48:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 18:41:48:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 18:41:48:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 18:41:48:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 18:41:48:main:Entering main processing loop...
+DEBUG:08-09-2015 18:41:48:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 18:42:18:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 18:42:18:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 18:42:18:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 18:42:18:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 18:42:18:main:scan_id = 274457
+DEBUG:08-09-2015 18:42:18:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 18:42:18:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 18:42:18:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 18:42:18:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 18:42:18:main:Username = testuser
+DEBUG:08-09-2015 18:42:18:main:Firstname = TestFirst
+DEBUG:08-09-2015 18:42:18:main:Lastname = TestLast
+DEBUG:08-09-2015 18:42:18:main:Last Scan = 2015-08-09 18:26:32
+DEBUG:08-09-2015 18:42:18:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 18:42:18:main:Total Time Logged = 75
+DEBUG:08-09-2015 18:42:18:main:
+DEBUG:08-09-2015 18:42:18:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 18:42:18:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 18:42:18:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 18:42:18:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 18:42:18:main:sending success string to scanner
+DEBUG:08-09-2015 18:42:18:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-09-2015 18:42:18:MachinePlug:Setting current user:
+DEBUG:08-09-2015 18:42:18:MachinePlug:User = testuser
+DEBUG:08-09-2015 18:42:18:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-09-2015 18:42:18:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 18:42:18:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-09-2015 18:42:18:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-09-2015 18:42:18:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-09-2015 18:42:28:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:42:38:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:42:48:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:42:52:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 18:42:52:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 18:42:52:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 18:42:52:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 18:42:52:main:scan_id = 274457
+DEBUG:08-09-2015 18:42:52:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 18:42:52:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 18:42:52:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 18:42:52:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 18:42:52:main:Username = testuser
+DEBUG:08-09-2015 18:42:52:main:Firstname = TestFirst
+DEBUG:08-09-2015 18:42:52:main:Lastname = TestLast
+DEBUG:08-09-2015 18:42:52:main:Last Scan = 2015-08-09 18:42:18
+DEBUG:08-09-2015 18:42:52:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 18:42:52:main:Total Time Logged = 75
+DEBUG:08-09-2015 18:42:52:main:
+DEBUG:08-09-2015 18:42:52:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 18:42:52:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 18:42:52:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 18:42:52:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 18:42:52:main:sending success string to scanner
+DEBUG:08-09-2015 18:42:52:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 18:42:52:MachinePlug_PowerMonitored:Transition to STATE_ALL_OFF
+
+DEBUG:08-09-2015 18:42:52:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.disableMachinePlug() called 
+DEBUG:08-09-2015 18:42:52:MachinePlug_TestBrand: MachinePlug_TestBrand.doDisableMachinePlug() called 
+DEBUG:08-09-2015 18:52:19:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 18:52:19:main:Creating Shared mem
+DEBUG:08-09-2015 18:52:19:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 18:52:19:main:Instantiating Machine Objects
+DEBUG:08-09-2015 18:52:19:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 18:52:19:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:52:19:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 18:52:19:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 18:52:19:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:52:19:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:52:19:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:52:20:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:52:20:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:52:20:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:52:21:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 18:52:21:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:52:21:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:52:21:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:52:22:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 18:52:22:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 18:52:22:main:Exception:  
+DEBUG:08-09-2015 18:52:22:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 18:52:23:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:52:23:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 18:52:23:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 18:52:23:main:Exception:  
+DEBUG:08-09-2015 18:52:23:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 18:52:23:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 18:52:23:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 18:52:23:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:52:23:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 18:52:23:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 18:52:24:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:52:24:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 18:52:24:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 18:52:24:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 18:52:24:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 18:52:24:main:Entering main processing loop...
+DEBUG:08-09-2015 18:52:24:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 18:52:54:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 18:52:54:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 18:52:54:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 18:52:54:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 18:52:54:main:scan_id = 274457
+DEBUG:08-09-2015 18:52:54:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 18:52:54:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 18:52:54:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 18:52:54:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 18:52:54:main:Username = testuser
+DEBUG:08-09-2015 18:52:54:main:Firstname = TestFirst
+DEBUG:08-09-2015 18:52:54:main:Lastname = TestLast
+DEBUG:08-09-2015 18:52:54:main:Last Scan = 2015-08-09 18:42:18
+DEBUG:08-09-2015 18:52:54:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 18:52:54:main:Total Time Logged = 75
+DEBUG:08-09-2015 18:52:54:main:
+DEBUG:08-09-2015 18:52:54:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 18:52:54:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 18:52:54:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 18:52:54:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 18:52:54:main:sending success string to scanner
+DEBUG:08-09-2015 18:52:54:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-09-2015 18:52:54:MachinePlug:Setting current user:
+DEBUG:08-09-2015 18:52:54:MachinePlug:User = testuser
+DEBUG:08-09-2015 18:52:54:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-09-2015 18:52:54:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 18:52:54:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-09-2015 18:52:54:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-09-2015 18:52:54:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-09-2015 18:53:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:53:47:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 18:53:47:main:Creating Shared mem
+DEBUG:08-09-2015 18:53:47:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 18:53:47:main:Instantiating Machine Objects
+DEBUG:08-09-2015 18:53:47:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 18:53:47:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:53:47:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 18:53:47:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 18:53:47:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:53:47:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:53:47:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:53:48:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:53:48:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:53:48:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:53:49:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 18:53:49:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 18:53:49:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:53:49:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 18:53:50:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 18:53:50:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 18:53:50:main:Exception:  
+DEBUG:08-09-2015 18:53:50:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 18:53:50:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 18:53:50:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 18:53:50:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 18:53:50:main:Exception:  
+DEBUG:08-09-2015 18:53:50:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 18:53:51:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 18:53:51:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 18:53:51:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:53:51:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 18:53:51:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 18:53:51:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 18:53:51:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 18:53:51:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 18:53:51:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 18:53:51:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 18:53:51:main:Entering main processing loop...
+DEBUG:08-09-2015 18:53:51:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 18:54:19:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 18:54:19:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 18:54:19:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 18:54:19:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 18:54:19:main:scan_id = 274457
+DEBUG:08-09-2015 18:54:19:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 18:54:19:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 18:54:19:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 18:54:19:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 18:54:19:main:Username = testuser
+DEBUG:08-09-2015 18:54:19:main:Firstname = TestFirst
+DEBUG:08-09-2015 18:54:19:main:Lastname = TestLast
+DEBUG:08-09-2015 18:54:19:main:Last Scan = 2015-08-09 18:52:54
+DEBUG:08-09-2015 18:54:19:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 18:54:20:main:Total Time Logged = 75
+DEBUG:08-09-2015 18:54:20:main:
+DEBUG:08-09-2015 18:54:20:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 18:54:20:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 18:54:20:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 18:54:20:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 18:54:20:main:sending success string to scanner
+DEBUG:08-09-2015 18:54:20:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-09-2015 18:54:20:MachinePlug:Setting current user:
+DEBUG:08-09-2015 18:54:20:MachinePlug:User = testuser
+DEBUG:08-09-2015 18:54:20:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-09-2015 18:54:20:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 18:54:20:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-09-2015 18:54:20:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-09-2015 18:54:20:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-09-2015 18:54:30:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:54:40:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:54:50:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:55:00:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:55:10:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:55:20:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:55:30:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:55:40:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:55:50:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:56:00:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:56:10:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:56:20:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:56:30:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:56:40:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:56:50:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:57:00:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:57:10:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:57:20:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:57:30:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:57:40:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:57:50:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:58:00:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:58:10:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:58:20:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:58:30:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:58:40:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:58:50:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:59:00:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:59:10:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:59:20:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:59:30:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:59:40:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 18:59:50:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:00:00:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:00:14:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 19:00:14:main:Creating Shared mem
+DEBUG:08-09-2015 19:00:14:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 19:00:14:main:Instantiating Machine Objects
+DEBUG:08-09-2015 19:00:14:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 19:00:14:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:00:14:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 19:00:14:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 19:00:14:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:00:14:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:00:14:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:00:15:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:00:15:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:00:15:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:00:16:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:00:16:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:00:16:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:00:16:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:00:17:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:00:17:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 19:00:17:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 19:00:17:main:Exception:  
+DEBUG:08-09-2015 19:00:17:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 19:00:18:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:00:18:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 19:00:18:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 19:00:18:main:Exception:  
+DEBUG:08-09-2015 19:00:18:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 19:00:18:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 19:00:18:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 19:00:18:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:00:18:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 19:00:18:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 19:00:18:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:00:18:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 19:00:18:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 19:00:18:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 19:00:18:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 19:00:18:main:Entering main processing loop...
+DEBUG:08-09-2015 19:00:18:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 19:00:45:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 19:00:45:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 19:00:45:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 19:00:45:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 19:00:45:main:scan_id = 274457
+DEBUG:08-09-2015 19:00:45:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 19:00:45:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 19:00:45:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 19:00:45:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 19:00:45:main:Username = testuser
+DEBUG:08-09-2015 19:00:45:main:Firstname = TestFirst
+DEBUG:08-09-2015 19:00:45:main:Lastname = TestLast
+DEBUG:08-09-2015 19:00:45:main:Last Scan = 2015-08-09 18:54:20
+DEBUG:08-09-2015 19:00:45:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 19:00:45:main:Total Time Logged = 75
+DEBUG:08-09-2015 19:00:45:main:
+DEBUG:08-09-2015 19:00:45:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 19:00:45:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 19:00:45:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 19:00:45:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 19:00:45:main:sending success string to scanner
+DEBUG:08-09-2015 19:00:45:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-09-2015 19:00:45:MachinePlug:Setting current user:
+DEBUG:08-09-2015 19:00:45:MachinePlug:User = testuser
+DEBUG:08-09-2015 19:00:45:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-09-2015 19:00:45:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 19:00:45:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-09-2015 19:00:45:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-09-2015 19:00:45:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-09-2015 19:00:55:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:01:05:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:01:58:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 19:01:58:main:Creating Shared mem
+DEBUG:08-09-2015 19:01:58:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 19:01:58:main:Instantiating Machine Objects
+DEBUG:08-09-2015 19:01:58:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 19:01:58:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:01:58:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 19:01:58:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 19:01:58:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:01:58:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:01:58:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:01:59:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:01:59:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:01:59:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:01:59:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:02:00:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:02:00:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:02:00:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:02:00:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:02:01:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 19:02:01:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 19:02:01:main:Exception:  
+DEBUG:08-09-2015 19:02:01:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 19:02:01:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:02:01:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 19:02:01:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 19:02:01:main:Exception:  
+DEBUG:08-09-2015 19:02:01:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 19:02:02:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 19:02:02:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 19:02:02:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:02:02:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 19:02:02:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 19:02:03:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:02:03:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 19:02:03:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 19:02:03:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 19:02:03:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 19:02:03:main:Entering main processing loop...
+DEBUG:08-09-2015 19:02:03:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 19:02:30:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 19:02:30:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 19:02:30:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 19:02:30:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 19:02:30:main:scan_id = 274457
+DEBUG:08-09-2015 19:02:30:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 19:02:30:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 19:02:30:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 19:02:30:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 19:02:30:main:Username = testuser
+DEBUG:08-09-2015 19:02:30:main:Firstname = TestFirst
+DEBUG:08-09-2015 19:02:30:main:Lastname = TestLast
+DEBUG:08-09-2015 19:02:30:main:Last Scan = 2015-08-09 19:00:45
+DEBUG:08-09-2015 19:02:30:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 19:02:30:main:Total Time Logged = 75
+DEBUG:08-09-2015 19:02:30:main:
+DEBUG:08-09-2015 19:02:30:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 19:02:31:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 19:02:31:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 19:02:31:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 19:02:31:main:sending success string to scanner
+DEBUG:08-09-2015 19:02:31:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-09-2015 19:02:31:MachinePlug:Setting current user:
+DEBUG:08-09-2015 19:02:31:MachinePlug:User = testuser
+DEBUG:08-09-2015 19:02:31:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-09-2015 19:02:31:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 19:02:31:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-09-2015 19:02:31:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-09-2015 19:02:31:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-09-2015 19:02:41:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:02:51:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:03:01:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:03:05:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 19:03:05:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 19:03:06:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 19:03:06:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 19:03:06:main:scan_id = 274457
+DEBUG:08-09-2015 19:03:06:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 19:03:06:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 19:03:06:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 19:03:06:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 19:03:06:main:Username = testuser
+DEBUG:08-09-2015 19:03:06:main:Firstname = TestFirst
+DEBUG:08-09-2015 19:03:06:main:Lastname = TestLast
+DEBUG:08-09-2015 19:03:06:main:Last Scan = 2015-08-09 19:02:31
+DEBUG:08-09-2015 19:03:06:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 19:03:06:main:Total Time Logged = 75
+DEBUG:08-09-2015 19:03:06:main:
+DEBUG:08-09-2015 19:03:06:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 19:03:06:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 19:03:06:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 19:03:06:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 19:03:06:main:sending success string to scanner
+DEBUG:08-09-2015 19:03:06:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 19:03:06:MachinePlug_PowerMonitored:Transition to STATE_ALL_OFF
+
+DEBUG:08-09-2015 19:03:06:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.disableMachinePlug() called 
+DEBUG:08-09-2015 19:03:06:MachinePlug_TestBrand: MachinePlug_TestBrand.doDisableMachinePlug() called 
+DEBUG:08-09-2015 19:30:00:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 19:30:00:main:Creating Shared mem
+DEBUG:08-09-2015 19:30:00:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 19:30:00:main:Instantiating Machine Objects
+DEBUG:08-09-2015 19:30:00:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 19:30:00:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:30:00:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 19:30:00:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 19:30:00:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:30:00:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:30:00:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:30:01:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:30:01:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:30:01:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:30:02:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:30:02:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:30:02:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:30:02:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:30:03:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 19:30:03:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 19:30:03:main:Exception:  
+DEBUG:08-09-2015 19:30:03:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 19:30:03:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:30:03:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 19:30:03:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 19:30:03:main:Exception:  
+DEBUG:08-09-2015 19:30:03:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 19:30:04:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 19:30:04:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 19:30:04:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:30:04:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 19:30:04:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 19:30:04:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:30:04:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 19:30:04:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 19:30:04:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 19:30:04:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 19:30:04:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 19:30:04:main:Entering main processing loop...
+DEBUG:08-09-2015 19:30:28:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 19:30:28:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 19:30:28:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 19:30:28:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 19:30:28:main:scan_id = 274457
+DEBUG:08-09-2015 19:30:28:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 19:30:28:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 19:30:28:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 19:30:28:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 19:30:28:main:Username = testuser
+DEBUG:08-09-2015 19:30:28:main:Firstname = TestFirst
+DEBUG:08-09-2015 19:30:28:main:Lastname = TestLast
+DEBUG:08-09-2015 19:30:28:main:Last Scan = 2015-08-09 19:02:31
+DEBUG:08-09-2015 19:30:28:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 19:30:28:main:Total Time Logged = 75
+DEBUG:08-09-2015 19:30:28:main:
+DEBUG:08-09-2015 19:30:28:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 19:30:28:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 19:30:28:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 19:30:28:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 19:30:28:main:sending success string to scanner
+DEBUG:08-09-2015 19:30:28:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-09-2015 19:30:28:MachinePlug:Setting current user:
+DEBUG:08-09-2015 19:30:28:MachinePlug:User = testuser
+DEBUG:08-09-2015 19:30:28:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-09-2015 19:30:28:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 19:30:28:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-09-2015 19:30:28:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-09-2015 19:30:28:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-09-2015 19:30:38:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:41:03:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 19:41:03:main:Creating Shared mem
+DEBUG:08-09-2015 19:41:03:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 19:41:03:main:Instantiating Machine Objects
+DEBUG:08-09-2015 19:41:03:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 19:41:03:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:41:03:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 19:41:03:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 19:41:03:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:41:03:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:41:03:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:41:04:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:41:04:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:41:04:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:41:05:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:41:05:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:41:05:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:41:05:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:41:06:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 19:41:06:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 19:41:06:main:Exception:  
+DEBUG:08-09-2015 19:41:06:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 19:41:07:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:41:07:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 19:41:07:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 19:41:07:main:Exception:  
+DEBUG:08-09-2015 19:41:07:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 19:41:07:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 19:41:07:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 19:41:07:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:41:07:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 19:41:07:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 19:41:07:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:41:07:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 19:41:07:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 19:41:07:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 19:41:07:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 19:41:07:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 19:41:07:main:Entering main processing loop...
+DEBUG:08-09-2015 19:43:36:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 19:43:36:main:Creating Shared mem
+DEBUG:08-09-2015 19:43:36:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 19:43:36:main:Instantiating Machine Objects
+DEBUG:08-09-2015 19:43:36:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 19:43:36:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:43:36:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 19:43:36:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 19:43:36:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:43:36:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:43:36:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:43:37:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:43:37:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:43:37:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:43:37:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:43:38:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:43:38:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:43:38:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:43:39:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:43:39:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 19:43:39:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 19:43:39:main:Exception:  
+DEBUG:08-09-2015 19:43:39:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 19:43:39:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:43:39:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 19:43:39:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 19:43:39:main:Exception:  
+DEBUG:08-09-2015 19:43:39:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 19:43:40:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 19:43:40:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 19:43:40:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:43:40:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 19:43:40:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 19:43:40:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:43:40:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 19:43:40:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 19:43:40:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 19:43:40:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 19:43:40:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 19:43:40:main:Entering main processing loop...
+DEBUG:08-09-2015 19:47:17:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 19:47:17:main:Creating Shared mem
+DEBUG:08-09-2015 19:47:18:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 19:47:18:main:Instantiating Machine Objects
+DEBUG:08-09-2015 19:47:18:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 19:47:18:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:47:18:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 19:47:18:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 19:47:18:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:47:18:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:47:18:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:47:19:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:47:19:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:47:19:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:47:19:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:47:20:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 19:47:20:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:47:20:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 19:47:21:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 19:47:21:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 19:47:21:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 19:47:21:main:Exception:  
+DEBUG:08-09-2015 19:47:21:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 19:47:21:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 19:47:21:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 19:47:21:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 19:47:21:main:Exception:  
+DEBUG:08-09-2015 19:47:21:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 19:47:22:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 19:47:22:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 19:47:22:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:47:22:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 19:47:22:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 19:47:22:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 19:47:22:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 19:47:22:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 19:47:22:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 19:47:22:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 19:47:22:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 19:47:22:main:Entering main processing loop...
+DEBUG:08-09-2015 19:55:30:PipeSwipe:TEST_SCANNER|439003|192.168.1.3
+
+DEBUG:08-09-2015 19:55:31:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 19:55:31:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:08-09-2015 19:55:31:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 19:55:31:main:scan_id = 439003
+DEBUG:08-09-2015 19:55:31:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 19:55:31:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 19:55:31:main:Scan Detected for User ID: 439003
+DEBUG:08-09-2015 19:55:31:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 19:55:31:main:Username = chrisanderson
+DEBUG:08-09-2015 19:55:31:main:Firstname = Chris
+DEBUG:08-09-2015 19:55:31:main:Lastname = Anderson
+DEBUG:08-09-2015 19:55:31:main:Last Scan = 2015-08-01 18:51:50
+DEBUG:08-09-2015 19:55:31:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 19:55:31:main:Total Time Logged = 619
+DEBUG:08-09-2015 19:55:31:main:
+DEBUG:08-09-2015 19:55:31:main:The given user (chrisanderson )
+DEBUG:08-09-2015 19:55:31:main:has no permission to the given machine (TEST_MACHINE)
+DEBUG:08-09-2015 19:55:31:main:Please check user_machine_allocation_rec to ensure user
+DEBUG:08-09-2015 19:55:31:main:is registered for time on this machine
+DEBUG:08-09-2015 19:55:31:main:Failed scan from IP: 192.168.1.3
+DEBUG:08-09-2015 19:55:31:main:sending failed string to scanner
+DEBUG:08-09-2015 19:55:55:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-09-2015 19:55:55:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-09-2015 19:55:55:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 19:55:55:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 19:55:55:main:scan_id = 274457
+DEBUG:08-09-2015 19:55:55:main:scanner_id = TEST_SCANNER
+DEBUG:08-09-2015 19:55:55:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 19:55:55:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 19:55:55:main:Scanner ID: TEST_SCANNER
+DEBUG:08-09-2015 19:55:55:main:Username = testuser
+DEBUG:08-09-2015 19:55:55:main:Firstname = TestFirst
+DEBUG:08-09-2015 19:55:55:main:Lastname = TestLast
+DEBUG:08-09-2015 19:55:55:main:Last Scan = 2015-08-09 19:30:28
+DEBUG:08-09-2015 19:55:55:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 19:55:55:main:Total Time Logged = 75
+DEBUG:08-09-2015 19:55:55:main:
+DEBUG:08-09-2015 19:55:55:main:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-09-2015 19:55:55:main:Time Logged for TEST_MACHINE = 0
+DEBUG:08-09-2015 19:55:55:main:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-09-2015 19:55:55:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 19:55:55:main:sending success string to scanner
+DEBUG:08-09-2015 19:55:55:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-09-2015 19:55:55:MachinePlug:Setting current user:
+DEBUG:08-09-2015 19:55:55:MachinePlug:User = testuser
+DEBUG:08-09-2015 19:55:55:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-09-2015 19:55:55:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-09-2015 19:55:55:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-09-2015 19:55:55:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-09-2015 19:55:55:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-09-2015 19:56:05:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:56:15:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:56:23:PipeSwipe:MANUAL_WEB_CLIENT1|274457|192.168.1.3
+
+DEBUG:08-09-2015 19:56:23:PipeSwipe:scanned scanner_id from pipe:  MANUAL_WEB_CLIENT1
+DEBUG:08-09-2015 19:56:23:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 19:56:23:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 19:56:23:main:scan_id = 274457
+DEBUG:08-09-2015 19:56:23:main:scanner_id = MANUAL_WEB_CLIENT1
+DEBUG:08-09-2015 19:56:23:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 19:56:23:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 19:56:23:main:Scanner ID: MANUAL_WEB_CLIENT1
+DEBUG:08-09-2015 19:56:23:main:Username = testuser
+DEBUG:08-09-2015 19:56:23:main:Firstname = TestFirst
+DEBUG:08-09-2015 19:56:23:main:Lastname = TestLast
+DEBUG:08-09-2015 19:56:23:main:Last Scan = 2015-08-09 19:55:55
+DEBUG:08-09-2015 19:56:23:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 19:56:23:main:Total Time Logged = 75
+DEBUG:08-09-2015 19:56:23:main:
+DEBUG:08-09-2015 19:56:23:main:The given user (testuser )
+DEBUG:08-09-2015 19:56:23:main:has no permission to the given machine (FABLAB_LASER1)
+DEBUG:08-09-2015 19:56:23:main:Please check user_machine_allocation_rec to ensure user
+DEBUG:08-09-2015 19:56:23:main:is registered for time on this machine
+DEBUG:08-09-2015 19:56:23:main:Failed scan from IP: 192.168.1.3
+DEBUG:08-09-2015 19:56:23:main:sending failed string to scanner
+DEBUG:08-09-2015 19:56:25:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:56:35:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:56:36:PipeSwipe:5001|274457|192.168.1.3
+
+DEBUG:08-09-2015 19:56:36:PipeSwipe:scanned scanner_id from pipe:  5001
+DEBUG:08-09-2015 19:56:36:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-09-2015 19:56:36:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 19:56:36:main:scan_id = 274457
+DEBUG:08-09-2015 19:56:36:main:scanner_id = 5001
+DEBUG:08-09-2015 19:56:36:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 19:56:36:main:Scan Detected for User ID: 274457
+DEBUG:08-09-2015 19:56:36:main:Scanner ID: 5001
+DEBUG:08-09-2015 19:56:36:main:Username = testuser
+DEBUG:08-09-2015 19:56:36:main:Firstname = TestFirst
+DEBUG:08-09-2015 19:56:36:main:Lastname = TestLast
+DEBUG:08-09-2015 19:56:36:main:Last Scan = 2015-08-09 19:55:55
+DEBUG:08-09-2015 19:56:36:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 19:56:36:main:Total Time Logged = 75
+DEBUG:08-09-2015 19:56:36:main:
+DEBUG:08-09-2015 19:56:36:main:Time Allocated for FABLAB_CNC1 = 100
+DEBUG:08-09-2015 19:56:36:main:Time Logged for FABLAB_CNC1 = 25
+DEBUG:08-09-2015 19:56:36:main:You can't do that you're already logged into a machine
+DEBUG:08-09-2015 19:56:36:main:Failed scan from IP: 192.168.1.3
+DEBUG:08-09-2015 19:56:36:main:sending failed string to scanner
+DEBUG:08-09-2015 19:56:45:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:56:55:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:57:05:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:57:10:PipeSwipe:MANUAL_WEB_CLIENT1|439003|192.168.1.3
+
+DEBUG:08-09-2015 19:57:10:PipeSwipe:scanned scanner_id from pipe:  MANUAL_WEB_CLIENT1
+DEBUG:08-09-2015 19:57:10:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:08-09-2015 19:57:10:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 19:57:10:main:scan_id = 439003
+DEBUG:08-09-2015 19:57:10:main:scanner_id = MANUAL_WEB_CLIENT1
+DEBUG:08-09-2015 19:57:10:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 19:57:10:main:Scan Detected for User ID: 439003
+DEBUG:08-09-2015 19:57:10:main:Scanner ID: MANUAL_WEB_CLIENT1
+DEBUG:08-09-2015 19:57:10:main:Username = chrisanderson
+DEBUG:08-09-2015 19:57:10:main:Firstname = Chris
+DEBUG:08-09-2015 19:57:10:main:Lastname = Anderson
+DEBUG:08-09-2015 19:57:10:main:Last Scan = 2015-08-01 18:51:50
+DEBUG:08-09-2015 19:57:10:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 19:57:10:main:Total Time Logged = 619
+DEBUG:08-09-2015 19:57:10:main:
+DEBUG:08-09-2015 19:57:10:main:Time Allocated for FABLAB_LASER1 = 1000
+DEBUG:08-09-2015 19:57:10:main:Time Logged for FABLAB_LASER1 = 511
+DEBUG:08-09-2015 19:57:10:main:User is authorized for machine:  FABLAB_LASER1
+DEBUG:08-09-2015 19:57:10:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 19:57:10:main:sending success string to scanner
+DEBUG:08-09-2015 19:57:15:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:57:25:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:57:35:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:57:45:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:57:55:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:58:05:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:58:15:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:58:25:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 19:58:35:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-09-2015 20:01:34:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 20:01:34:main:Creating Shared mem
+DEBUG:08-09-2015 20:01:34:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 20:01:34:main:Instantiating Machine Objects
+DEBUG:08-09-2015 20:01:34:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 20:01:34:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 20:01:34:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 20:01:35:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 20:01:35:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 20:01:35:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 20:01:35:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 20:01:36:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 20:01:36:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 20:01:36:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 20:01:36:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 20:01:37:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 20:01:37:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 20:01:37:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 20:01:37:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 20:01:37:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 20:01:38:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-09-2015 20:01:38:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-09-2015 20:01:38:main:Exception:  
+DEBUG:08-09-2015 20:01:38:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-09-2015 20:01:38:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 20:01:38:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-09-2015 20:01:38:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-09-2015 20:01:38:main:Exception:  
+DEBUG:08-09-2015 20:01:38:main:Creating machine ID: test machine 
+Paired With Plug: This is a test plug
+
+DEBUG:08-09-2015 20:01:38:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-09-2015 20:01:38:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-09-2015 20:01:38:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 20:01:38:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-09-2015 20:01:39:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-09-2015 20:01:39:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-09-2015 20:01:39:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-09-2015 20:01:39:main:Spawning PLNU magstripe handler process
+DEBUG:08-09-2015 20:01:39:main:Spawning Pipe scan handler process
+DEBUG:08-09-2015 20:01:39:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-09-2015 20:01:39:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-09-2015 20:01:39:main:Entering main processing loop...
+DEBUG:08-09-2015 20:01:49:PipeSwipe:5001|439003|192.168.1.3
+
+DEBUG:08-09-2015 20:01:49:PipeSwipe:scanned scanner_id from pipe:  5001
+DEBUG:08-09-2015 20:01:49:PipeSwipe:scanned scan_id from pipe:  439003
+DEBUG:08-09-2015 20:01:49:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-09-2015 20:01:49:main:scan_id = 439003
+DEBUG:08-09-2015 20:01:49:main:scanner_id = 5001
+DEBUG:08-09-2015 20:01:49:main:client_ip = 192.168.1.3
+DEBUG:08-09-2015 20:01:49:main:Scan Detected for User ID: 439003
+DEBUG:08-09-2015 20:01:49:main:Scanner ID: 5001
+DEBUG:08-09-2015 20:01:49:main:Username = chrisanderson
+DEBUG:08-09-2015 20:01:49:main:Firstname = Chris
+DEBUG:08-09-2015 20:01:49:main:Lastname = Anderson
+DEBUG:08-09-2015 20:01:49:main:Last Scan = 2015-08-01 18:51:50
+DEBUG:08-09-2015 20:01:49:main:Total Time Allocated = 99999999
+DEBUG:08-09-2015 20:01:49:main:Total Time Logged = 619
+DEBUG:08-09-2015 20:01:49:main:
+DEBUG:08-09-2015 20:01:49:main:Time Allocated for FABLAB_CNC1 = 1000
+DEBUG:08-09-2015 20:01:49:main:Time Logged for FABLAB_CNC1 = 388
+DEBUG:08-09-2015 20:01:49:main:User is authorized for machine:  FABLAB_CNC1
+DEBUG:08-09-2015 20:01:49:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-09-2015 20:01:49:main:sending success string to scanner

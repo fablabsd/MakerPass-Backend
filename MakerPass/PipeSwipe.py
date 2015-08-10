@@ -11,7 +11,13 @@ from MakerPassLogger import PipeSwipe_logger as logger
 ## ------- main------------------------------------------------------
 
 def main(shared_mem, null_param):
-  
+ 
+	## before entering main loop, clear out the pipe
+	## to ensure any orphaned logins aren't picked up
+	## at initialization time
+        pipe = open("pipe_scan", "r")
+        old_scan = pipe.read().rstrip()
+        pipe.close()
 
 	while (True): 
 

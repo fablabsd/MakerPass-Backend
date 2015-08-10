@@ -159,6 +159,7 @@ def registerScan():
 		if (userinfo == None):
 			logger.debug( "No User found with scan_id = " + str(scan_id))
 			logUserFeedback( "No User found with scan_id = " + str(scan_id))
+			MakerPassDatabase.setLastMessage( "No User found with scan_id = " + str(scan_id), selected_machine_id)
 			return -1
 		
 		## found user
@@ -185,6 +186,7 @@ def registerScan():
 			logger.debug( "has no permission to the given machine (" + selected_machine_id + ")")
 			logger.debug( "Please check user_machine_allocation_rec to ensure user")
 			logger.debug( "is registered for time on this machine" )
+			MakerPassDatabase.setLastMessage( "Access Denied to: " + scanned_username, selected_machine_id)
 			return -1
 		
 		## If no alloted time left for user (total from user_rec) -- error
@@ -193,6 +195,7 @@ def registerScan():
 			logger.debug( " has exceeded the total alloted to them")
 			logger.debug( " for all machines.  Please ensure user record is up to date")
 			logUserFeedback("User " +  userinfo['firstname'] + " " + userinfo['lastname']  + " Exceeded total time allotment - see administrator for details")
+			MakerPassDatabase.setLastMessage( "Total allotted time exceeded for: " + scanned_username, selected_machine_id)
 			return -1
 	
 		
@@ -205,12 +208,14 @@ def registerScan():
 			logger.debug( "The given user (%s)" % scanned_username)
 			logger.debug( " has no more time left on the scanned machine (%s)" % selected_machine_id)
 			logUserFeedback("User " +  userinfo['firstname'] + " " + userinfo['lastname']  + " Exceeded time allotment on the given machine - see administrator for details")
+			MakerPassDatabase.setLastMessage( "Allotted time exceeded on this machine for: " + scanned_username, selected_machine_id)
 			return -1
 	
 		## Prevent same user from logging into multiple machines
 		if (isUserAlreadyUsingAMachine(scanned_username, selected_machine_id, machine_list)): 
 			logger.debug( "You can't do that you're already logged into a machine")
 			logUserFeedback("User " +  userinfo['firstname'] + " " + userinfo['lastname']  + " is already logged into another machine")
+			MakerPassDatabase.setLastMessage( "This user already using another machine: " + scanned_username, selected_machine_id)
   			return -1
 
 				
@@ -264,17 +269,21 @@ def initMakerPass():
 
 	## clear feedback on web client
 	logUserFeedback("")
+	
+	
 
 
 ## --------------------------------------------------------
 ## this function checks user=machine.user for all machines  
 ## to ensure no attempt is made to log user in multiple machines
-## or same machine twice
 
 def isUserAlreadyUsingAMachine(scanned_username, selected_machine_id, machine_list):
 
+	## see if user is attempting to login to a machine other than the one they are
+	## already logged in to - we don't care about the one they are logged in to because
+	## we allow for un-scanning from their current machine
 	for machine in machine_list:
-		if (scanned_username == machine.current_user):
+		if ((machine.machine_id != selected_machine_id) and (scanned_username == machine.current_user)):
 			return True
 
 	return False
@@ -318,6 +327,9 @@ def InitMachines(shared_mem):
 			
 				## clear out any pre-existing users this machine might have had on last exit	
 				MakerPassDatabase.clearMachineUser(machine['machine_id'])
+
+				## clear out any pre-existing user feedback messages for this machine 
+				MakerPassDatabase.clearMachineLastMessage(machine['machine_id'])
 
 				## instantiate the machine
                 		new_machine = MachinePlugCreator.instantiateMachinePlug(machine['machine_id'], \
