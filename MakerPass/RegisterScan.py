@@ -132,6 +132,7 @@ def isUserAlreadyUsingAMachine(scanned_username, selected_machine_id):
         ## get users currently using machines from database
         rows = MakerPassDatabase.getMachineRecords()
         for machine in rows:
+		## check login to any other machine than the current one (so as not to prevent an un-swipe)
                 if ((machine['machine_id'] != selected_machine_id) and (machine['current_user'] == scanned_username)):
 			return True
 

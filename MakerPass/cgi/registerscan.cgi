@@ -30,9 +30,7 @@ try:
 	## If the submitted user+scanner are valid, 
 	## submit them via the pipe to makerpass
 	if (scanner_id and user_id):
-		#ret_val, dummy1, dummy2 = registerScan(user_id, scanner_id) 
-		registerScan(user_id, scanner_id) 
-		ret_val = 0
+		ret_val, dummy1, dummy2 = registerScan(user_id, scanner_id) 
 		if (ret_val == 0):
 			MakerPassWebClient.loginUser(scanner_id, user_id, client_ip)
 			print "{1}"

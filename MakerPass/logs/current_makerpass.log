@@ -11979,3 +11979,497 @@ DEBUG:08-09-2015 23:33:35:RegisterScan:here1
 DEBUG:08-09-2015 23:33:35:RegisterScan:here1
 DEBUG:08-09-2015 23:33:35:RegisterScan:here1
 DEBUG:08-09-2015 23:33:35:RegisterScan:here1
+DEBUG:08-09-2015 23:36:09:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-09-2015 23:36:09:main:Creating Shared mem
+DEBUG:08-09-2015 23:36:10:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-09-2015 23:36:10:main:Instantiating Machine Objects
+DEBUG:08-09-2015 23:36:10:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-09-2015 23:36:10:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-09-2015 23:36:10:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-09-2015 23:36:10:ouimeaux.environment:Discovering devices
+DEBUG:08-09-2015 23:36:10:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 23:36:10:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 23:36:10:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 23:36:11:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-09-2015 23:36:11:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 23:36:11:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 23:36:11:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 23:36:12:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-09-2015 23:36:12:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 23:36:12:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-09-2015 23:36:13:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-10-2015 19:19:03:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-10-2015 19:19:03:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-10-2015 19:19:03:main:Exception:  
+DEBUG:08-10-2015 19:19:03:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-10-2015 19:19:04:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-10-2015 19:19:04:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-10-2015 19:19:04:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-10-2015 19:19:04:main:Exception:  
+DEBUG:08-10-2015 19:19:04:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-10-2015 19:19:04:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-10-2015 19:19:04:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-10-2015 19:19:04:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-10-2015 19:19:04:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-10-2015 19:19:04:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-10-2015 19:19:04:main:Creating machine ID: test machine
+Paired With Plug: This is a test plug
+
+DEBUG:08-10-2015 19:19:04:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-10-2015 19:19:05:main:Spawning PLNU magstripe handler process
+DEBUG:08-10-2015 19:19:05:main:Spawning Pipe scan handler process
+DEBUG:08-10-2015 19:19:05:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-10-2015 19:19:05:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-10-2015 19:19:05:main:Entering main processing loop...
+DEBUG:08-10-2015 22:24:30:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 22:24:30:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 22:24:30:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 22:24:30:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 22:24:30:RegisterScan:Username = testuser
+DEBUG:08-10-2015 22:24:30:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 22:24:30:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 22:24:30:RegisterScan:Last Scan = 2015-08-09 23:32:38
+DEBUG:08-10-2015 22:24:30:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 22:24:30:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 22:24:30:RegisterScan:
+DEBUG:08-10-2015 22:24:30:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 22:24:30:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 22:24:30:RegisterScan:here1
+DEBUG:08-10-2015 22:24:30:RegisterScan:here1
+DEBUG:08-10-2015 22:24:30:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 22:24:30:RegisterScan:here1
+DEBUG:08-10-2015 22:24:30:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 22:24:30:RegisterScan:here2
+DEBUG:08-10-2015 22:24:30:RegisterScan:here3
+DEBUG:08-10-2015 22:24:30:MakerPassDatabase:Error unable to open database file:
+DEBUG:08-10-2015 22:25:23:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 22:25:23:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 22:25:23:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 22:25:23:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 22:25:23:RegisterScan:Username = testuser
+DEBUG:08-10-2015 22:25:23:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 22:25:23:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 22:25:23:RegisterScan:Last Scan = 2015-08-09 23:32:38
+DEBUG:08-10-2015 22:25:23:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 22:25:23:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 22:25:23:RegisterScan:
+DEBUG:08-10-2015 22:25:23:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 22:25:23:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 22:25:23:RegisterScan:here1
+DEBUG:08-10-2015 22:25:23:RegisterScan:here1
+DEBUG:08-10-2015 22:25:23:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 22:25:23:RegisterScan:here1
+DEBUG:08-10-2015 22:25:23:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 22:25:23:RegisterScan:here2
+DEBUG:08-10-2015 22:25:23:RegisterScan:here3
+DEBUG:08-10-2015 22:25:23:MakerPassDatabase:Error unable to open database file:
+DEBUG:08-10-2015 22:25:35:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 22:25:35:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 22:25:35:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 22:25:35:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 22:25:35:RegisterScan:Username = testuser
+DEBUG:08-10-2015 22:25:35:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 22:25:35:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 22:25:35:RegisterScan:Last Scan = 2015-08-09 23:32:38
+DEBUG:08-10-2015 22:25:35:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 22:25:35:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 22:25:35:RegisterScan:
+DEBUG:08-10-2015 22:25:35:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 22:25:35:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 22:25:35:RegisterScan:here1
+DEBUG:08-10-2015 22:25:35:RegisterScan:here1
+DEBUG:08-10-2015 22:25:35:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 22:25:35:RegisterScan:here1
+DEBUG:08-10-2015 22:25:35:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 22:25:35:RegisterScan:here2
+DEBUG:08-10-2015 22:25:35:RegisterScan:here3
+DEBUG:08-10-2015 22:25:35:MakerPassDatabase:Error unable to open database file:
+DEBUG:08-10-2015 22:36:21:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 22:36:21:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 22:36:21:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 22:36:21:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 22:36:21:RegisterScan:Username = testuser
+DEBUG:08-10-2015 22:36:21:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 22:36:21:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 22:36:21:RegisterScan:Last Scan = 2015-08-09 23:32:38
+DEBUG:08-10-2015 22:36:21:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 22:36:21:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 22:36:21:RegisterScan:
+DEBUG:08-10-2015 22:36:21:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 22:36:21:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 22:36:21:RegisterScan:here1
+DEBUG:08-10-2015 22:36:21:RegisterScan:here1
+DEBUG:08-10-2015 22:36:21:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 22:36:21:RegisterScan:here1
+DEBUG:08-10-2015 22:36:21:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 22:36:21:RegisterScan:here2
+DEBUG:08-10-2015 22:36:21:RegisterScan:here3
+DEBUG:08-10-2015 22:36:21:MakerPassDatabase:Error unable to open database file:
+DEBUG:08-10-2015 22:42:26:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 22:42:26:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 22:42:26:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 22:42:26:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 22:42:26:RegisterScan:Username = testuser
+DEBUG:08-10-2015 22:42:26:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 22:42:26:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 22:42:26:RegisterScan:Last Scan = 2015-08-09 23:32:38
+DEBUG:08-10-2015 22:42:26:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 22:42:26:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 22:42:26:RegisterScan:
+DEBUG:08-10-2015 22:42:26:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 22:42:26:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 22:42:26:RegisterScan:here1
+DEBUG:08-10-2015 22:42:26:RegisterScan:here1
+DEBUG:08-10-2015 22:42:26:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 22:42:26:RegisterScan:here1
+DEBUG:08-10-2015 22:42:26:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 22:42:26:RegisterScan:here2
+DEBUG:08-10-2015 22:42:26:RegisterScan:here3
+DEBUG:08-10-2015 22:42:26:MakerPassDatabase:here4
+DEBUG:08-10-2015 22:42:26:MakerPassDatabase:here5
+DEBUG:08-10-2015 22:42:26:MakerPassDatabase:Error unable to open database file:
+DEBUG:08-10-2015 22:43:28:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 22:43:29:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 22:43:29:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 22:43:29:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 22:43:29:RegisterScan:Username = testuser
+DEBUG:08-10-2015 22:43:29:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 22:43:29:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 22:43:29:RegisterScan:Last Scan = 2015-08-09 23:32:38
+DEBUG:08-10-2015 22:43:29:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 22:43:29:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 22:43:29:RegisterScan:
+DEBUG:08-10-2015 22:43:29:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 22:43:29:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 22:43:29:RegisterScan:here1
+DEBUG:08-10-2015 22:43:29:RegisterScan:here1
+DEBUG:08-10-2015 22:43:29:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 22:43:29:RegisterScan:here1
+DEBUG:08-10-2015 22:43:29:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 22:43:29:RegisterScan:here2
+DEBUG:08-10-2015 22:43:29:RegisterScan:here3
+DEBUG:08-10-2015 22:43:29:MakerPassDatabase:here6
+DEBUG:08-10-2015 22:43:29:MakerPassDatabase:Error unable to open database file:
+DEBUG:08-10-2015 22:47:55:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-10-2015 22:47:55:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-10-2015 22:47:55:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-10-2015 22:47:55:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-10-2015 22:47:55:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 22:47:55:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 22:47:55:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 22:47:55:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 22:47:55:RegisterScan:Username = testuser
+DEBUG:08-10-2015 22:47:55:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 22:47:55:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 22:47:55:RegisterScan:Last Scan = 2015-08-09 23:32:38
+DEBUG:08-10-2015 22:47:55:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 22:47:55:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 22:47:55:RegisterScan:
+DEBUG:08-10-2015 22:47:55:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 22:47:55:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 22:47:55:RegisterScan:here1
+DEBUG:08-10-2015 22:47:55:RegisterScan:here1
+DEBUG:08-10-2015 22:47:55:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 22:47:55:RegisterScan:here1
+DEBUG:08-10-2015 22:47:55:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 22:47:55:RegisterScan:here2
+DEBUG:08-10-2015 22:47:55:RegisterScan:here3
+DEBUG:08-10-2015 22:47:55:RegisterScan:here1
+DEBUG:08-10-2015 22:47:55:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-10-2015 22:47:55:main:sending success string to scanner
+DEBUG:08-10-2015 22:47:55:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-10-2015 22:47:55:MachinePlug:Setting current user:
+DEBUG:08-10-2015 22:47:55:MachinePlug:User = testuser
+DEBUG:08-10-2015 22:47:55:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-10-2015 22:47:55:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-10-2015 22:47:55:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-10-2015 22:47:55:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-10-2015 22:47:55:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-10-2015 22:48:05:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:48:15:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:48:25:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:48:35:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:48:45:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:48:55:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:49:05:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:49:15:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:49:25:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:49:35:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:49:46:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:49:56:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:50:06:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:50:16:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:50:26:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:50:36:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:50:46:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:50:56:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:51:06:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:51:16:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:51:26:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:51:36:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:51:46:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:51:56:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:52:06:main:
+
+
+
+			 ---- Restarting MakerPass ------
+
+
+
+
+DEBUG:08-10-2015 22:52:06:main:Creating Shared mem
+DEBUG:08-10-2015 22:52:06:main:Cluster Controller for this machine = MASTER_CONTROLLER
+DEBUG:08-10-2015 22:52:06:main:Instantiating Machine Objects
+DEBUG:08-10-2015 22:52:06:main:Creating machine ID: CNC in Room 1
+Paired With Plug: WeMo Insight in CNC Room 1
+
+DEBUG:08-10-2015 22:52:06:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-10-2015 22:52:06:ouimeaux.discovery:Binding datagram server to 192.168.1.201:54321
+INFO:08-10-2015 22:52:06:ouimeaux.environment:Discovering devices
+DEBUG:08-10-2015 22:52:06:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-10-2015 22:52:06:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-10-2015 22:52:06:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-10-2015 22:52:06:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-10-2015 22:52:07:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-10-2015 22:52:07:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-10-2015 22:52:07:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-10-2015 22:52:08:ouimeaux.discovery:Broadcasting M-SEARCH to 239.255.255.250:1900
+DEBUG:08-10-2015 22:52:08:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-10-2015 22:52:08:ouimeaux.discovery:Received a response from 192.168.1.1:1900
+DEBUG:08-10-2015 22:52:08:ouimeaux.discovery:Received a response from 192.168.1.4:1900
+DEBUG:08-10-2015 22:52:09:MachinePlug_WemoInsight:Unable to get switch:  WEMO CNC ROOM
+DEBUG:08-10-2015 22:52:09:main:Failed to Instantiate machine:  CNC in Room 1
+DEBUG:08-10-2015 22:52:09:main:Exception:  
+DEBUG:08-10-2015 22:52:09:main:Creating machine ID: Laser in Laser Room
+Paired With Plug: WeMo Insight in Laser Room 1
+
+DEBUG:08-10-2015 22:52:09:MachinePlugCreator:Instantiating a WEMO_INSIGHT machine
+
+DEBUG:08-10-2015 22:52:09:MachinePlug_WemoInsight:Unable to get switch:  WEMO LASER ROOM
+DEBUG:08-10-2015 22:52:10:main:Failed to Instantiate machine:  Laser in Laser Room
+DEBUG:08-10-2015 22:52:10:main:Exception:  
+DEBUG:08-10-2015 22:52:10:main:Creating machine ID: machine controlled by gpio 17
+Paired With Plug: plug controlled from r-pi gpio 17
+
+DEBUG:08-10-2015 22:52:10:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-10-2015 22:52:10:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 17
+DEBUG:08-10-2015 22:52:10:main:Creating machine ID: machine controlled by gpio 27
+Paired With Plug: plug controlled from r-pi gpio 27
+
+DEBUG:08-10-2015 22:52:10:MachinePlugCreator:Instantiating a GPIO machine
+
+DEBUG:08-10-2015 22:52:10:MachinePlug_GPIO: MachinePlug_GPIO using gpio number 27
+DEBUG:08-10-2015 22:52:10:main:Creating machine ID: test machine
+Paired With Plug: This is a test plug
+
+DEBUG:08-10-2015 22:52:10:MachinePlugCreator:Instantiating a TEST_BRAND machine
+
+DEBUG:08-10-2015 22:52:11:main:Spawning PLNU magstripe handler process
+DEBUG:08-10-2015 22:52:11:main:Spawning Pipe scan handler process
+DEBUG:08-10-2015 22:52:11:PLNU_IDCardSwipe:Opening STMMicroelectronics Keyboard device for PLNU magstripe swipe
+DEBUG:08-10-2015 22:52:11:PLNU_IDCardSwipe:Device name: /dev/hidraw1
+DEBUG:08-10-2015 22:52:11:main:Entering main processing loop...
+DEBUG:08-10-2015 22:52:33:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-10-2015 22:52:33:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-10-2015 22:52:33:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-10-2015 22:52:33:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-10-2015 22:52:33:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 22:52:33:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 22:52:33:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 22:52:33:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 22:52:33:RegisterScan:Username = testuser
+DEBUG:08-10-2015 22:52:33:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 22:52:33:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 22:52:33:RegisterScan:Last Scan = 2015-08-10 22:47:55
+DEBUG:08-10-2015 22:52:33:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 22:52:33:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 22:52:33:RegisterScan:
+DEBUG:08-10-2015 22:52:33:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 22:52:33:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 22:52:33:RegisterScan:here1
+DEBUG:08-10-2015 22:52:33:RegisterScan:here1
+DEBUG:08-10-2015 22:52:33:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 22:52:33:RegisterScan:here1
+DEBUG:08-10-2015 22:52:33:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 22:52:33:RegisterScan:here2
+DEBUG:08-10-2015 22:52:33:RegisterScan:here3
+DEBUG:08-10-2015 22:52:33:MakerPassDatabase:here6
+DEBUG:08-10-2015 22:52:33:MakerPassDatabase:here7
+DEBUG:08-10-2015 22:52:33:RegisterScan:here1
+DEBUG:08-10-2015 22:52:33:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-10-2015 22:52:33:main:sending success string to scanner
+DEBUG:08-10-2015 22:52:33:MachinePlug:Registering scan in for user: testuser
+DEBUG:08-10-2015 22:52:33:MachinePlug:Setting current user:
+DEBUG:08-10-2015 22:52:33:MachinePlug:User = testuser
+DEBUG:08-10-2015 22:52:33:MachinePlug:Machine = TEST_MACHINE
+DEBUG:08-10-2015 22:52:33:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-10-2015 22:52:33:MachinePlug_PowerMonitored:Transition to STATE_NEED_SWITCH_ON
+
+DEBUG:08-10-2015 22:52:33:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.enableMachinePlug() called 
+DEBUG:08-10-2015 22:52:33:MachinePlug_TestBrand: MachinePlug_TestBrand.doEnableMachinePlug() called 
+DEBUG:08-10-2015 22:52:43:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:52:53:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:53:03:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:53:13:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:53:23:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:53:33:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:53:43:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:53:53:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:54:03:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:54:13:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:54:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:54:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:54:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:54:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:55:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:55:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:55:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:55:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:55:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:55:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:56:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:56:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:56:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:56:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:56:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:56:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:57:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:57:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:57:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:57:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:57:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:57:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:58:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:58:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:58:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:58:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:58:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:58:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:59:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:59:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:59:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:59:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:59:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 22:59:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:00:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:00:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:00:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:00:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:00:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:00:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:01:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:01:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:01:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:01:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:01:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:01:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:02:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:02:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:02:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:02:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:02:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:02:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:03:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:03:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:03:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:03:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:03:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:03:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:04:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:04:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:04:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:04:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:04:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:04:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:05:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:05:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:05:24:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:05:34:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:05:44:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:05:54:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:06:03:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 23:06:03:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 23:06:03:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 23:06:03:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 23:06:03:RegisterScan:Username = testuser
+DEBUG:08-10-2015 23:06:03:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 23:06:03:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 23:06:03:RegisterScan:Last Scan = 2015-08-10 22:52:33
+DEBUG:08-10-2015 23:06:03:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 23:06:03:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 23:06:03:RegisterScan:
+DEBUG:08-10-2015 23:06:03:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 23:06:03:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 23:06:03:RegisterScan:here1
+DEBUG:08-10-2015 23:06:03:RegisterScan:here1
+DEBUG:08-10-2015 23:06:03:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 23:06:03:RegisterScan:here1
+DEBUG:08-10-2015 23:06:03:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 23:06:03:RegisterScan:here2
+DEBUG:08-10-2015 23:06:03:RegisterScan:here3
+DEBUG:08-10-2015 23:06:03:MakerPassDatabase:here6
+DEBUG:08-10-2015 23:06:03:MakerPassDatabase:Error unable to open database file:
+DEBUG:08-10-2015 23:06:04:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:06:14:MachinePlug_PowerMonitored:Making isSwitchedOn() check after delay:  10s
+DEBUG:08-10-2015 23:06:22:PipeSwipe:TEST_SCANNER|274457|192.168.1.3
+
+DEBUG:08-10-2015 23:06:22:PipeSwipe:scanned scanner_id from pipe:  TEST_SCANNER
+DEBUG:08-10-2015 23:06:22:PipeSwipe:scanned scan_id from pipe:  274457
+DEBUG:08-10-2015 23:06:22:PipeSwipe:scanned client_ip from pipe:  192.168.1.3
+DEBUG:08-10-2015 23:06:22:RegisterScan:scan_id = 274457
+DEBUG:08-10-2015 23:06:22:RegisterScan:scanner_id = TEST_SCANNER
+DEBUG:08-10-2015 23:06:22:RegisterScan:Scan Detected for User ID: 274457
+DEBUG:08-10-2015 23:06:22:RegisterScan:Scanner ID: TEST_SCANNER
+DEBUG:08-10-2015 23:06:22:RegisterScan:Username = testuser
+DEBUG:08-10-2015 23:06:22:RegisterScan:Firstname = TestFirst
+DEBUG:08-10-2015 23:06:22:RegisterScan:Lastname = TestLast
+DEBUG:08-10-2015 23:06:22:RegisterScan:Last Scan = 2015-08-10 22:52:33
+DEBUG:08-10-2015 23:06:22:RegisterScan:Total Time Allocated = 99999999
+DEBUG:08-10-2015 23:06:22:RegisterScan:Total Time Logged = 75
+DEBUG:08-10-2015 23:06:22:RegisterScan:
+DEBUG:08-10-2015 23:06:22:RegisterScan:Time Allocated for TEST_MACHINE = 1000
+DEBUG:08-10-2015 23:06:22:RegisterScan:Time Logged for TEST_MACHINE = 0
+DEBUG:08-10-2015 23:06:22:RegisterScan:here1
+DEBUG:08-10-2015 23:06:22:RegisterScan:here1
+DEBUG:08-10-2015 23:06:22:RegisterScan:here1:TEST_MACHINE
+DEBUG:08-10-2015 23:06:22:RegisterScan:here1
+DEBUG:08-10-2015 23:06:22:RegisterScan:User is authorized for machine:  TEST_MACHINE
+DEBUG:08-10-2015 23:06:22:RegisterScan:here2
+DEBUG:08-10-2015 23:06:22:RegisterScan:here3
+DEBUG:08-10-2015 23:06:22:MakerPassDatabase:here6
+DEBUG:08-10-2015 23:06:23:MakerPassDatabase:here7
+DEBUG:08-10-2015 23:06:23:RegisterScan:here1
+DEBUG:08-10-2015 23:06:23:main:Successful scan from IP: 192.168.1.3
+DEBUG:08-10-2015 23:06:23:main:sending success string to scanner
+DEBUG:08-10-2015 23:06:23:MachinePlug_PowerMonitored:plug_id:  TESTPLUG
+DEBUG:08-10-2015 23:06:23:MachinePlug_PowerMonitored:Transition to STATE_ALL_OFF
+
+DEBUG:08-10-2015 23:06:23:MachinePlug_PowerMonitored: MachinePlug_PowerMonitored.disableMachinePlug() called 
+DEBUG:08-10-2015 23:06:23:MachinePlug_TestBrand: MachinePlug_TestBrand.doDisableMachinePlug() called 
