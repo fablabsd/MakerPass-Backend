@@ -174,11 +174,9 @@ def setLastMessage(last_message, machine_id):
 
                 sql = "update machine_rec set last_message = '" + last_message + "' where machine_id = '" + machine_id + "';"
 
-		logger.debug("here6")
                 cur.execute(sql)
 
                 con.commit()
-		logger.debug("here7")
                 return None
 
         except lite.Error, e:

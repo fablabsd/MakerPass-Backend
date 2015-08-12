@@ -30,16 +30,20 @@ try:
 	## If the submitted user+scanner are valid, 
 	## submit them via the pipe to makerpass
 	if (scanner_id and user_id):
-		ret_val, dummy1, dummy2 = registerScan(user_id, scanner_id) 
-		if (ret_val == 0):
-			MakerPassWebClient.loginUser(scanner_id, user_id, client_ip)
-			print "{1}"
 
-	print "{0}"
+		## send our scan through the pipe
+	        pipe = open("/home/pi/makerpass/MakerPass/wifi_scan", "w")
+	        pipe.write(str(scanner_id) + "|" + str(user_id) + "|" + str(client_ip) + "\n")
+        	pipe.close()
+
+		## now read the response from the pipe
+		pipe = open("/home/pi/makerpass/MakerPass/wifi_response", "r")
+		response = pipe.read().rstrip()
+		pipe.close()
+
+		print str(response)
 
 except Exception as e:
-	print "except"
-	print "{0}"
-	print "Error %s:" % e.message
+	print "Exception %s:" % e.message
 print "</body>"
 print "</head>"

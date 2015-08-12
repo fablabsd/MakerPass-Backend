@@ -85,7 +85,6 @@ def registerScan(scan_id, scanner_id):
 		logger.debug( "Time Allocated for " + selected_machine_id + " = " + str(usermachineinfo['time_allocated']))
 		logger.debug( "Time Logged for " + selected_machine_id + " = " + str(usermachineinfo['time_logged']))
 
-		logger.debug("here1")
 		## If no alloted time left for user on THIS machine 
 		## (from user_machine_allocation_rec) -- error
 		if (usermachineinfo['time_logged'] >= usermachineinfo['time_allocated']):
@@ -94,7 +93,6 @@ def registerScan(scan_id, scanner_id):
 			logUserFeedback("User " +  userinfo['firstname'] + " " + userinfo['lastname']  + " Exceeded time allotment on the given machine - see administrator for details")
 			MakerPassDatabase.setLastMessage( "Allotted time exceeded on this machine for: " + scanned_username, selected_machine_id)
 			return -1, scanned_username, selected_machine_id
-		logger.debug("here1")
 	
 		## Prevent same user from logging into multiple machines
 		if (isUserAlreadyUsingAMachine(scanned_username, selected_machine_id)): 
@@ -103,7 +101,6 @@ def registerScan(scan_id, scanner_id):
 			MakerPassDatabase.setLastMessage( "This user already using another machine: " + scanned_username, selected_machine_id)
   			return -1, scanned_username, selected_machine_id
 
-		logger.debug("here1:" + selected_machine_id)
 				
 		## Prevent scanning in to a machine that is in the "Unrecognized" state
 		machine_state_data = MakerPassDatabase.getMachineState(selected_machine_id)
@@ -112,14 +109,11 @@ def registerScan(scan_id, scanner_id):
 			logUserFeedback(str(selected_machine_id) + " is unavailable/uninitialzed ")
 			MakerPassDatabase.setLastMessage("Machine unavailable/uninitialized ", selected_machine_id)
                         return -1, scanned_username, selected_machine_id
-		logger.debug("here1")
 
 		## display successful swipe and machine selected	
 		logger.debug( "User is authorized for machine:  " + selected_machine_id)
 		logUserFeedback("Successfully scanned " +  userinfo['firstname'] + " " + userinfo['lastname']  + " for machine:  " + selected_machine_id)
-		logger.debug("here3")
 		MakerPassDatabase.setLastMessage( "Authorized Scan: " + scanned_username, selected_machine_id)
-		logger.debug("here1")
 		
 	return 0, scanned_username, selected_machine_id
 
@@ -142,8 +136,8 @@ def isUserAlreadyUsingAMachine(scanned_username, selected_machine_id):
 ## Respond to web client with this feedback
 
 def logUserFeedback(feedbackString):
-	logger.debug("here2")
-       	feedback_file = open('/home/pi/makerpass/MakerPass/cgi/user_feedback.txt', "w")
+       	
+	feedback_file = open('/home/pi/makerpass/MakerPass/cgi/user_feedback.txt', "w")
         feedback_file.write(feedbackString)
         feedback_file.close()
 

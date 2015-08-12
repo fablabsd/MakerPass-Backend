@@ -6,6 +6,7 @@ import time
 import SharedMem
 import PLNU_IDCardSwipe
 import PipeSwipe
+import WifiSwipe
 import logging
 import MachinePlugCreator
 import MakerPassDatabase
@@ -280,6 +281,8 @@ def initMakerPass():
     	Process(target=PLNU_IDCardSwipe.main, args=(shared_mem,"PLNU_MAG_SWIPE")).start()
     	logger.debug( "Spawning Pipe scan handler process")
     	Process(target=PipeSwipe.main, args=(shared_mem, "null")).start()
+    	logger.debug( "Spawning Wifi pipe scan handler process")
+    	Process(target=WifiSwipe.main, args=(shared_mem, "null")).start()
 
 	## clear feedback on web client
 	logUserFeedback("")
