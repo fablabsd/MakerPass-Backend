@@ -12,13 +12,7 @@ from MakerPassLogger import PipeSwipe_logger as logger
 
 def main(shared_mem, null_param):
  
-	## before entering main loop, clear out the pipe
-	## to ensure any orphaned logins aren't picked up
-	## at initialization time
-        pipe = open("pipe_scan", "r")
-        old_scan = pipe.read().rstrip()
-        pipe.close()
-
+	
 	while (True): 
 
 		try:
@@ -41,7 +35,7 @@ def main(shared_mem, null_param):
 			logger.debug( "scanned client_ip from pipe:  " + client_ip)
 					
 			## register complete scan by updating synchronized variables 	
-			shared_mem.set_shared_mem_values(scan_id, scanner_id, client_ip)
+			shared_mem.set_shared_mem_values(scan_id, scanner_id, client_ip, "True")
 					
 	
 		except (KeyboardInterrupt):

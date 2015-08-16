@@ -77,7 +77,7 @@ def main(shared_mem, scanner_id):
 					
 					## register complete scan by updating synchronized variables 	
 					## -1 indicates client_ip address which is unused here
-					shared_mem.set_shared_mem_values(outstring, MY_SCANNER_ID, "-1")
+					shared_mem.set_shared_mem_values(outstring, MY_SCANNER_ID, "-1", "True")
 					
 					## clear the raw data for another scan
 					del rawdata[:]

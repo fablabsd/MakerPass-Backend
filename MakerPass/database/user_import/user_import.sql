@@ -7,7 +7,7 @@ where not exists(select username, machine_id from user_machine_allocation_rec wh
 'chrisanderson' and machine_id = 'FABLAB_CNC1'); 
 
 insert into user_rec (user_id, username, firstname, lastname, total_time_allocated, active_date) 
-select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
+select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
 where not exists(select username from user_rec where username=
 'chrisanderson' ); 
 
@@ -23,7 +23,7 @@ where not exists(select username, machine_id from user_machine_allocation_rec wh
 'chrisanderson' and machine_id = 'FABLAB_CNC2'); 
 
 insert into user_rec (user_id, username, firstname, lastname, total_time_allocated, active_date) 
-select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
+select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
 where not exists(select username from user_rec where username=
 'chrisanderson' ); 
 
@@ -39,7 +39,7 @@ where not exists(select username, machine_id from user_machine_allocation_rec wh
 'chrisanderson' and machine_id = 'FABLAB_LASER1'); 
 
 insert into user_rec (user_id, username, firstname, lastname, total_time_allocated, active_date) 
-select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
+select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
 where not exists(select username from user_rec where username=
 'chrisanderson' ); 
 
@@ -55,7 +55,7 @@ where not exists(select username, machine_id from user_machine_allocation_rec wh
 'chrisanderson' and machine_id = 'TEST_GPIO_MACHINE'); 
 
 insert into user_rec (user_id, username, firstname, lastname, total_time_allocated, active_date) 
-select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
+select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
 where not exists(select username from user_rec where username=
 'chrisanderson' ); 
 
@@ -71,7 +71,7 @@ where not exists(select username, machine_id from user_machine_allocation_rec wh
 'chrisanderson' and machine_id = 'TEST_GPIO_MACHINE2'); 
 
 insert into user_rec (user_id, username, firstname, lastname, total_time_allocated, active_date) 
-select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
+select 439003, 'chrisanderson', 'Chris', 'Anderson', 99999999, date('now') 
 where not exists(select username from user_rec where username=
 'chrisanderson' ); 
 
@@ -87,7 +87,7 @@ where not exists(select username, machine_id from user_machine_allocation_rec wh
 'testuser' and machine_id = 'FABLAB_CNC1'); 
 
 insert into user_rec (user_id, username, firstname, lastname, total_time_allocated, active_date) 
-select 274457, 'testuser', 'TestFirst', 'TestLast', 99999999, date('now') 
+select 274457, 'testuser', 'TestFirst', 'TestLast', 99999999, date('now') 
 where not exists(select username from user_rec where username=
 'testuser' ); 
 
@@ -103,7 +103,7 @@ where not exists(select username, machine_id from user_machine_allocation_rec wh
 'testuser' and machine_id = 'TEST_MACHINE'); 
 
 insert into user_rec (user_id, username, firstname, lastname, total_time_allocated, active_date) 
-select 274457, 'testuser', 'TestFirst', 'TestLast', 99999999, date('now') 
+select 274457, 'testuser', 'TestFirst', 'TestLast', 99999999, date('now') 
 where not exists(select username from user_rec where username=
 'testuser' ); 
 
@@ -119,7 +119,7 @@ where not exists(select username, machine_id from user_machine_allocation_rec wh
 'someuser' and machine_id = 'TEST_MACHINE'); 
 
 insert into user_rec (user_id, username, firstname, lastname, total_time_allocated, active_date) 
-select 12345, 'someuser', 'Some', 'User', 99999999, date('now') 
+select 12345, 'someuser', 'Some', 'User', 99999999, date('now') 
 where not exists(select username from user_rec where username=
 'someuser' ); 
 
@@ -135,7 +135,7 @@ where not exists(select username, machine_id from user_machine_allocation_rec wh
 'someuser' and machine_id = 'TEST_GPIO_MACHINE2'); 
 
 insert into user_rec (user_id, username, firstname, lastname, total_time_allocated, active_date) 
-select 12345, 'someuser', 'Some', 'User', 99999999, date('now') 
+select 12345, 'someuser', 'Some', 'User', 99999999, date('now') 
 where not exists(select username from user_rec where username=
 'someuser' ); 
 

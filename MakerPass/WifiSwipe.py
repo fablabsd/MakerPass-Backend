@@ -17,9 +17,10 @@ def main(shared_mem, null_param):
 	## before entering main loop, clear out the pipe
 	## to ensure any orphaned logins aren't picked up
 	## at initialization time
-        pipe = open("/home/pi/makerpass/MakerPass/wifi_scan", "r")
-        old_scan = pipe.read().rstrip()
-        pipe.close()
+	#logger.debug("Clearing out wifi_scan pipe")
+        #pipe = open("/home/pi/makerpass/MakerPass/wifi_scan", "r")
+        #old_scan = pipe.read().rstrip()
+        #pipe.close()
 
 	while (True): 
 
@@ -45,16 +46,18 @@ def main(shared_mem, null_param):
         			## submit them via the pipe to makerpass
         			if (scanner_id and scan_id):
 					response = "0"
-                			ret_val, dummy1, dummy2 = registerScan(scan_id, scanner_id)
+                			ret_val, scanned_username, selected_machine_id = registerScan(scan_id, scanner_id)
                 			if (ret_val == 0):
-						## register complete scan by updating synchronized variables 	
-						shared_mem.set_shared_mem_values(scan_id, scanner_id, client_ip)
+						## register complete scan by updating synchronized variables
+						## note we are shoehorning username and machine_id in here rather
+						## than scan_id and scanner_id since we validated them already 	
+						shared_mem.set_shared_mem_values(scanned_username, selected_machine_id, client_ip, "False")
                         			response = "1"
 					sendResponse(response)
 
 			except Exception as e:
-        			print "{0}"
         			logger.debug("Error %s:" % e.message)
+        			sendResponse("0")
 
 
 					

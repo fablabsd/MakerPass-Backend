@@ -18,12 +18,13 @@ form = cgi.FieldStorage()
 # Get data from fields
 scanner_id = form.getvalue('scanner_id')
 user_id  = form.getvalue('user_id')
+use_json  = form.getvalue('use_json')
 client_ip = os.environ["REMOTE_ADDR"]
 
-#print "Content-Type: application/json";
-print "Content-type: text/html\n\n";
-print "<html>"
-print "<body>"
+#print "Content-Type: application/json\n\n"
+json_header = "Content-Type: application/json\n\n"
+html_header =  "Content-type: text/html\n\n<html><body>"
+html_footer =  "</body></html>"
 
 try: 
 
@@ -41,9 +42,12 @@ try:
 		response = pipe.read().rstrip()
 		pipe.close()
 
-		print str(response)
+		if (use_json and use_json == "1"): 
+			print json_header + "{response:" + str(response) + "}"
+		else:
+			print html_header + str(response)  + html_footer
+			
 
 except Exception as e:
-	print "Exception %s:" % e.message
-print "</body>"
-print "</head>"
+	print  "Exception %s:" % e.message
+

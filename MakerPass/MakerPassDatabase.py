@@ -55,7 +55,7 @@ def getUserInfo(scan_id):
 
         except lite.Error, e:
                 logger.debug( "Error %s:" % e.args[0])
-                sys.exit(1)
+                return None
 
         finally:
                 if con: con.close()

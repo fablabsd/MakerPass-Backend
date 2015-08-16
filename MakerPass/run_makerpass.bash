@@ -17,9 +17,26 @@ cd $BASE_PATH
 
 ## create the user_feedback.txt file if it doesn't already exist, and ensure
 ## that it is readable by the pi user (for cgi access)
-touch cgi/user_feedback.txt
-chown pi:pi cgi/user_feedback.txt 
-chmod 777 cgi/user_feedback.txt
+echo "Creating cgi/user_feedback.txt"
+touch $BASE_PATH/cgi/user_feedback.txt
+chown pi:pi $BASE_PATH/cgi/user_feedback.txt 
+chmod 777 $BASE_PATH/cgi/user_feedback.txt
+
+## create the pipe_scan fifo/pipe which will accept scan-ins from 
+## any other process/location (but mainly from HUD.cgi)
+## we re-create this here so as to eliminate the possibility of 
+## zombie scans living in the pipe getting registered on start-up
+echo "Creating pipe_scan fifo"
+rm -f $BASE_PATH/pipe_scan
+mkfifo $BASE_PATH/pipe_scan
+chmod 666 $BASE_PATH/pipe_scan
+
+## Same as above here for wifi_scan (for WifiPipe.py) and wifi_response
+## for scans coming in from cgi/registerscan.cgi
+echo "Creating wifi_scan fifo and wifi_response fifo"
+rm -f $BASE_PATH/wifi_scan $BASE_PATH/wifi_response
+mkfifo $BASE_PATH/wifi_scan $BASE_PATH/wifi_response
+chmod 666 $BASE_PATH/wifi_scan $BASE_PATH/wifi_response
 
  
 ## run the main thread which will spawn the reader threads for scanner input

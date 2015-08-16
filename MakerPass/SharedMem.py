@@ -20,17 +20,19 @@ class Mem(object):
         self.scan_id = Array('c', ' ' * 128)
         self.selected_machine_id = Array('c', ' ' * 128)
         self.client_ip = Array('c', ' ' * 128)
+        self.need_auth = Array('c', ' ' * 128)
         self.lock = Lock()
 
-    def set_shared_mem_values(self,scan_id_value, selected_machine_id_value, client_ip_value):
+    def set_shared_mem_values(self,scan_id_value, selected_machine_id_value, client_ip_value, need_auth_value):
 	with self.lock:
 		self.scan_id.value = scan_id_value
 		self.selected_machine_id.value = selected_machine_id_value
 		self.client_ip.value = client_ip_value
+		self.need_auth.value = need_auth_value
 
     def get_shared_mem_values(self):
 	with self.lock:
-		return (self.scan_id.value, self.selected_machine_id.value, self.client_ip.value) 
+		return (self.scan_id.value, self.selected_machine_id.value, self.client_ip.value, self.need_auth.value) 
 
 
 
