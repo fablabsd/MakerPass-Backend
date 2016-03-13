@@ -22,3 +22,7 @@ have something to do with the fact that my first attempt on this involved compil
 A lot of good sqlite info can be found here (about the CLI):
 https://www.sqlite.org/cli.html
 
+** Apache -- required for various web end points.  See online documentation for apache on raspberry pi.  Should be installed with apt-get
+
+** Anacron -- for running of cron.daily files that will perform log rotations and report runs (and which will 
+remember to run even if the system is shut off and back on again, hence use of anacron, not just regular cron)

@@ -1,5 +1,5 @@
 user_id,username,firstname,lastname,machine_id,time_allocated,total_time_allocated
-439003,chrisanderson,Chris,Anderson,FABLAB_CNC1,1000,99999999
+439003,chrisanderson,Chris,Anderson,FABLAB_CNC1,9999,99999999
 439003,chrisanderson,Chris,Anderson,FABLAB_CNC2,1000,99999999
 439003,chrisanderson,Chris,Anderson,FABLAB_LASER1,1000,99999999
 439003,chrisanderson,Chris,Anderson,TEST_GPIO_MACHINE,2000,99999999
@@ -9,3 +9,6 @@ user_id,username,firstname,lastname,machine_id,time_allocated,total_time_allocat
 12345,someuser,Some,User,TEST_MACHINE,1000,99999999
 12345,someuser,Some,User,TEST_GPIO_MACHINE2,1000,99999999
 123456,someuser2,Some,User,TEST_GPIO_MACHINE2,1000,99999999
+4920,elliotbuller,Elliot,Buller,FABLAB_LASER1,99999,99999999
+4920,elliotbuller,Elliot,Buller,FABLAB_CNC1,99999,99999999
+4920,elliotbuller,Elliot,Buller,TEST_MACHINE,99998,99999999
