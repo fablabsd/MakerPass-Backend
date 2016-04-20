@@ -26,3 +26,5 @@ https://www.sqlite.org/cli.html
 
 ** Anacron -- for running of cron.daily files that will perform log rotations and report runs (and which will 
 remember to run even if the system is shut off and back on again, hence use of anacron, not just regular cron)
+
+** git, if you plan to update and/or make contributions to the repo
