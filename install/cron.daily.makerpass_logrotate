@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+#
+
+
+cd /home/pi/makerpass/MakerPass/logs
+./roll_logs.bash
+
+
