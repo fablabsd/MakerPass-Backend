@@ -1,8 +1,8 @@
 
-/* user machine scan times */
+/* machine usage per date */
 .mode csv
 .headers on
-/* select * from user_machine_allocation_rec limit 5;*/
+select  date(scan_timestamp),machine_id, username, time(scan_timestamp) from user_machine_scan_rec group by 1,2,3,4 order by 1;
 
 
 
