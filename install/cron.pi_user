@@ -1,0 +1,2 @@
+0 */4 * * * sudo /home/pi/makerpass/MakerPass/cgi/reports/run_reports.bash
+* * * * * /home/pi/makerpass/MakerPass/database/user_import/reimport_users.bash
